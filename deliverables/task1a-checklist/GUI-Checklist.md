@@ -1,6 +1,6 @@
 # HW03 · Task 1 Phần A — GUI Checklist dùng chung (sản phẩm nhóm)
 
-**SUT:** EMS — Event Management System · https://promoter-starboard-prude.ngrok-free.dev/
+**SUT:** EMS — Event Management System · https://prod-dev.ems-fitus.cloud *(khu quản trị: `/dashboard/admin`)*
 **Phạm vi phủ:** IA-01 (chuẩn UI chung) · IA-02 (forms) · IA-03 (navigation) · IA-04 (feedback/state)
 **Tổng số mục:** **74** (yêu cầu tối thiểu: > 40)
 
@@ -12,7 +12,7 @@
 | IA-04 — Feedback / State | 20 | 6 | 14 |
 | **Tổng** | **74** | **30** | **44** |
 
-Các mục đánh dấu **⚠️** là mục suy ra từ tài liệu, **chưa xác minh trên EMS thật** (app đang offline) — xem §3 của `AI-Prompts-Log.md`.
+**Trạng thái xác minh:** toàn bộ 74 mục đã được đối chiếu với EMS thật (`https://prod-dev.ems-fitus.cloud`) ngày 01/08/2026. Sáu mục đặc thù pool C (G-17, G-18, N-16, N-17, S-19, S-20) đã **viết lại theo giao diện thực tế** — chi tiết ở §6.
 
 ---
 
@@ -36,7 +36,7 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 
 ---
 
-## 1. IA-01 — Chuẩn UI chung (16 mục)
+## 1. IA-01 — Chuẩn UI chung (18 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|---|
@@ -56,8 +56,8 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình | R1#2, R3#2, R8 bước 1 | **RV** |
 | G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu | R3#2, R8 bước 1 | **RV** |
 | G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác | R1#1, R8 bước 1 | **RV** |
-| G-17 | Avatar không tải được / user chưa có ảnh phải hiển thị fallback (chữ cái đầu hoặc icon), không hiện icon ảnh hỏng và không xô lệch chiều cao dòng | R8 bước 2, R1#1 | **RV** ⚠️ |
-| G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột, và định dạng nhất quán giữa danh sách và trang chi tiết | R8 bước 2, R3#1 | **RV** ⚠️ |
+| G-17 | Avatar dạng chữ viết tắt phải nằm gọn trong vòng tròn với **tên dài nhiều từ** (vd "KHOA NGUYỄN QUANG ĐĂNG" → "KNQĐ"), không tràn, không đè lên tên | R8 bước 2, R1#1 | **RV** |
+| G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột; giá trị rỗng có ký hiệu thống nhất và định dạng đồng nhất giữa các dòng | R8 bước 2, R3#1 | **RV** |
 
 ---
 
@@ -87,7 +87,7 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 
 ---
 
-## 3. IA-03 — Navigation (15 mục)
+## 3. IA-03 — Navigation (17 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|---|
@@ -106,12 +106,12 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | N-13 | Thứ tự sau khi kéo-thả được **lưu đúng** sau khi Save và giữ nguyên khi tải lại trang | R8 bước 3 | **RV** |
 | N-14 | Kéo-thả có **phương án thay thế không dùng chuột** (nút lên/xuống hoặc nhập số thứ tự) | R10 SC 2.5.7, R3#2 | **RV** |
 | N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** | R4 p.14 (Menu options align with application mode) | **RV** |
-| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang | R1#1, R4 p.16 | **RV** ⚠️ |
-| N-17 | Cột **Audit** mở được lịch sử thay đổi của user và có đường quay lại danh sách mà không mất bộ lọc đang áp | R8 bước 2, R1#3 | **RV** ⚠️ |
+| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang | R1#1, R4 p.16 | **RV** |
+| N-17 | Thông tin audit (ai tạo / ai sửa lần cuối, thời điểm) hiển thị đủ **người thực hiện và mốc thời gian**; giá trị thiếu có ký hiệu rõ ràng thay vì để trống | R8 bước 2, R1#1 | **RV** |
 
 ---
 
-## 4. IA-04 — Feedback / State (18 mục)
+## 4. IA-04 — Feedback / State (20 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|---|
@@ -133,8 +133,8 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | S-16 | Hành động bị chặn vì ràng buộc nghiệp vụ phải giải thích **lý do** (vd không xoá được Campus vì đang được sự kiện tham chiếu), không chỉ báo "thất bại" | R8 bước 3, R1#9 | **RV** |
 | S-17 | Xuất file (Export Excel) có chỉ báo đang xử lý và thông báo khi tải xong hoặc thất bại | R8 bước 2, R1#1 | **RV** |
 | S-18 | Badge / chấm thông báo phản ánh **đúng số lượng thật** và biến mất sau khi đã xử lý | R8 bước 7 | **RV** |
-| S-19 | Sau khi Block/Unblock, cột trạng thái Active của user cập nhật **ngay trên danh sách** mà không cần tải lại trang | R8 bước 2, R4 p.14 | **RV** ⚠️ |
-| S-20 | Reset Password nói rõ mật khẩu mới được xử lý thế nào (gửi qua email / hiển thị một lần), không để admin phải đoán | R1#1, R1#9, R8 bước 2 | **RV** ⚠️ |
+| S-19 | Sau khi đổi công tắc trạng thái (Active) và lưu, cột trạng thái trên danh sách cập nhật **ngay** mà không cần tải lại trang | R8 bước 2, R4 p.14 | **RV** |
+| S-20 | Trường mật khẩu nêu rõ **ràng buộc trước khi submit** (độ dài tối thiểu, ký tự bắt buộc), không để người dùng đoán rồi mới báo lỗi | R1#5, R1#9 | **RV** |
 
 ---
 
@@ -194,7 +194,22 @@ Hệ quả trực tiếp: bản 6th ed. nêu đích danh *"novices, experts, **p
 
 ---
 
-## 6. Sản phẩm nhóm kèm theo
+## 6. Đối chiếu với EMS thật — các mục đã phải sửa lại
+
+Khảo sát trực tiếp trên `https://prod-dev.ems-fitus.cloud` ngày 01/08/2026 (đăng nhập admin, quan sát 3 màn hình pool C). Bốn mục viết từ tài liệu đã **sai so với sản phẩm thật** và được sửa:
+
+| ID | Bản viết từ tài liệu | Thực tế trên EMS | Đã sửa thành |
+|---|---|---|---|
+| **G-17** | Kiểm ảnh avatar hỏng → hiện fallback | Avatar **luôn** là chữ viết tắt, không có thẻ `<img>` nào trong bảng | Kiểm chữ viết tắt của **tên dài nhiều từ** có tràn vòng tròn không (vd "KHOA NGUYỄN QUANG ĐĂNG" → "KNQĐ") |
+| **N-17** | Cột **Audit** mở được lịch sử thay đổi | **Không có cột Audit.** Thông tin audit nằm ở hai cột CREATED / UPDATED, hiển thị người thao tác + thời điểm | Kiểm hai cột đó có đủ người thực hiện và mốc thời gian, giá trị thiếu có ký hiệu rõ ràng |
+| **S-20** | Reset Password nói rõ mật khẩu mới xử lý thế nào | **Không có chức năng Reset Password.** Mật khẩu chỉ đặt được lúc tạo user mới | Kiểm trường Password nêu ràng buộc **trước** khi submit |
+| **G-18, N-16, S-19** | — | Xác nhận có thật: cột Member Code (rỗng hiển thị `-`), 2 tiêu đề cột sắp xếp được, công tắc Active trong dialog Edit User | Giữ nguyên hướng kiểm, chỉnh lời cho khớp giao diện |
+
+**Bài học ghi nhận cho AI Critique:** ba trong sáu mục đặc thù mà AI (và cả tài liệu E2E) tự tin mô tả lại **không tồn tại trong sản phẩm thật**. Tài liệu mô tả một phiên bản EMS khác với phiên bản đang chạy — nghĩa là *"đặc thù sản phẩm"* không chỉ nằm ngoài tầm của AI, mà còn nằm ngoài tầm của tài liệu. Chỉ mở app ra xem mới biết.
+
+---
+
+## 7. Sản phẩm nhóm kèm theo
 
 | # | Sản phẩm | Vị trí |
 |---|---|---|
