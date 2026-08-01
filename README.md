@@ -41,8 +41,8 @@ hw03/
 
 | # | Hạng mục | Điểm | Trạng thái |
 |---|---|---|---|
-| 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | 🟡 Bản nháp 68 mục — **chờ nhóm review trên EMS thật** |
-| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | ⬜ Đã chốt C1/C2/C3 — **chờ EMS online** (ngrok `ERR_NGROK_3200` lúc 01/08 05:15 UTC) |
+| 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **74 mục**, đã đối chiếu EMS thật 01/08/2026 — chờ nhóm chốt |
+| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 74 mục |
 | 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
 | 3 | Task 3 — Cross-browser / platform | 25 | ⬜ Mẫu đã sẵn sàng |
 | 4 | Findings (Form + log tổng hợp) | 10 | ⬜ Mẫu đã sẵn sàng |
