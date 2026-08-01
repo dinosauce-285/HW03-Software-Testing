@@ -2,15 +2,17 @@
 
 **SUT:** EMS — Event Management System · https://promoter-starboard-prude.ngrok-free.dev/
 **Phạm vi phủ:** IA-01 (chuẩn UI chung) · IA-02 (forms) · IA-03 (navigation) · IA-04 (feedback/state)
-**Tổng số mục:** **68** (yêu cầu tối thiểu: > 40)
+**Tổng số mục:** **74** (yêu cầu tối thiểu: > 40)
 
 | IA | Số mục | Do AI sinh | Nhóm bổ sung |
 |---|---|---|---|
-| IA-01 — Chuẩn UI chung | 16 | 10 | 6 |
+| IA-01 — Chuẩn UI chung | 18 | 10 | 8 |
 | IA-02 — Forms | 19 | 8 | 11 |
-| IA-03 — Navigation | 15 | 6 | 9 |
-| IA-04 — Feedback / State | 18 | 6 | 12 |
-| **Tổng** | **68** | **30** | **38** |
+| IA-03 — Navigation | 17 | 6 | 11 |
+| IA-04 — Feedback / State | 20 | 6 | 14 |
+| **Tổng** | **74** | **30** | **44** |
+
+Các mục đánh dấu **⚠️** là mục suy ra từ tài liệu, **chưa xác minh trên EMS thật** (app đang offline) — xem §3 của `AI-Prompts-Log.md`.
 
 ---
 
@@ -54,6 +56,8 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình | R1#2, R3#2, R8 bước 1 | **RV** |
 | G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu | R3#2, R8 bước 1 | **RV** |
 | G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác | R1#1, R8 bước 1 | **RV** |
+| G-17 | Avatar không tải được / user chưa có ảnh phải hiển thị fallback (chữ cái đầu hoặc icon), không hiện icon ảnh hỏng và không xô lệch chiều cao dòng | R8 bước 2, R1#1 | **RV** ⚠️ |
+| G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột, và định dạng nhất quán giữa danh sách và trang chi tiết | R8 bước 2, R3#1 | **RV** ⚠️ |
 
 ---
 
@@ -102,6 +106,8 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | N-13 | Thứ tự sau khi kéo-thả được **lưu đúng** sau khi Save và giữ nguyên khi tải lại trang | R8 bước 3 | **RV** |
 | N-14 | Kéo-thả có **phương án thay thế không dùng chuột** (nút lên/xuống hoặc nhập số thứ tự) | R10 SC 2.5.7, R3#2 | **RV** |
 | N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** | R4 p.14 (Menu options align with application mode) | **RV** |
+| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang | R1#1, R4 p.16 | **RV** ⚠️ |
+| N-17 | Cột **Audit** mở được lịch sử thay đổi của user và có đường quay lại danh sách mà không mất bộ lọc đang áp | R8 bước 2, R1#3 | **RV** ⚠️ |
 
 ---
 
@@ -127,6 +133,8 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | S-16 | Hành động bị chặn vì ràng buộc nghiệp vụ phải giải thích **lý do** (vd không xoá được Campus vì đang được sự kiện tham chiếu), không chỉ báo "thất bại" | R8 bước 3, R1#9 | **RV** |
 | S-17 | Xuất file (Export Excel) có chỉ báo đang xử lý và thông báo khi tải xong hoặc thất bại | R8 bước 2, R1#1 | **RV** |
 | S-18 | Badge / chấm thông báo phản ánh **đúng số lượng thật** và biến mất sau khi đã xử lý | R8 bước 7 | **RV** |
+| S-19 | Sau khi Block/Unblock, cột trạng thái Active của user cập nhật **ngay trên danh sách** mà không cần tải lại trang | R8 bước 2, R4 p.14 | **RV** ⚠️ |
+| S-20 | Reset Password nói rõ mật khẩu mới được xử lý thế nào (gửi qua email / hiển thị một lần), không để admin phải đoán | R1#1, R1#9, R8 bước 2 | **RV** ⚠️ |
 
 ---
 
@@ -149,6 +157,9 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | S-16 | Chặn xoá vì ràng buộc tham chiếu | AI sinh mục "có thông báo lỗi", nhưng không biết EMS có nhóm ràng buộc toàn vẹn dữ liệu (Campus/Category/Context đang được tham chiếu) — nơi *lý do* mới là thứ quan trọng |
 | S-17, S-18 | Export Excel · badge thông báo | Chức năng cụ thể của EMS |
 | G-11 | Không lộ mã trạng thái nội bộ | Rủi ro này chỉ thấy được khi biết EMS có các mã như `OUTSIDE_CHECKIN_WINDOW` |
+| G-17, G-18 | Avatar fallback · Member Code không bị cắt | AI không biết bảng Users của EMS có cột Avatar+Name và Member Code. Trường hợp ảnh hỏng và mã bị cắt là rủi ro cụ thể của đúng hai cột đó |
+| N-16, N-17 | Chỉ báo hướng sắp xếp · cột Audit | AI không biết bảng có cột **Audit** riêng dẫn tới lịch sử thay đổi; cũng không sinh mục về trạng thái sắp xếp vì coi sort là hành vi mặc định của component bảng |
+| S-19, S-20 | Cập nhật trạng thái Active sau Block · cách xử lý mật khẩu mới | Hai luồng nghiệp vụ riêng của EMS (Block/Unblock, Reset Password). Riêng S-20 là câu hỏi AI không đặt ra được vì không biết EMS chọn cơ chế nào |
 | G-14, G-15, G-16 | i18n EN/VI | AI có nhắc "hỗ trợ đa ngôn ngữ" chung chung, nhưng **không** sinh 3 mục cụ thể: phủ dịch toàn bộ, tràn text do tiếng Việt dài hơn, và lưu lựa chọn ngôn ngữ. Phải nhìn app song ngữ mới tách được |
 | N-15 | Truy cập URL admin khi không đủ quyền | EMS có hai lớp giao diện admin/user chia sẻ cùng domain — rủi ro này đặc thù kiến trúc đó |
 

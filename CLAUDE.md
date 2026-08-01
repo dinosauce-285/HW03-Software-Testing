@@ -12,10 +12,10 @@
 | Họ tên | `Lý Quốc Thạnh` |
 | Email MSSV | `23127262@student.hcmus.edu.vn`|
 | Kịch bản | `C` |
-| 3 màn hình | **C1** Danh sách Users · **C2** Assign Role / sửa user · **C3** Dialog Block-Unblock + Reset Password |
+| 3 màn hình | **C1** Users Management `/dashboard/admin/users` · **C2** dialog *Edit User* · **C3** dialog *Create New User* |
 
-Export ra Excel (C4) **không** tính là màn hình thứ 4 — kiểm như một chức năng bên trong C1 (mục `S-17`, `G-03`).
-URL cụ thể của 3 màn hình: `<điền khi EMS online>`
+Đã khảo sát thực tế 01/08/2026: EMS **không có** Reset Password; Assign Role là dropdown và Block/Unblock là công tắc Active, cả hai nằm trong dialog Edit User. Lý do sai lệch so với đề §5 đã ghi ở `Checklist-Execution.md §1`.
+Export Excel và dialog Delete User kiểm kèm trong C1, không tính là màn hình riêng.
 
 Khi còn `<điền>` mà cần dùng → **hỏi**, không tự suy ra, không dùng giá trị ví dụ.
 
@@ -28,8 +28,18 @@ Mỗi prompt làm thay đổi bài làm → thêm một dòng vào `deliverables
 *Thiếu AI Audit Report → 0 điểm.*
 
 **R2 — Commit theo từng bước.** *(2026.HW03.GUI Usability EMS_Vi.md §13 · ___2026.Homework.Policies.md — "Version Control Requirements")*
-Xong một bước có ý nghĩa (một màn hình chạy xong, một phiên user test, một lần chạy cross-platform, một lần sửa checklist) → đề xuất commit message theo quy ước trong `deliverables/appendix/Git-Commit-Log.md`, commit khi người dùng đồng ý.
-**Commit message KHÔNG kèm trailer `Co-Authored-By`** — bài nộp phải đứng tên sinh viên; việc dùng AI đã được khai báo ở AI Audit Report (R1), không khai qua git trailer.
+Xong một bước có ý nghĩa (một màn hình chạy xong, một phiên user test, một lần chạy cross-platform, một lần sửa checklist) → đề xuất commit message, commit khi người dùng đồng ý.
+
+**Định dạng bắt buộc — Conventional Commits, viết bằng tiếng Anh:**
+```
+<type>(<scope>): <mô tả ngắn, thức mệnh lệnh, không viết hoa đầu, không dấu chấm cuối>
+```
+- `type` ∈ `feat` · `fix` · `docs` · `chore` · `refactor` · `test`
+- `scope` ∈ `task1a` · `task1b` · `task2` · `task3` · `findings` · `appendix` · `repo`
+- Ví dụ: `docs(task1b): run GUI checklist on users management screen`
+
+**KHÔNG kèm trailer `Co-Authored-By`** — bài nộp phải đứng tên sinh viên; việc dùng AI đã khai ở AI Audit Report (R1), không khai qua git trailer.
+Chi tiết quy ước và ví dụ: `deliverables/appendix/Git-Commit-Log.md`.
 *"For every step within a requirement, students must create a clear and explicit Git commit message."*
 
 **R3 — Mọi phát hiện vào Findings Log.** *(2026.HW03.GUI Usability EMS_Vi.md §7)*
@@ -86,6 +96,9 @@ Không làm hộ, không tự nhắc mỗi phiên. Chỉ trả lời khi đượ
 | Bài giảng môn học | `references/S13_GUI Testing & Usability Testing.pdf` |
 | Cấu trúc thư mục, trạng thái, self-assessment | `README.md` |
 
-**SUT:** https://promoter-starboard-prude.ngrok-free.dev/ · admin `admin@gmail.com` / `Admin@123`
+**SUT:** https://prod-dev.ems-fitus.cloud · admin `admin@gmail.com` / `Admin@123`
+Khu quản trị: `/dashboard/admin` — route `/admin/...` trả 404.
+*(URL ngrok trong đề bài đã chết: `ERR_NGROK_3200`.)*
 Dữ liệu EMS có thể bị reset — chụp bằng chứng ngay khi làm.
+EMS là hệ thống **dùng chung với sinh viên khác**: chỉ mở dialog để quan sát, không lưu/xoá dữ liệu khi khảo sát.
 **Nộp findings:** https://forms.gle/CJQFQCAXcsDbXDMM9

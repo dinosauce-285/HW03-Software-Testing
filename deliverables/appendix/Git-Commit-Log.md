@@ -10,39 +10,52 @@
 
 ## Quy ước commit message
 
+Chuẩn **Conventional Commits**, viết bằng **tiếng Anh**:
+
 ```
-<task>: <hành động cụ thể>
+<type>(<scope>): <mô tả ngắn>
 ```
 
-| Prefix | Dùng cho |
+Mô tả dùng thức mệnh lệnh (`add`, `run`, `fix`), không viết hoa chữ đầu, không có dấu chấm cuối.
+
+| `type` | Dùng cho |
 |---|---|
-| `task1a` | Thiết kế / chỉnh checklist dùng chung |
+| `feat` | Thêm sản phẩm mới của bài (checklist, ma trận, Agent Skill) |
+| `fix` | Sửa lỗi trong chính bài làm |
+| `docs` | Viết / cập nhật tài liệu, báo cáo, kết quả chạy |
+| `chore` | Hạ tầng repo, cấu trúc thư mục, công cụ |
+| `refactor` | Sắp xếp lại nội dung, không đổi kết luận |
+| `test` | Kịch bản, script khảo sát |
+
+| `scope` | Phạm vi |
+|---|---|
+| `task1a` | Checklist dùng chung |
 | `task1b` | Chạy checklist — **một commit cho mỗi màn hình** |
 | `task2` | User testing — **một commit cho mỗi phiên** |
 | `task3` | Cross-platform — **một commit cho mỗi lần chạy / mỗi màn hình** |
-| `findings` | Ghi log lỗi, nộp Google Form |
-| `docs` | Báo cáo, README, phụ lục |
-| `ai` | Cập nhật AI Audit Report / AI Critique |
-| `review` | Peer review |
+| `findings` | Log lỗi, nộp Google Form |
+| `appendix` | AI Audit Report, AI Critique, git log |
+| `repo` | Cấu trúc, README, CLAUDE.md |
 
 **Ví dụ tốt:**
 ```
-task1a: dựng checklist 68 mục phủ IA-01..IA-04
-task1a: bổ sung 6 mục accessibility sau khi đối chiếu WCAG 2.2
-task1b: chạy checklist trên màn hình Users list (C1)
-task1b: ghi 4 lỗi phát hiện ở màn hình Assign Role
-task2: chạy phiên pilot P0, chỉnh lại task scenario
-task2: chạy phiên P3, ghi note quan sát + SUS
-task3: chạy ma trận MH1 trên macOS/Safari/desktop
-findings: nộp T1B-01..T1B-07 lên Google Form
+feat(task1a): add 68-item GUI checklist covering IA-01 to IA-04
+docs(task1a): explain why AI missed accessibility items
+docs(task1b): run GUI checklist on users management screen
+docs(findings): log swapped validation messages on create user dialog
+docs(task2): record pilot session and refine task scenario
+docs(task2): record session P3 with observation notes and SUS score
+docs(task3): run compatibility matrix for screen C1 on macos safari desktop
 ```
 
-**Ví dụ xấu** *(sẽ bị trừ điểm vì không thể hiện "mỗi bước một commit")*:
+**Ví dụ xấu** *(bị trừ điểm vì không thể hiện "mỗi bước một commit")*:
 ```
 update
 final
 done homework
 ```
+
+**Không kèm trailer `Co-Authored-By`** — việc dùng AI khai ở `AI-Audit-Report.md`.
 
 ---
 

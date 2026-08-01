@@ -11,32 +11,63 @@
 
 > ⚠️ Chính sách môn học: *"Choosing tasks that are too simple will limit the maximum achievable grade"* — chọn màn hình quá đơn giản sẽ **giới hạn điểm tối đa**, kể cả khi làm đủ.
 
-| # | Mã | Tên màn hình | URL | Lý do chọn | Chất liệu giao diện |
+> **URL hệ thống:** `https://prod-dev.ems-fitus.cloud` — EMS đã chuyển khỏi ngrok sang domain này. Khu quản trị nằm dưới `/dashboard/admin` (route `/admin/...` trả về 404).
+
+| # | Mã | Tên màn hình | URL / cách mở | Lý do chọn | Chất liệu giao diện *(đã khảo sát thực tế)* |
 |---|---|---|---|---|---|
-| 1 | **C1** | Danh sách Users | `<điền>` | Màn hình gốc của pool C; giàu chất liệu bảng và điều hướng — là nơi duy nhất kiểm được search, lọc role/active, phân trang, empty state | Bảng (Avatar+Name, Role, Member Code, Active, Audit), search, filter, phân trang, Export |
-| 2 | **C2** | Assign Role / sửa user | `<điền>` | **Màn hình duy nhất trong pool C có form thật** — nếu bỏ, gần như toàn bộ 19 mục IA-02 sẽ thành N/A và độ phủ checklist bị rỗng một mảng | Form, chọn role, validation, submit |
-| 3 | **C3** | Dialog Block-Unblock + Reset Password | `<điền>` | **Nơi duy nhất có hành động phá huỷ và dialog xác nhận** — gánh phần lớn IA-04; đồng thời kiểm được ghi nhận audit sau thao tác | Dialog xác nhận, toast, đổi trạng thái Active, audit log |
+| 1 | **C1** | Users Management | `/dashboard/admin/users` | Màn hình gốc của pool C, giàu chất liệu bảng và điều hướng nhất | 7 cột (USER · ROLE · MEMBER CODE · STATUS · CREATED · UPDATED · ACTIONS), ô Search, bộ lọc trên cột ROLE và STATUS, 2 cột sắp xếp được, phân trang **79 user / 16 trang**, chọn số dòng 5–100, nút **Export** và **Add User**, avatar dạng chữ viết tắt |
+| 2 | **C2** | Dialog **Edit User** | Mở từ nút bút chì ở cột ACTIONS của C1 | Form sửa user — **nơi hiện thực cả Assign Role lẫn Block/Unblock** trong build này | 7 trường: First Name · Last Name · Email · Phone Number · **Role** (dropdown Admin/Guest/Lecturer/Student) · Member Code · **Active** (công tắc). Nút Cancel / Save Changes |
+| 3 | **C3** | Dialog **Create New User** | Mở từ nút **Add User** ở C1 | Bề mặt validation lớn nhất của pool C — 8 trường, nhiều loại ràng buộc khác nhau | 8 trường (thêm **Password** có nút hiện/ẩn), validation inline khi submit rỗng, Active mặc định bật. Nút Cancel / Create User |
 
-### Vì sao không chọn C4 — Export ra Excel
+### ⚠️ Sai lệch so với danh sách gợi ý của đề — có lý do
 
-Export chỉ gồm một nút và một file tải về, không đủ chất liệu để coi là một màn hình độc lập; chọn nó sẽ rơi vào đúng trường hợp *"tasks that are too simple"* mà chính sách môn cảnh báo.
-**Không bỏ nội dung này:** Export vẫn được kiểm như một **chức năng bên trong C1**, qua các mục `S-17` (chỉ báo đang xử lý + thông báo khi tải xong/thất bại) và `G-03` (tính đầy đủ, nhất quán của các cột).
+Đề §5 gợi ý cho kịch bản C: *(C1) Danh sách Users · (C2) Assign Role / sửa user · (C3) Dialog Block-Unblock và Reset-Password · (C4) Export ra Excel*. Khảo sát thực tế trên EMS ngày 01/08/2026 cho thấy:
+
+| Chức năng đề nêu | Thực tế trong build hiện tại |
+|---|---|
+| Assign Role | **Không có màn hình riêng** — là dropdown `Role` bên trong dialog Edit User |
+| Block / Unblock | **Không có dialog riêng** — là công tắc `Active` bên trong dialog Edit User |
+| **Reset Password** | **Không tồn tại.** Cột ACTIONS chỉ có 2 nút: sửa và xoá. Mật khẩu chỉ đặt được lúc tạo user mới |
+| Cột **Audit** | Không có cột tên Audit; thông tin audit nằm ở hai cột CREATED / UPDATED (hiển thị người thao tác) |
+
+Đề §5 cho phép *"chọn màn hình khác trong cùng nhóm nhưng phải giải thích lý do"* — đây là lý do. Bộ C1/C2/C3 ở trên bám sát pool C và **giữ nguyên phạm vi chức năng đề yêu cầu** (danh sách, gán vai trò, khoá/mở khoá), chỉ khác ở chỗ chúng được hiện thực trong dialog thay vì màn hình riêng.
+
+### Hai chức năng kiểm kèm, không tính là màn hình riêng
+
+- **Export ra Excel** — chỉ là một nút và một file tải về, quá mỏng để tính là màn hình *(chính sách môn: "tasks that are too simple will limit the maximum achievable grade")*. Kiểm trong C1 qua mục `S-17` và `G-03`.
+- **Dialog Delete User** — nội dung ngắn (*"Are you sure you want to delete user X? This action cannot be undone."* + Cancel/Confirm). Kiểm trong C1 qua mục `S-06`, `S-07`, `S-08`.
 
 ### Phân bố phủ IA của bộ 3 màn hình
 
 | Màn hình | Nhóm IA gánh chính |
 |---|---|
-| C1 | IA-01 (bảng, cột, empty state) + IA-03 (search, lọc, phân trang, deep link) |
-| C2 | **IA-02** (form, validation, trường bắt buộc) |
-| C3 | **IA-04** (dialog, toast, màu trạng thái, phản hồi) |
+| C1 | IA-01 (bảng, cột, avatar, empty state) + IA-03 (search, lọc cột, sắp xếp, phân trang, deep link) |
+| C2 | **IA-02** (form sửa) + IA-04 (công tắc Active, phản hồi sau lưu) |
+| C3 | **IA-02** (form tạo, validation đầy đủ) + IA-04 (dialog, thông báo lỗi) |
 
-> Ba màn hình gánh ba nhóm khác nhau → không chồng lấn phạm vi, và cả 4 IA đều có màn hình đại diện.
-
-**Phương án dự phòng:** đề §4 liệt kê **audit log** cũng thuộc pool C. Nếu khảo sát thực tế cho thấy C3 quá mỏng, thay bằng màn hình audit log (đề §5 cho phép chọn màn hình khác trong cùng pool nếu giải thích lý do).
+Cả 4 IA đều có màn hình đại diện; ba màn hình không chồng lấn phạm vi chức năng.
 
 **Không trùng với thành viên khác trong nhóm:** *(ghi rõ ai làm kịch bản/màn hình nào)*
 
-> ⚠️ **Chưa xác minh trên EMS thật** — tunnel ngrok báo `ERR_NGROK_3200` (offline) lúc 01/08/2026 05:15 UTC. Cần điền URL và xác nhận chất liệu giao diện của từng màn hình khi app online.
+---
+
+## 1b. Ghi chú khảo sát ban đầu — 01/08/2026
+
+Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không xoá** vì hệ thống dùng chung). Các quan sát dưới đây **cần bạn tự kiểm lại trên trình duyệt** trước khi đưa vào kết quả chính thức.
+
+| Quan sát | Ảnh hưởng tới mục checklist |
+|---|---|
+| **Không có breadcrumb** ở khu admin | `N-03` sẽ Failed hoặc N/A ở cả 3 màn hình |
+| Avatar là **chữ viết tắt trong vòng tròn**, không phải ảnh (`<img>` = 0) | `G-17` cần đổi cách kiểm: xem tên dài như "KHOA NGUYỄN QUANG ĐĂNG" → viết tắt "KNQĐ" có tràn vòng tròn không |
+| Cột CREATED/UPDATED hiển thị chuỗi **"Tôi là Admin"** (tiếng Việt) trong giao diện đang để **English** | Ứng viên Failed cho `G-14` (i18n phủ toàn bộ) |
+| Trường bắt buộc **không có dấu `*`** trước khi submit | Ứng viên Failed cho `F-02` |
+| Thông báo lỗi hiện **inline ngay dưới từng trường** | Ứng viên Passed cho `F-04` |
+| Dialog xoá có câu *"This action cannot be undone"* | Ứng viên Passed cho `S-08` |
+| Member Code rỗng hiển thị `-` | Kiểm `G-18` |
+| Bộ lọc cột ROLE: All Roles / Admin / Guest / Lecturer / Student | Kiểm `N-16`, `N-09` |
+| Chưa mở được menu đổi ngôn ngữ bằng script | Cần bạn tự bấm cờ ở header để kiểm `G-14`, `G-15`, `G-16` |
+
+Ảnh khảo sát tham khảo: `scratchpad/ems-survey/` — **không dùng làm bằng chứng nộp bài**; đề §12 yêu cầu ảnh phải là màn hình **bạn** đã kiểm tra, nên hãy tự chụp lại khi chạy checklist.
 
 ---
 
