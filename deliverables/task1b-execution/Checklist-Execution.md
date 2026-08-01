@@ -2,22 +2,41 @@
 
 > Yêu cầu: đề §6 Task 1B — chạy **checklist dùng chung của nhóm** (68 mục) trên **≥ 3 màn hình**, đánh `Passed` / `Failed` theo từng màn hình, cột **Notes** ghi lý do fail, **ảnh chụp chỉ cho mục Failed**.
 
-**Sinh viên:** *(MSSV – Họ tên)*
-**Kịch bản đã chọn:** *(A / B / C / D)*
+**Sinh viên:** 23127262 – Lý Quốc Thạnh
+**Kịch bản đã chọn:** **C — Admin quản lý người dùng**
 
 ---
 
 ## 1. Màn hình đã chọn và lý do
 
-> ⚠️ Chính sách môn học: *"Choosing tasks that are too simple will limit the maximum achievable grade"* — chọn màn hình quá đơn giản sẽ **giới hạn điểm tối đa**, kể cả khi làm đủ. Ưu tiên màn hình có form, validation, upload, trạng thái động.
+> ⚠️ Chính sách môn học: *"Choosing tasks that are too simple will limit the maximum achievable grade"* — chọn màn hình quá đơn giản sẽ **giới hạn điểm tối đa**, kể cả khi làm đủ.
 
-| # | Mã | Tên màn hình | URL | Lý do chọn | Độ phức tạp giao diện |
+| # | Mã | Tên màn hình | URL | Lý do chọn | Chất liệu giao diện |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | **C1** | Danh sách Users | `<điền>` | Màn hình gốc của pool C; giàu chất liệu bảng và điều hướng — là nơi duy nhất kiểm được search, lọc role/active, phân trang, empty state | Bảng (Avatar+Name, Role, Member Code, Active, Audit), search, filter, phân trang, Export |
+| 2 | **C2** | Assign Role / sửa user | `<điền>` | **Màn hình duy nhất trong pool C có form thật** — nếu bỏ, gần như toàn bộ 19 mục IA-02 sẽ thành N/A và độ phủ checklist bị rỗng một mảng | Form, chọn role, validation, submit |
+| 3 | **C3** | Dialog Block-Unblock + Reset Password | `<điền>` | **Nơi duy nhất có hành động phá huỷ và dialog xác nhận** — gánh phần lớn IA-04; đồng thời kiểm được ghi nhận audit sau thao tác | Dialog xác nhận, toast, đổi trạng thái Active, audit log |
+
+### Vì sao không chọn C4 — Export ra Excel
+
+Export chỉ gồm một nút và một file tải về, không đủ chất liệu để coi là một màn hình độc lập; chọn nó sẽ rơi vào đúng trường hợp *"tasks that are too simple"* mà chính sách môn cảnh báo.
+**Không bỏ nội dung này:** Export vẫn được kiểm như một **chức năng bên trong C1**, qua các mục `S-17` (chỉ báo đang xử lý + thông báo khi tải xong/thất bại) và `G-03` (tính đầy đủ, nhất quán của các cột).
+
+### Phân bố phủ IA của bộ 3 màn hình
+
+| Màn hình | Nhóm IA gánh chính |
+|---|---|
+| C1 | IA-01 (bảng, cột, empty state) + IA-03 (search, lọc, phân trang, deep link) |
+| C2 | **IA-02** (form, validation, trường bắt buộc) |
+| C3 | **IA-04** (dialog, toast, màu trạng thái, phản hồi) |
+
+> Ba màn hình gánh ba nhóm khác nhau → không chồng lấn phạm vi, và cả 4 IA đều có màn hình đại diện.
+
+**Phương án dự phòng:** đề §4 liệt kê **audit log** cũng thuộc pool C. Nếu khảo sát thực tế cho thấy C3 quá mỏng, thay bằng màn hình audit log (đề §5 cho phép chọn màn hình khác trong cùng pool nếu giải thích lý do).
 
 **Không trùng với thành viên khác trong nhóm:** *(ghi rõ ai làm kịch bản/màn hình nào)*
+
+> ⚠️ **Chưa xác minh trên EMS thật** — tunnel ngrok báo `ERR_NGROK_3200` (offline) lúc 01/08/2026 05:15 UTC. Cần điền URL và xác nhận chất liệu giao diện của từng màn hình khi app online.
 
 ---
 

@@ -1,6 +1,8 @@
 # HW03 — GUI & Usability Testing trên EMS
 
-**Sinh viên:** *(MSSV – Họ tên)* · **Kịch bản:** *(A/B/C/D)* · **Repo:** https://github.com/dinosauce-285/HW03-Software-Testing
+**Sinh viên:** 23127262 – Lý Quốc Thạnh · **Kịch bản:** **C — Admin quản lý người dùng** · **Repo:** https://github.com/dinosauce-285/HW03-Software-Testing
+
+**3 màn hình:** C1 Danh sách Users · C2 Assign Role / sửa user · C3 Dialog Block-Unblock + Reset Password
 
 > Quy trình làm việc và các quy tắc bắt buộc: xem [`CLAUDE.md`](CLAUDE.md)
 
@@ -40,7 +42,7 @@ hw03/
 | # | Hạng mục | Điểm | Trạng thái |
 |---|---|---|---|
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | 🟡 Bản nháp 68 mục — **chờ nhóm review trên EMS thật** |
-| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | ⬜ Chờ chốt kịch bản + màn hình |
+| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | ⬜ Đã chốt C1/C2/C3 — **chờ EMS online** (ngrok `ERR_NGROK_3200` lúc 01/08 05:15 UTC) |
 | 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
 | 3 | Task 3 — Cross-browser / platform | 25 | ⬜ Mẫu đã sẵn sàng |
 | 4 | Findings (Form + log tổng hợp) | 10 | ⬜ Mẫu đã sẵn sàng |
