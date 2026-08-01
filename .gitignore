@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Tạm
+*.tmp
+~$*
+
+# File nặng — KHÔNG commit lên GitHub, giữ ở máy và bỏ vào zip khi nộp
+# (Chính sách môn: bằng chứng phải nằm trong zip, không dựa vào link online)
+*.mp4
+*.mov
+*.mkv
+evidence/**/*.zip
