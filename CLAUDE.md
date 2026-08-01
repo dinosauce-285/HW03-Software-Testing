@@ -44,11 +44,7 @@ Hạng mục đổi trạng thái → cập nhật bảng trong `README.md` ngay
 Mọi nội dung sinh ra mà chưa được kiểm trên EMS thật phải có ghi chú ⚠️ và ô ☐ để người dùng verify. Nói rõ trong câu trả lời, không im lặng.
 *"Nộp thẳng output thô của AI là không chấp nhận được."*
 
-**R6 — Không bịa dữ liệu chống gian lận.** *(2026.HW03.GUI Usability EMS_Vi.md §12 · ___2026.Homework.Policies.md — "Anti-Cheat Policy")*
-Tuyệt đối không sinh: tên/liên hệ người tham gia, nội dung phiên user testing, điểm SUS, kết quả Pass/Fail của ô ma trận, ảnh chụp. Chỉ tạo **mẫu trống**.
-*TA gọi ngẫu nhiên 2 người xác minh; mạo danh → 0 điểm Task 2. Vi phạm anti-cheat bị xử như gian lận học thuật.*
-
-**R7 — Số liệu phải nhất quán.** *(quy tắc vận hành — không trích từ tài liệu; hỗ trợ 2026.HW03.GUI Usability EMS_Vi.md §7 và §15)*
+**R6 — Số liệu phải nhất quán.** *(quy tắc vận hành — không trích từ tài liệu; hỗ trợ 2026.HW03.GUI Usability EMS_Vi.md §7 và §15)*
 Khi số mục checklist / số findings / số ô ma trận thay đổi → cập nhật **đồng thời** mọi nơi trích số đó, và **đếm lại bằng lệnh** (`grep -c`), không tin trí nhớ.
 *§7 yêu cầu file tổng hợp khớp với submission trên form; §15 yêu cầu test summary khớp với nội dung bài. Số liệu lệch giữa các file làm hỏng cả hai.*
 
