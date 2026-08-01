@@ -159,7 +159,7 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 | G-11 | Không lộ mã trạng thái nội bộ | Rủi ro này chỉ thấy được khi biết EMS có các mã như `OUTSIDE_CHECKIN_WINDOW` |
 | G-17, G-18 | Avatar fallback · Member Code không bị cắt | AI không biết bảng Users của EMS có cột Avatar+Name và Member Code. Trường hợp ảnh hỏng và mã bị cắt là rủi ro cụ thể của đúng hai cột đó |
 | N-16, N-17 | Chỉ báo hướng sắp xếp · cột Audit | AI không biết bảng có cột **Audit** riêng dẫn tới lịch sử thay đổi; cũng không sinh mục về trạng thái sắp xếp vì coi sort là hành vi mặc định của component bảng |
-| S-19, S-20 | Cập nhật trạng thái Active sau Block · cách xử lý mật khẩu mới | Hai luồng nghiệp vụ riêng của EMS (Block/Unblock, Reset Password). Riêng S-20 là câu hỏi AI không đặt ra được vì không biết EMS chọn cơ chế nào |
+| S-19, S-20 | Cập nhật trạng thái Active sau khi lưu · ràng buộc của trường mật khẩu | Hai luồng nghiệp vụ riêng của EMS. AI không biết Block/Unblock được hiện thực bằng công tắc trong dialog sửa, cũng không biết mật khẩu chỉ đặt được lúc tạo user |
 | G-14, G-15, G-16 | i18n EN/VI | AI có nhắc "hỗ trợ đa ngôn ngữ" chung chung, nhưng **không** sinh 3 mục cụ thể: phủ dịch toàn bộ, tràn text do tiếng Việt dài hơn, và lưu lựa chọn ngôn ngữ. Phải nhìn app song ngữ mới tách được |
 | N-15 | Truy cập URL admin khi không đủ quyền | EMS có hai lớp giao diện admin/user chia sẻ cùng domain — rủi ro này đặc thù kiến trúc đó |
 

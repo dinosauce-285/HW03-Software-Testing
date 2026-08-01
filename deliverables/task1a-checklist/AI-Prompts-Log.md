@@ -57,12 +57,14 @@
 
 `docs/2026.HW03.GUI Usability EMS_Vi.md` §2 quy định: *"Mọi kết quả AI sinh ra phải được sinh viên review kỹ… **nộp thẳng output thô của AI là không chấp nhận được**."*
 
-Checklist hiện tại **chưa được kiểm chứng trên EMS thật**. Trước khi coi Task 1A là hoàn tất, nhóm phải:
+- [x] **Đối chiếu checklist với EMS thật** — hoàn tất 01/08/2026 trên `https://prod-dev.ems-fitus.cloud`. Ba mục (G-17, N-17, S-20) sai so với sản phẩm thật đã được viết lại; chi tiết ở §6 của checklist
+- [x] **Bổ sung 6 mục đặc thù pool C** (G-17, G-18, N-16, N-17, S-19, S-20) kèm lý do AI bỏ sót → §5.1 của checklist
+- [x] Quy ước **N/A** và cách tính tỉ lệ pass — đã ghi ở đầu checklist
 
-- [ ] Mở EMS và **đối chiếu từng mục** — mục nào không áp dụng được cho EMS thì bỏ hoặc sửa lời
-- [ ] Kiểm lại các con số đặc thù EMS trong mục F-18 (**4:3**, **24:9**), S-11 (**6 màu**), S-15 (**4 nhánh trạng thái**) — tài liệu E2E ghi vậy nhưng phải xác nhận trên app đang chạy
-- [ ] Mỗi thành viên **bổ sung ít nhất 2 mục của riêng mình** phát hiện khi dùng app, kèm lý do AI bỏ sót → ghi tiếp vào §5 của checklist
-- [ ] Thống nhất trong nhóm quy ước **N/A** và cách tính tỉ lệ pass
+Còn lại:
+
+- [ ] Kiểm các con số đặc thù kịch bản **A** trong mục F-18 (**4:3**, **24:9**), S-11 (**6 màu**), S-15 (**4 nhánh trạng thái**) — thành viên phụ trách kịch bản A xác nhận, vì các mục này không thuộc phạm vi 3 màn hình của kịch bản C
+- [ ] **Thành viên khác trong nhóm review** và bổ sung mục của riêng họ theo kịch bản mình phụ trách
 - [ ] Điền giờ cụ thể vào bảng §1 và chuyển toàn bộ log này vào `deliverables/appendix/AI-Audit-Report.md`
 
 > Lưu ý §18: *"Sao chép giữa sinh viên — **kể cả prompt** — → 0 điểm cho cả hai bên."* Checklist được phép giống nhau trong cùng nhóm; **prompt và phần thực thi thì không**.
