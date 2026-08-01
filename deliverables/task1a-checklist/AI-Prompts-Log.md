@@ -1,6 +1,11 @@
-# HW03 · Task 1 Phần A — Log prompt AI (sản phẩm nhóm số 3)
+# HW03 · Task 1 Phần A — Log prompt AI **cá nhân**
 
-> Yêu cầu: `docs/2026.HW03.GUI Usability EMS_Vi.md` §6 Task 1A — *"các **prompt AI** đã dùng để sinh và tinh chỉnh checklist"*; và §10 — AI Audit Report ghi **tên công cụ · ngày giờ · prompt · output**.
+> ⚠️ **File này KHÔNG gửi cho nhóm.** Đây là nhật ký tương tác AI của riêng tôi, dùng làm nguồn cho `deliverables/appendix/AI-Audit-Report.md` (đề §10).
+> Phần prompt **dùng chung để xây checklist** — thứ đề §6 và §15 yêu cầu nộp ở cấp nhóm — đã tách sang [`AI-Prompts-Nhom.md`](AI-Prompts-Nhom.md).
+>
+> **Vì sao tách:** đề §18 phạt *"sao chép giữa sinh viên — kể cả prompt — 0 điểm cho cả hai bên"*. Chỉ prompt xây checklist nhóm được phép giống nhau; các lượt hỏi để tự hiểu đề và phục vụ Task 1B/2/3 là của riêng từng người.
+>
+> Căn cứ: §6 Task 1A *(prompt sinh và tinh chỉnh checklist = sản phẩm nhóm)* · §10 *("Các prompt tạo checklist của nhóm cũng thuộc phần này")*.
 
 **Công cụ AI:** Claude Code (model Claude Opus 5)
 **Ngày phiên làm việc:** 01/08/2026

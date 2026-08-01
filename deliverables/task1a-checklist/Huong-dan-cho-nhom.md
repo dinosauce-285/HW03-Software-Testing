@@ -13,7 +13,9 @@
 |---|---|---|
 | `GUI-Checklist.md` | Checklist 74 mục, phủ IA-01…IA-04 | §15 — sản phẩm nhóm (1) |
 | `Task1A_Heuristics-Reference.md` | Danh sách nguồn R1–R10 (Nielsen, Norman, Shneiderman, slide S13, WCAG, SUS, severity, compatibility) | §15 — sản phẩm nhóm (2) |
-| `AI-Prompts-Log.md` | Các prompt đã dùng để sinh và tinh chỉnh checklist | §15 — sản phẩm nhóm (3) |
+| `AI-Prompts-Nhom.md` | 5 prompt đã dùng để sinh và tinh chỉnh checklist | §15 — sản phẩm nhóm (3) |
+
+> Theo đề §10, mỗi thành viên vẫn phải **chép các prompt này vào AI Audit Report cá nhân** của mình — *"Các prompt tạo checklist của nhóm (§6, Task 1 Phần A) cũng thuộc phần này."*
 
 Đề §15: *"Nộp một lần cho cả nhóm; mỗi thành viên giữ một bản."*
 
