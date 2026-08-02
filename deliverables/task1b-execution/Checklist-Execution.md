@@ -82,38 +82,129 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 ## 2. Bảng chạy checklist
 
-> Sao chép toàn bộ 88 mục từ [`../task1a-checklist/GUI-Checklist.md`](../task1a-checklist/GUI-Checklist.md) vào bảng dưới.
-> Giá trị mỗi ô: `Passed` · `Failed` · `N/A`. **Không được để trống.**
-> Mỗi `Failed` bắt buộc có **Notes** và **ảnh** trong `evidence/task1b/`.
+> **Nguồn:** 88 mục của [`../task1a-checklist/GUI-Checklist.md`](../task1a-checklist/GUI-Checklist.md).
+> Mỗi ô nhận `Passed` · `Failed` · `N/A` — **không để trống khi nộp**.
+> `Failed` bắt buộc kèm lý do ở cột Notes và ảnh trong `evidence/task1b/`.
 
-### IA-01 — Chuẩn UI chung
+**Cách các ô hiện có được điền — 02/08/2026:**
 
-| ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes (lý do Failed) | Ảnh |
-|---|---|---|---|---|---|---|
-| G-01 | Tiêu đề trang khớp với mục đang chọn trên sidebar | | | | | |
-| G-02 | Cùng chức năng dùng cùng nhãn ở mọi màn hình | | | | | |
-| … | *(chép tiếp G-03 → G-18)* | | | | | |
+| Loại ô | Cách xác định | Độ tin cậy |
+|---|---|---|
+| **N/A** | Mục thuộc kịch bản A/B/D, không có control tương ứng trên C1–C3 | Chắc chắn — lý do ghi ở cột Notes |
+| **Passed / Failed** | Đo trực tiếp trên EMS bằng Playwright: đọc DOM, computed style, thử submit, thử phím Esc | Có bằng chứng số ở cột Notes |
+| *(trống)* | Cần mắt người xét (thẩm mỹ, ngữ nghĩa, luồng nhiều bước) hoặc cần thao tác ghi dữ liệu | **Bạn tự điền** |
 
-### IA-02 — Forms
+> ⚠️ Các ô trống **không phải** đã kiểm mà không kết luận được — chúng là phần chưa kiểm. Đề §2 yêu cầu người review, nên phần này để bạn làm.
 
-| ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
-|---|---|---|---|---|---|---|
-| F-01 | Mọi ô nhập có nhãn thường trực | | | | | |
-| … | *(chép tiếp F-02 → F-26)* | | | | | |
+### IA-01 — Chuẩn UI chung (18 mục)
 
-### IA-03 — Navigation
+| ID | Mục kiểm tra | C1 | C2 | C3 | Notes / bằng chứng |
+|---|---|---|---|---|---|
+| G-01 | Tiêu đề trang khớp với mục đang được chọn trên sidebar/menu | Passed |  |  | **C1:** Tiêu đề "Users Management" khớp mục sidebar đang active |
+| G-02 | Cùng một chức năng dùng cùng một nhãn ở mọi màn hình (không lúc "Export" lúc "Xuất file") |  |  |  |  |
+| G-03 | Trong bảng dữ liệu: text canh trái, số canh phải, trạng thái canh giữa — nhất quán ở mọi bảng |  |  |  |  |
+| G-04 | Toàn hệ thống dùng tối đa 2 họ font; cỡ chữ theo thang nhất quán (tiêu đề / nội dung / chú thích) | Passed |  |  | **C1:** 1 họ font (ui-sans-serif), 6 cỡ chữ theo thang: 11/12/14/16/18/24px |
+| G-05 | Màu dùng đúng ngữ nghĩa: màu chính cho hành động chính, **đỏ chỉ dành cho lỗi / hành động phá huỷ** |  |  |  |  |
+| G-06 | Mỗi màn hình chỉ có **một** nút hành động chính; các nút còn lại ở dạng phụ |  |  |  |  |
+| G-07 | Nội dung không tràn ngang gây thanh cuộn ngang ở độ rộng màn hình ≥ 1280px | Passed |  |  | **C1:** scrollWidth 1425 = clientWidth 1425 → không cuộn ngang ở 1440px |
+| G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn |  |  |  |  |
+| G-09 | Trạng thái đang tải có skeleton/spinner; khi dữ liệu về **không gây nhảy layout** |  |  |  |  |
+| G-10 | Ảnh giữ đúng tỉ lệ khung, không bị méo hay co giãn sai | N/A | N/A | N/A | Avatar là chữ viết tắt, không có thẻ ảnh nào trên C1–C3 |
+| G-11 | Thuật ngữ dùng ngôn ngữ người dùng — **không lộ mã trạng thái nội bộ** ra giao diện (vd hiện thẳng `OUTSIDE_CHECKIN_WINDOW`) | Passed |  |  | **C1:** Không tìm thấy chuỗi dạng UPPER_SNAKE lộ ra giao diện |
+| G-12 | Tỉ lệ tương phản chữ/nền ≥ 4.5:1 (chữ thường), ≥ 3:1 (chữ lớn) | Failed |  |  | **C1:** Tương phản dưới ngưỡng WCAG 1.4.3: sidebar active 2.08:1 · nút Export 2.71:1 · nút Add User 2.08:1 · badge 4.14:1 (cần 4.5). *(chỉ tính phần tử dùng màu rgb; 75 phần tử dùng lab() không quy đổi được nên chưa xét)* |
+| G-13 | Nội dung vẫn đọc được và không vỡ layout khi zoom trình duyệt **200%** |  |  |  |  |
+| G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình |  |  |  |  |
+| G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu |  |  |  |  |
+| G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác |  |  |  |  |
+| G-17 | Avatar dạng chữ viết tắt phải nằm gọn trong vòng tròn với **tên dài nhiều từ** (vd "KHOA NGUYỄN QUANG ĐĂNG" → "KNQĐ"), không tràn, không đè lên tên | Passed |  |  | **C1:** 4 avatar viết tắt (AÂTN, KL, TPĐ, NAQ), không cái nào tràn khỏi vòng tròn |
+| G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột; giá trị rỗng có ký hiệu thống nhất và định dạng đồng nhất giữa các dòng | Passed |  |  | **C1:** Member Code hiển thị đủ, không bị cắt; giá trị rỗng dùng ký hiệu "-" thống nhất |
 
-| ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
-|---|---|---|---|---|---|---|
-| N-01 | Menu chính truy cập được mọi khu vực lớn | | | | | |
-| … | *(chép tiếp N-02 → N-19)* | | | | | |
+### IA-02 — Forms (26 mục)
 
-### IA-04 — Feedback / State
+| ID | Mục kiểm tra | C1 | C2 | C3 | Notes / bằng chứng |
+|---|---|---|---|---|---|
+| F-01 | Mọi ô nhập có nhãn hiển thị **thường trực**, không chỉ dựa vào placeholder (placeholder biến mất khi gõ) |  | Passed | Passed | **C2:** Có nhãn thường trực cho cả 7 trường. **Ghi chú:** nhãn không gắn `for`/`id` với ô nhập → bấm nhãn không focus vào ô, screen reader không đọc đúng cặp<br>**C3:** Có nhãn thường trực cho cả 8 trường. **Ghi chú:** không gắn `for`/`id`, giống C2 |
+| F-02 | Trường bắt buộc được đánh dấu rõ (dấu `*` hoặc chữ "bắt buộc") **trước khi** người dùng submit |  | Failed | Failed | **C2:** Không có dấu `*` nào, không có chữ "bắt buộc". Chỉ có thuộc tính HTML `required` (3 trường) — **vô hình với người dùng** trước khi submit<br>**C3:** Không dấu `*`, không chữ "bắt buộc"; chỉ có `required` ở tầng HTML (4 trường) |
+| F-03 | Submit khi thiếu trường bắt buộc → hệ thống **chặn**, không cho lưu |  |  | Passed | **C3:** Submit rỗng → dialog vẫn mở, không tạo user |
+| F-04 | Thông báo lỗi hiện **ngay cạnh trường bị lỗi**, không chỉ ở toast góc màn hình |  |  | Passed | **C3:** Lỗi hiện ngay dưới từng trường (class `mt-1 text-xs text-red-500`), không chỉ ở toast |
+| F-05 | Thông báo lỗi nói rõ **cách sửa**, không chỉ nói "dữ liệu không hợp lệ" |  |  | Passed | **C3:** Lỗi nói rõ từng trường: "Last name is required" · "Invalid email address" · "Role is required" · "Password must be at least 8 characters" |
+| F-06 | Giá trị mặc định của mỗi trường hợp lý (vd ngày bắt đầu = hôm nay), không rỗng hay vô nghĩa |  |  |  |  |
+| F-07 | Ràng buộc được áp **ngay tại control** (date picker chặn ngày không hợp lệ) thay vì chỉ báo lỗi sau khi submit | N/A | N/A | N/A | Không có date picker / control ràng buộc kiểu này trên C1–C3 |
+| F-08 | Sau khi submit lỗi, **focus tự nhảy về trường lỗi đầu tiên** |  |  | Failed | **C3:** Sau submit lỗi, focus vẫn nằm trên **nút Create User**, không nhảy về trường lỗi đầu tiên |
+| F-09 | Upload nêu rõ **định dạng, dung lượng tối đa và tỉ lệ khung** yêu cầu *trước khi* người dùng chọn file | N/A | N/A | N/A | Không có upload file trong pool C |
+| F-10 | Upload có chỉ báo tiến trình, có thể huỷ; thất bại thì báo lỗi rõ và cho thử lại | N/A | N/A | N/A | Không có upload file trong pool C |
+| F-11 | Nút Submit bị khoá trong lúc đang gửi để tránh **submit trùng** (double-submit) |  |  |  |  |
+| F-12 | Rời form khi đang nhập dở → **cảnh báo mất dữ liệu** trước khi điều hướng |  |  |  |  |
+| F-13 | Mọi ô nhập và control thao tác được **hoàn toàn bằng bàn phím**, có viền focus nhìn thấy rõ |  | Passed | Passed | **C2:** Thao tác bàn phím được, ô đang focus có outline solid 1px<br>**C3:** Thao tác bàn phím được, outline solid 1px |
+| F-14 | **Validation chéo ngày/giờ:** ngày kết thúc trước ngày bắt đầu bị chặn, có báo lỗi rõ | N/A | N/A | N/A | Validation ngày/giờ sự kiện — kịch bản A |
+| F-15 | **Validation chéo:** thời gian đóng đăng ký không được sau thời điểm sự kiện kết thúc | N/A | N/A | N/A | Thời gian đóng đăng ký — kịch bản A |
+| F-16 | **Trường bắt buộc có điều kiện:** khi bật một loại đăng ký (Student/Lecturer/Guest), mục con **Roles** hiện ra với công tắc **Is Unlimited**; khi tắt, | N/A | N/A | N/A | Công tắc loại đăng ký — kịch bản A |
+| F-17 | Bật/tắt công tắc (Allow Additional Role, Allow Student/Lecturer/Guest Registration…) làm ẩn/hiện **đúng** nhóm trường phụ thuộc, không để lại trường m | N/A | N/A | N/A | Công tắc form sự kiện — kịch bản A |
+| F-18 | Upload sai tỉ lệ quy định (thumbnail **4:3**, banner **24:9**) được báo trước khi lưu; preview hiển thị đúng tỉ lệ | N/A | N/A | N/A | Tỉ lệ ảnh 4:3 / 24:9 — kịch bản A |
+| F-19 | Rich-text editor có Undo/Redo và **giữ nguyên định dạng** sau khi lưu rồi mở lại | N/A | N/A | N/A | Rich-text editor — kịch bản A |
+| F-20 | Upload nhiều ảnh nêu rõ **định dạng hỗ trợ, dung lượng tối đa mỗi ảnh và số lượng ảnh tối đa** trước khi người dùng chọn file | N/A | N/A | N/A | Upload nhiều ảnh — kịch bản D |
+| F-21 | Upload ảnh có preview và nút xoá theo từng file; file sai định dạng, vượt dung lượng hoặc vượt số lượng bị từ chối bằng thông báo nêu rõ giới hạn | N/A | N/A | N/A | Preview/xoá ảnh — kịch bản D |
+| F-22 | Công tắc **Public Event**: trạng thái được lưu đúng và giữ nguyên sau khi Save rồi mở lại; khi tắt, sự kiện không còn hiển thị trên trang khám phá côn | N/A | N/A | N/A | Public Event — kịch bản A |
+| F-23 | Trường **Album Link** từ chối URL sai định dạng bằng thông báo lỗi tại chỗ, trước khi lưu | N/A | N/A | N/A | Album Link — kịch bản A |
+| F-24 | **Reminder before hours** chỉ nhận số nguyên không âm hợp lý; đơn vị (giờ) rõ ràng trong nhãn; giá trị 0/rỗng được xử lý nhất quán | N/A | N/A | N/A | Reminder before hours — kịch bản A |
+| F-25 | **Validation chéo Check-in:** giờ đóng check-in phải sau giờ mở check-in, có báo lỗi rõ ràng và đúng ngữ cảnh (không lặp lại tên trường bị so sánh) | N/A | N/A | N/A | Giờ check-in — kịch bản A |
+| F-26 | Khung giờ **Check-in** (mở/đóng) được đối chiếu hợp lý với khung giờ Start/End của sự kiện, có cảnh báo nếu lệch quá xa | N/A | N/A | N/A | Khung giờ check-in — kịch bản A |
 
-| ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
-|---|---|---|---|---|---|---|
-| S-01 | Mọi hành động đổi dữ liệu có phản hồi rõ ràng | | | | | |
-| … | *(chép tiếp S-02 → S-25)* | | | | | |
+### IA-03 — Navigation (19 mục)
+
+| ID | Mục kiểm tra | C1 | C2 | C3 | Notes / bằng chứng |
+|---|---|---|---|---|---|
+| N-01 | Menu chính cho phép truy cập tới **mọi khu vực lớn** của ứng dụng | Passed |  |  | **C1:** 8 mục sidebar phủ mọi khu vực lớn: Users · Categories · Academic Years · Campuses · Events · Support · User Guide · Analytics |
+| N-02 | Mục đang xem được đánh dấu **active** rõ ràng trên sidebar/menu | Passed |  |  | **C1:** Mục đang xem được tô nền và đổi màu chữ |
+| N-03 | Breadcrumb phản ánh **đúng đường đi**, và mỗi cấp bấm được để quay lui | Failed |  |  | **C1:** Khu admin **không có breadcrumb** ở bất kỳ cấp nào |
+| N-04 | Mọi trang chi tiết có đường quay lại danh sách cha (nút Back hoặc breadcrumb) |  |  |  |  |
+| N-05 | Link và nút dẫn tới **đúng** màn hình/hành động kỳ vọng; không có link chết | Passed |  |  | **C1:** Mọi thẻ a đều có href thật, không có href="#" hay javascript:void(0) |
+| N-06 | Tab trong trang giữ đúng nội dung khi chuyển qua lại; tab đang chọn nhận biết được | N/A | N/A | N/A | Không có tab trong trang ở C1–C3 |
+| N-07 | **Nút Back của trình duyệt** hoạt động đúng — không mất trạng thái, không submit lại form |  |  |  |  |
+| N-08 | **Deep link:** copy URL trang chi tiết, mở ở tab mới vẫn vào đúng bản ghi |  |  |  |  |
+| N-09 | **Bộ lọc / từ khoá tìm kiếm / số trang được giữ lại** khi quay về từ trang chi tiết |  |  |  |  |
+| N-10 | Sau khi lưu, người dùng được trả về **đúng ngữ cảnh cũ**, không bị đá về dashboard |  |  |  |  |
+| N-11 | Thứ tự Tab bàn phím đi theo thứ tự đọc trực quan; **Esc đóng modal**; không có bẫy focus trong modal |  | Passed |  | **C2:** Bấm Esc đóng dialog |
+| N-12 | **Kéo-thả reorder:** dòng đang kéo có phản hồi thị giác rõ (mờ đi), các nút khác bị vô hiệu trong lúc kéo | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
+| N-13 | Thứ tự sau khi kéo-thả được **lưu đúng** sau khi Save và giữ nguyên khi tải lại trang | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
+| N-14 | Kéo-thả có **phương án thay thế không dùng chuột** (nút lên/xuống hoặc nhập số thứ tự) | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
+| N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** |  |  |  |  |
+| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang |  |  |  |  |
+| N-17 | Thông tin audit (ai tạo / ai sửa lần cuối, thời điểm) hiển thị đủ **người thực hiện và mốc thời gian**; giá trị thiếu có ký hiệu rõ ràng thay vì để tr |  |  |  |  |
+| N-18 | Danh sách support request có tab **Pending / Resolved** nhận biết được tab đang chọn; khi request được xử lý, bản ghi xuất hiện ở đúng tab trạng thái | N/A | N/A | N/A | Tab Pending/Resolved — kịch bản D |
+| N-19 | Khi nhấn **Clear filters** trên Dashboard, hệ thống xoá từ khoá tìm kiếm và các lựa chọn Category, Academic Context, Campus, Event Date, đồng thời làm | N/A | N/A | N/A | Clear filters Dashboard — kịch bản B |
+
+### IA-04 — Feedback / State (25 mục)
+
+| ID | Mục kiểm tra | C1 | C2 | C3 | Notes / bằng chứng |
+|---|---|---|---|---|---|
+| S-01 | Mọi hành động làm thay đổi dữ liệu đều có phản hồi rõ ràng (toast hoặc thông báo tại chỗ) |  |  |  |  |
+| S-02 | Mức độ phản hồi **tương xứng**: thao tác nhỏ phản hồi nhẹ, thao tác lớn/hiếm phản hồi rõ rệt |  |  |  |  |
+| S-03 | Thao tác kéo dài (> ~400ms) có chỉ báo đang xử lý; màn hình không đứng im vô cớ |  |  |  |  |
+| S-04 | Toast tự tắt sau 3–5 giây, **không che** nội dung đang thao tác, và đóng thủ công được |  |  |  |  |
+| S-05 | Thông báo lỗi hệ thống dùng ngôn ngữ thường — không lộ mã lỗi, stack trace hay tên bảng CSDL |  |  |  |  |
+| S-06 | Hành động phá huỷ (Delete, Block) có **dialog xác nhận** nêu rõ hậu quả và đối tượng bị tác động |  |  |  |  |
+| S-07 | Trong dialog xác nhận: nút mặc định là nút **an toàn**; nút phá huỷ có nhãn động từ cụ thể ("Xoá sự kiện") thay vì "OK" |  |  |  |  |
+| S-08 | Hành động **hoàn tác được**; nếu không hoàn tác được thì phải nói rõ điều đó *trước khi* xác nhận |  |  |  |  |
+| S-09 | Kết thúc một chuỗi thao tác nhiều bước có thông báo **hoàn tất** rõ ràng |  |  |  |  |
+| S-10 | Trạng thái được phân biệt **không chỉ bằng màu** — có thêm icon hoặc nhãn chữ | Passed |  |  | **C1:** Cột STATUS có nhãn chữ ("Active"), không chỉ dựa vào màu |
+| S-11 | Bảng có nhiều màu trạng thái (EMS: 6 màu ở tab Participants) phải có **chú giải** hoặc tooltip giải nghĩa | N/A | N/A | N/A | Bảng 6 màu tab Participants — kịch bản A |
+| S-12 | Trạng thái của nút phản ánh đúng trạng thái dữ liệu (sự kiện đã PUBLISHED thì không còn nút Publish) |  |  |  |  |
+| S-13 | **Progress bar** phản ánh đúng tiến độ thật và cập nhật ngay khi dữ liệu thay đổi | N/A | N/A | N/A | Progress bar duyệt đăng ký — kịch bản A |
+| S-14 | Danh sách **real-time** (log quét check-in) tự cập nhật mà không cần tải lại trang, và không làm mất vị trí đang đọc | N/A | N/A | N/A | Log check-in real-time — kịch bản A |
+| S-15 | Các nhánh kết quả khác nhau được hiển thị **phân biệt rõ** (SUCCESS / ALREADY_CHECKED_IN / OUTSIDE_CHECKIN_WINDOW / PENDING_REVIEW) | N/A | N/A | N/A | Bốn nhánh kết quả quét — kịch bản A |
+| S-16 | Hành động bị chặn vì ràng buộc nghiệp vụ phải giải thích **lý do** (vd không xoá được Campus/Category vì đang được sự kiện tham chiếu; không xoá được  |  |  |  |  |
+| S-17 | Xuất file (Export Excel) có chỉ báo đang xử lý và thông báo khi tải xong hoặc thất bại |  |  |  |  |
+| S-18 | Badge / chấm thông báo phản ánh **đúng số lượng thật** và biến mất sau khi đã xử lý | N/A | N/A | N/A | Badge duyệt đăng ký — kịch bản A |
+| S-19 | Sau khi đổi công tắc trạng thái (Active) và lưu, cột trạng thái trên danh sách cập nhật **ngay** mà không cần tải lại trang |  |  |  |  |
+| S-20 | Trường mật khẩu nêu rõ **ràng buộc trước khi submit** (độ dài tối thiểu, ký tự bắt buộc), không để người dùng đoán rồi mới báo lỗi |  | N/A | Failed | **C2:** Dialog Edit User không có trường mật khẩu<br>**C3:** Ràng buộc "at least 8 characters" **chỉ hiện sau khi submit**; trước đó quanh ô mật khẩu không có gợi ý nào |
+| S-21 | Gửi phản hồi support tạo thông báo hoàn tất rõ ràng, chuyển request **Pending → Resolved**, cập nhật số lượng/tab danh sách và hiển thị phản hồi chính | N/A | N/A | N/A | Gửi phản hồi support — kịch bản D |
+| S-22 | **Internal note** được ghi nhãn chỉ admin thấy và tách khỏi phản hồi chính thức; nội dung note không xuất hiện trên trang chi tiết của requester | N/A | N/A | N/A | Internal note — kịch bản D |
+| S-23 | Ảnh đính kèm mở trong **dialog lightbox** có nội dung ảnh, tên/nhãn và nút Close; đóng lightbox trả người dùng về đúng trang chi tiết request | N/A | N/A | N/A | Lightbox ảnh — kịch bản D |
+| S-24 | Khi nhấn Save hoặc Unsave trên Event Card ở Dashboard, trạng thái nút được cập nhật ngay mà không cần tải lại toàn bộ trang | N/A | N/A | N/A | Save/Unsave Event Card — kịch bản B |
+| S-25 | Carousel sự kiện nổi bật tự chuyển sau mỗi 7 giây phải tạm dừng khi người dùng đưa chuột vào để có đủ thời gian đọc nội dung | N/A | N/A | N/A | Carousel 7 giây — kịch bản B |
+
+**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **124** (Passed 18 · Failed 6 · N/A 100) · **còn trống 140**
 
 ---
 
