@@ -43,8 +43,11 @@ Chi tiết quy ước và ví dụ: `deliverables/appendix/Git-Commit-Log.md`.
 *"For every step within a requirement, students must create a clear and explicit Git commit message."*
 
 **R3 — Mọi phát hiện vào Findings Log.** *(2026.HW03.GUI Usability EMS_Vi.md §7)*
-Bất kỳ lỗi hay vấn đề usability nào xuất hiện trong hội thoại → thêm ngay vào `deliverables/findings/Findings-Log.md` đủ 9 cột, rồi **nhắc nộp Google Form** và điền cột thời điểm gửi.
-*Phải báo cáo hai lần; TA đối chiếu số lượng giữa file và form.*
+Bất kỳ lỗi hay vấn đề usability nào xuất hiện trong hội thoại → thêm ngay vào `deliverables/findings/Findings-Log.md` đủ 9 cột, kèm đề xuất mức nghiêm trọng 0–4 và lý do chấm.
+
+**Nộp Google Form làm MỘT LẦN cuối cùng**, sau khi xong cả Task 1B, 2 và 3 — không nộp lắt nhắt từng phát hiện. Khi log có thêm dòng, chỉ cập nhật ô "Đã gửi Google Form" trong phần Thống kê, **không nhắc nộp form giữa chừng**.
+Trước khi đóng gói bài: nộp toàn bộ, điền cột "Thời điểm gửi form" cho từng dòng, và kiểm **số dòng = số submission**.
+*TA đối chiếu số lượng giữa file và form.*
 
 **R4 — Giữ bảng trạng thái README đúng.** *(2026.HW03.GUI Usability EMS_Vi.md §15 và §18)*
 Hạng mục đổi trạng thái → cập nhật bảng trong `README.md` ngay.

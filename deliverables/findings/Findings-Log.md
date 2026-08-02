@@ -66,7 +66,24 @@ Ba yếu tố quyết định: **frequency** (bao nhiêu người gặp, gặp b
 | Từ Task 1B | 1 |
 | Từ Task 2 | 0 *(chưa chạy)* |
 | Từ Task 3 | 2 |
-| **Đã gửi Google Form** | **0** ⬅️ cần nộp |
+| **Đã gửi Google Form** | **0** |
 
-> ⚠️ **Số dòng trong bảng tổng hợp phải bằng số submission trên Google Form.** Hiện là 3 ↔ 0 — chưa khớp.
-> Sau khi nộp, điền **thời điểm gửi** vào cột cuối của từng dòng rồi cập nhật ô "Đã gửi Google Form".
+### Kế hoạch nộp form
+
+Nộp **một lần duy nhất** sau khi hoàn tất cả ba task — không nộp lắt nhắt từng phát hiện. Đề §7 chỉ yêu cầu số lượng khớp nhau lúc nộp bài, không yêu cầu nộp ngay khi phát hiện.
+
+| Nguồn | Trạng thái | Số phát hiện |
+|---|---|---|
+| Task 1B — chạy 74 mục × 3 màn hình | ⬜ **chưa chạy** | 1 *(mới có từ khảo sát ban đầu)* |
+| Task 2 — 5 phiên user testing | ⬜ **chưa chạy** | 0 |
+| Task 3 — ma trận 21 ô | ✅ xong | 2 |
+| **Tổng hiện tại** | | **3** |
+
+**Checklist trước khi nộp form:**
+
+- [ ] Task 1B chạy xong, mọi mục `Failed` đáng kể đã thành một dòng ở bảng trên
+- [ ] Task 2 chạy xong, mọi phát hiện severity ≥ 2 đã thành một dòng
+- [ ] Duyệt lại mức nghiêm trọng của toàn bộ danh sách **theo cùng một thước đo** — chấm cả loạt cuối cùng nhất quán hơn chấm rời rạc từng lúc
+- [ ] Nộp từng dòng lên https://forms.gle/CJQFQCAXcsDbXDMM9 bằng email `23127262@student.hcmus.edu.vn`
+- [ ] Điền **Thời điểm gửi form** cho từng dòng
+- [ ] Kiểm lần cuối: **số dòng bảng trên = số submission trên form**
