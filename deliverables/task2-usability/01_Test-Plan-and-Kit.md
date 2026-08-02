@@ -3,90 +3,152 @@
 > Cấu trúc theo **"Typical test plan format"** — slide `S13_GUI Testing & Usability Testing.pdf` (9 mục), kết hợp yêu cầu đề §6 Task 2.
 > Loại hình: **Assessment test** (theo phân loại S13: người dùng thực hiện tập tác vụ well-defined, thu số liệu định lượng, ít tương tác với người điều phối).
 
-**Sinh viên:** *(MSSV – Họ tên)* · **Kịch bản:** *(A/B/C/D)*
+**Sinh viên:** 23127262 – Lý Quốc Thạnh · **Kịch bản:** **C — Admin quản lý người dùng**
+**Màn hình:** C1 Users Management · C2 dialog Edit User · C3 dialog Create New User
+**SUT:** `https://prod-dev.ems-fitus.cloud/dashboard/admin/users`
 
 ---
 
 ## 1. Purpose — Mục đích
 
-*(Kiểm tra tính tiện dụng của [3 màn hình] trong luồng [tên luồng] trên EMS.)*
+Đánh giá tính tiện dụng của luồng **quản trị người dùng** trên EMS: một người chưa từng dùng hệ thống có tự hoàn thành được việc thêm thành viên mới và ngừng quyền truy cập của một thành viên cũ hay không, mất bao lâu, vấp ở đâu.
+
+Task 1B đã đánh giá cùng ba màn hình này bằng **checklist heuristic** (đánh giá chuyên gia). Task 2 kiểm lại bằng **bằng chứng thực nghiệm** từ người dùng thật, để trả lời câu hỏi mà checklist không trả lời được: *trong 25 lỗi checklist bắt được, cái nào người dùng thật sự vấp phải?*
 
 ## 2. Problem statement — Câu hỏi cần trả lời
 
-*(Ví dụ: Người dùng lần đầu có tự hoàn thành được [tác vụ] mà không cần hướng dẫn không? Họ vấp ở bước nào?)*
-
-| # | Câu hỏi | Performance data thu thập | Preference data thu thập |
+| # | Câu hỏi | Performance data | Preference data |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
+| 1 | Người dùng lần đầu có tự tìm ra cách **thêm một thành viên mới** không? | Tỉ lệ hoàn thành · time on task · số lần bấm sai | Điểm SUS câu 3 (dễ dùng), câu 7 (học nhanh) |
+| 2 | Có tự tìm ra cách **ngừng quyền truy cập** của một thành viên mà không xoá họ không? | Tỉ lệ hoàn thành · số lần do dự · số lần mở nhầm dialog | Câu probe *clarity* |
+| 3 | Sau khi bấm lưu, người dùng có **biết chắc là đã lưu** không? *(Task 1B: `S-01` Failed — hệ thống im lặng)* | Số lần hỏi lại / kiểm lại / bấm lưu lần hai | Câu probe *trust* |
+| 4 | Có ai điền nhầm **Họ vào ô Tên** không? *(Task 1B: `T1B-01` — nhãn và placeholder ngược nhau)* | Đếm số người điền ngược | Câu probe *clarity* |
+| 5 | Có ai **mất dữ liệu** vì bấm Esc giữa chừng không? *(Task 1B: `T1B-08`)* | Đếm số lần mất dữ liệu | Câu probe *error recovery* |
+
+> Ba câu 3–5 là **giả thuyết rút ra từ Task 1B**. Chúng cho phép đối chiếu trực tiếp: lỗi checklist bắt được có thành vấn đề thật với người dùng không.
 
 ## 3. Test plan & objectives — Task scenario
 
-> ⚠️ Đề §6: kịch bản phải cho **mục tiêu**, KHÔNG chỉ từng bước bấm. S13: *"asking the user to perform typical tasks and NOT telling them exactly how to do it."*
+> Đề §6: kịch bản cho **mục tiêu**, KHÔNG chỉ từng bước bấm. S13: *"asking the user to perform typical tasks and NOT telling them exactly how to do it."*
 
 **Kịch bản đọc cho người tham gia:**
 
-> *(Viết ở đây — một tình huống đời thực, có bối cảnh, có mục tiêu, không có chỉ dẫn thao tác.)*
+> *"Bạn vừa được giao phụ trách danh sách thành viên của một câu lạc bộ, và câu lạc bộ dùng hệ thống EMS này để quản lý.*
+>
+> *Có hai việc cần xử lý hôm nay:*
+>
+> *Thứ nhất, có một bạn sinh viên mới xin vào câu lạc bộ. Bạn ấy tên là **Minh Trần Văn**, email **minhtv.test@example.com**, mã số **99001234**. Hãy đưa bạn ấy vào hệ thống.*
+>
+> *Thứ hai, bạn **[tên user có sẵn]** đã rời câu lạc bộ. Bạn ấy không được vào hệ thống nữa, nhưng câu lạc bộ vẫn muốn giữ lại hồ sơ để đối chiếu về sau — đừng xoá hẳn.*
+>
+> *Bạn cứ làm theo cách bạn thấy tự nhiên nhất. Vừa làm vừa nói to những gì bạn đang nghĩ giúp mình."*
+
+**Vì sao kịch bản này hợp lệ:**
+
+- **Hướng mục tiêu, không chỉ đường.** Không có chữ nào nói "bấm Add User" hay "mở dialog Edit". Người tham gia phải tự tìm.
+- **Phủ cả 3 màn hình:** tìm người → **C1** · thêm mới → **C3** · ngừng truy cập → **C2**.
+- **Vế thứ hai là bẫy có chủ đích.** "Đừng xoá hẳn" buộc người dùng phải phân biệt *vô hiệu hoá* với *xoá* — mà trên C1, nút Xoá thì nhìn thấy ngay ở mỗi dòng, còn công tắc Active thì nằm **ẩn bên trong dialog Edit**. Đây là chỗ dự đoán sẽ có người vấp.
 
 **Phân rã theo mẫu Task components của S13:**
 
 | Thành phần | Nội dung |
 |---|---|
-| **Task** | |
-| **Machine state** *(trạng thái hệ thống trước khi bắt đầu)* | |
-| **Successful completion criteria** *(thế nào là hoàn thành)* | |
-| **Benchmark** *(thời gian mục tiêu)* | |
+| **Task** | Thêm một thành viên mới và ngừng quyền truy cập của một thành viên cũ, trên EMS Users Management |
+| **Machine state** | Đã đăng nhập sẵn bằng tài khoản admin, đang ở màn hình `/dashboard/admin/users`, không mở dialog nào |
+| **Successful completion criteria** | (a) User mới xuất hiện trong danh sách với đúng họ tên, email, mã số và vai trò Student; (b) User cũ còn trong danh sách nhưng trạng thái đã là **Inactive** |
+| **Benchmark** | 4 phút cho cả hai việc |
 
 **Định nghĩa mức hoàn thành:**
 
-| Mức | Định nghĩa cụ thể cho tác vụ này |
+| Mức | Định nghĩa cụ thể |
 |---|---|
-| Hoàn thành | |
-| Một phần | |
-| Thất bại | |
+| **Hoàn thành** | Làm được cả hai việc, không cần can thiệp |
+| **Một phần** | Làm được một trong hai việc; **hoặc** làm được cả hai nhưng có dữ liệu sai (vd họ tên bị đảo) |
+| **Thất bại** | Không làm được việc nào, hoặc **xoá nhầm** user thay vì vô hiệu hoá, hoặc phải nhờ can thiệp mới xong |
+
+> ⚠️ **Ghi rõ trong biên bản** nếu người tham gia xoá nhầm user — đó là dữ liệu quý nhất của phiên, không phải sự cố cần giấu.
 
 ## 4. User profile — Hồ sơ người dùng mục tiêu
 
-*(Ai là người dùng thật của luồng này? sinh viên / giảng viên / khách / admin — nêu tiêu chí tuyển.)*
+Kịch bản C là màn hình **quản trị**, người dùng thật của nó là cán bộ quản lý thành viên — không phải sinh viên thường. Vì vậy tiêu chí tuyển:
+
+| Tiêu chí | Yêu cầu |
+|---|---|
+| Bối cảnh | Có kinh nghiệm **quản lý danh sách người** (ban chấp hành đoàn/hội, ban tổ chức sự kiện, trưởng nhóm CLB, trợ lý văn phòng) |
+| Kỹ năng máy tính | Dùng thành thạo web thông thường; **không** cần biết lập trình |
+| Quan hệ với EMS | **Chưa từng dùng EMS** — nếu đã dùng thì không đo được trải nghiệm lần đầu |
+| Ràng buộc bắt buộc | **Ngoài lớp học này** (đề §6), có liên hệ kiểm chứng được |
+
+**Cách đóng khung để giải quyết vấn đề "không phải admin thật":** kịch bản đặt người tham gia vào vai *người phụ trách danh sách thành viên CLB* — một vai ai cũng hình dung được, và đúng bản chất công việc mà màn hình này phục vụ. Không cần họ là admin hệ thống thật.
 
 ## 5. Method & test design — Cách chạy
 
-- Moderated, think-aloud, 1 người/phiên
-- Quan sát trung lập — chỉ can thiệp khi người tham gia **hoàn toàn bế tắc**
-- Mở đầu mỗi phiên: *"Tôi đang kiểm thử **sản phẩm**, không kiểm thử bạn."*
-- Ghi màn hình *(xin phép nếu thu âm)*
-- Kết phiên: điền SUS → hỏi các câu probe
+- **Moderated, think-aloud**, 1 người/phiên, khoảng 20–25 phút
+- Mở đầu: *"Mình đang kiểm thử **phần mềm**, không kiểm thử bạn. Không có câu trả lời đúng sai. Bạn thấy chỗ nào khó là thông tin quý cho mình."*
+- **Quan sát trung lập.** Người tham gia hỏi "cái này bấm đâu?" → trả lời *"Bạn nghĩ nó ở đâu?"*. Chỉ can thiệp khi bế tắc hoàn toàn quá 2 phút, và **ghi lại là đã can thiệp**
+- Ghi màn hình; xin phép trước nếu thu âm
+- Kết phiên: điền SUS → hỏi 5 câu probe
+
+**Điểm cần quan sát kỹ — rút từ Task 1B:**
+
+| Dự đoán | Cơ sở |
+|---|---|
+| Người dùng điền **Họ vào ô Tên** | `T1B-01` — nhãn "First Name" nhưng placeholder "Last Name" |
+| Bấm lưu xong **ngập ngừng, kiểm lại, hoặc bấm lưu lần nữa** | `T1B-10` — không có thông báo nào sau khi lưu |
+| **Xoá nhầm** thay vì vô hiệu hoá | Nút Xoá nổi bật ở mỗi dòng, công tắc Active ẩn trong dialog |
+| Bỏ trống trường bắt buộc rồi mới biết | `T1B-02` — không có dấu `*` |
+| Bấm Esc và **mất sạch dữ liệu đang nhập** | `T1B-08` |
 
 ## 6. Test environment & equipment
 
 | Hạng mục | Nội dung |
 |---|---|
-| Thiết bị | |
-| Trình duyệt | |
-| Mạng | |
-| Công cụ ghi màn hình | |
-| Địa điểm | |
+| Thiết bị | Laptop, màn hình ≥ 13", chuột rời nếu có |
+| Trình duyệt | Chrome, cửa sổ tối đa hoá, zoom 100% |
+| Mạng | Wi-Fi thường |
+| Ghi màn hình | *(điền công cụ)* |
+| Địa điểm | *(điền)* |
+| Tài khoản | Admin `admin@gmail.com` — **người điều phối đăng nhập sẵn trước khi bắt đầu bấm giờ** |
 
 ## 7. Test monitor role — Vai trò người điều phối
 
-*(Ai điều phối, được phép nói gì / không được nói gì.)*
+Người điều phối: **Lý Quốc Thạnh (23127262)**.
+
+| Được làm | Không được làm |
+|---|---|
+| Đọc kịch bản, nhắc "nói to suy nghĩ" | Chỉ chỗ bấm, gợi ý tên nút |
+| Hỏi trung tính: *"Bạn đang nghĩ gì?"*, *"Bạn mong chờ điều gì xảy ra?"* | Hỏi dẫn dắt: *"Sao bạn không thử nút kia?"* |
+| Bấm giờ, đếm lỗi và lần do dự | Sửa hộ khi người tham gia làm sai |
+| Can thiệp khi bế tắc > 2 phút — **và ghi lại** | Can thiệp sớm rồi bỏ qua không ghi |
 
 ## 8. Evaluation measures — Chỉ số thu thập
 
-**Performance data** *(đo khách quan)* — bắt buộc theo đề §6:
+**Performance data** *(đo khách quan — đề §6 bắt buộc)*:
 
 | Chỉ số | Cách đo |
 |---|---|
-| Task success | Hoàn thành / Một phần / Thất bại |
-| Time on task | Bấm giờ từ lúc đọc xong đề đến lúc người dùng nói "xong" |
-| Số lỗi | Đếm số lần bấm sai chỗ / đi sai nhánh |
-| Số lần do dự | Đếm số lần dừng > 5 giây không thao tác |
+| Task success | Hoàn thành / Một phần / Thất bại, theo định nghĩa ở §3 |
+| Time on task | Bấm giờ từ lúc đọc xong kịch bản đến khi người tham gia nói "xong"; tách riêng thời gian cho từng việc |
+| Số lỗi | Đếm: bấm sai nút, mở nhầm dialog, điền sai ô, submit thiếu trường |
+| Số lần do dự | Đếm: dừng > 5 giây không thao tác, hoặc rê chuột qua lại không bấm |
+| Số lần can thiệp | Đếm riêng, ghi rõ can thiệp gì |
 
-**Preference data** *(đo chủ quan)*: SUS (§11 bên dưới) + câu hỏi mở về **clarity · error recovery · speed · trust**.
+**Preference data** *(đo chủ quan)*: **SUS 10 câu** (§11) + 5 câu probe (§12) về **clarity · error recovery · speed · trust**.
 
 ## 9. Report — Sản phẩm đầu ra
 
-→ [`02_Usability-Report.md`](02_Usability-Report.md)
+→ [`02_Usability-Report.md`](02_Usability-Report.md), gồm: kịch bản · bảng 5 người đã che liên hệ · bảng chỉ số · phát hiện xếp hạng severity 0–4 kèm ảnh · khuyến nghị theo ưu tiên · **§7 đối chiếu với kết quả Task 1B**.
+
+---
+
+## 9b. ⚠️ Dọn dẹp dữ liệu sau mỗi phiên
+
+Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng chung với các lớp khác.
+
+- Dùng email theo mẫu `minhtv.test+p1@example.com` … `+p5` để phân biệt từng phiên
+- **Sau mỗi phiên:** xoá user vừa tạo, và bật lại `Active` cho user đã bị vô hiệu hoá
+- Chụp ảnh trước khi dọn để làm bằng chứng
+- Ghi vào biên bản phiên: đã dọn hay chưa
 
 ---
 
