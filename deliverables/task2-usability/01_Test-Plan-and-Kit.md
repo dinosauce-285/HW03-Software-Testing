@@ -154,23 +154,35 @@ Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng ch
 
 ## 10. Bảng người tham gia
 
-> ⚠️ Đề §6 + §12: **5 người thật, ngoài lớp này**, khớp hồ sơ người dùng mục tiêu, liên hệ kiểm chứng được, **ẩn 4 số giữa**.
-> **TA có thể gọi ngẫu nhiên 2 người xác minh. Mạo danh → 0 điểm Task 2.**
+> ⚠️ [Đề §6](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L111) + [§12](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L182): **5 người thật, ngoài lớp này**, khớp hồ sơ người dùng mục tiêu, liên hệ kiểm chứng được, **ẩn 4 số giữa**.
+> 🔴 **TA có thể gọi ngẫu nhiên 2 người xác minh. Mạo danh → 0 điểm Task 2.**
 
-| # | Họ tên | Vai trò / hồ sơ | Liên hệ (ẩn 4 số giữa) | Ngày chạy | Thiết bị |
+**Cách ẩn số:** `0912345678` → `0912****78` *(giữ 4 số đầu và 2 số cuối, ẩn 4 số giữa)*
+
+| # | Họ tên | Vai trò / bối cảnh quản lý danh sách | Liên hệ (đã ẩn) | Ngày chạy | Thiết bị |
 |---|---|---|---|---|---|
-| P0 *(pilot)* | | | | | |
+| **P0** *(pilot)* | | | | | |
 | P1 | | | | | |
 | P2 | | | | | |
 | P3 | | | | | |
 | P4 | | | | | |
 | P5 | | | | | |
 
-> Pilot (P0) chạy **trước** để phát hiện tác vụ tối nghĩa — **không tính** vào 5 người chính thức.
+> **P0 chạy trước và KHÔNG tính** vào 5 người chính thức — [đề §6](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L112).
 
-**Ghi nhận sau pilot — đã chỉnh sửa gì:**
+**Kiểm tra điều kiện tuyển — đánh dấu cho từng người:**
 
-*(…)*
+| Điều kiện | P1 | P2 | P3 | P4 | P5 |
+|---|---|---|---|---|---|
+| Ngoài lớp học này | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Có bối cảnh quản lý danh sách người | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Chưa từng dùng EMS | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Có liên hệ kiểm chứng được | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Đã đồng ý cho ghi màn hình | ☐ | ☐ | ☐ | ☐ | ☐ |
+
+**Ghi nhận sau pilot — đã chỉnh sửa gì trước khi chạy P1–P5:**
+
+*(điền sau khi chạy P0)*
 
 ---
 
