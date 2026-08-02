@@ -100,18 +100,18 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 | ID | Mục kiểm tra | C1 | C2 | C3 | Notes / bằng chứng |
 |---|---|---|---|---|---|
-| G-01 | Tiêu đề trang khớp với mục đang được chọn trên sidebar/menu | Passed |  |  | **C1:** Tiêu đề "Users Management" khớp mục sidebar đang active |
-| G-02 | Cùng một chức năng dùng cùng một nhãn ở mọi màn hình (không lúc "Export" lúc "Xuất file") |  |  |  |  |
+| G-01 | Tiêu đề trang khớp với mục đang được chọn trên sidebar/menu | Passed | N/A | N/A | **C1:** Tiêu đề "Users Management" khớp mục sidebar đang active<br>**C2:** Mục này nói về tiêu đề trang khớp mục sidebar — dialog không phải trang riêng nên không áp dụng<br>**C3:** Mục này nói về tiêu đề trang khớp mục sidebar — dialog không phải trang riêng nên không áp dụng |
+| G-02 | Cùng một chức năng dùng cùng một nhãn ở mọi màn hình (không lúc "Export" lúc "Xuất file") |  |  |  | **C1:** ⏳ Đo được — nút trên 3 màn hình admin: Users [Export, Add User] · Categories [Add Category] · Campuses [Add Campus]. Bạn xét mẫu đặt tên "Add X" có nhất quán không |
 | G-03 | Trong bảng dữ liệu: text canh trái, số canh phải, trạng thái canh giữa — nhất quán ở mọi bảng |  |  |  | **C1:** ⏳ Đo được — canh lề: USER=start, sáu cột còn lại=center. Bạn xét: MEMBER CODE là số nhưng canh giữa, có nhất quán với quy ước không |
-| G-04 | Toàn hệ thống dùng tối đa 2 họ font; cỡ chữ theo thang nhất quán (tiêu đề / nội dung / chú thích) | Passed |  |  | **C1:** 1 họ font (ui-sans-serif), 6 cỡ chữ theo thang: 11/12/14/16/18/24px |
+| G-04 | Toàn hệ thống dùng tối đa 2 họ font; cỡ chữ theo thang nhất quán (tiêu đề / nội dung / chú thích) | Passed | Passed | Passed | **C1:** 1 họ font (ui-sans-serif), 6 cỡ chữ theo thang: 11/12/14/16/18/24px<br>**C2:** 1 họ font, cỡ chữ đồng nhất trong dialog<br>**C3:** 1 họ font, cỡ chữ đồng nhất trong dialog |
 | G-05 | Màu dùng đúng ngữ nghĩa: màu chính cho hành động chính, **đỏ chỉ dành cho lỗi / hành động phá huỷ** |  |  |  | **C1:** ⏳ Đo được — phần tử màu đỏ duy nhất là nút "Delete user". Bạn xét xem có chỗ nào dùng đỏ sai ngữ cảnh không |
 | G-06 | Mỗi màn hình chỉ có **một** nút hành động chính; các nút còn lại ở dạng phụ |  |  |  |  |
-| G-07 | Nội dung không tràn ngang gây thanh cuộn ngang ở độ rộng màn hình ≥ 1280px | Passed |  |  | **C1:** scrollWidth 1425 = clientWidth 1425 → không cuộn ngang ở 1440px |
+| G-07 | Nội dung không tràn ngang gây thanh cuộn ngang ở độ rộng màn hình ≥ 1280px | Passed | Passed | Passed | **C1:** scrollWidth 1425 = clientWidth 1425 → không cuộn ngang ở 1440px<br>**C2:** dialog scrollWidth 448 = clientWidth 448, không tràn ở desktop<br>**C3:** dialog scrollWidth 448 = clientWidth 448, không tràn ở desktop |
 | G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn |  |  |  | **C1:** ⏳ Tìm chuỗi vô nghĩa "zzzqqq-khong-ton-tai-9999" → vẫn còn 1 dòng, có thông điệp rỗng. Bộ lọc không rỗng hẳn nên chưa kết luận được |
-| G-09 | Trạng thái đang tải có skeleton/spinner; khi dữ liệu về **không gây nhảy layout** |  |  |  |  |
+| G-09 | Trạng thái đang tải có skeleton/spinner; khi dữ liệu về **không gây nhảy layout** | Passed |  |  | **C1:** Thấy 2 phần tử skeleton/animate-pulse trong lúc tải dữ liệu bảng |
 | G-10 | Ảnh giữ đúng tỉ lệ khung, không bị méo hay co giãn sai | N/A | N/A | N/A | Avatar là chữ viết tắt, không có thẻ ảnh nào trên C1–C3 |
 | G-11 | Thuật ngữ dùng ngôn ngữ người dùng — **không lộ mã trạng thái nội bộ** ra giao diện (vd hiện thẳng `OUTSIDE_CHECKIN_WINDOW`) | Passed |  |  | **C1:** Không tìm thấy chuỗi dạng UPPER_SNAKE lộ ra giao diện |
-| G-12 | Tỉ lệ tương phản chữ/nền ≥ 4.5:1 (chữ thường), ≥ 3:1 (chữ lớn) | Failed |  |  | **C1:** Tương phản dưới ngưỡng WCAG 1.4.3: sidebar active 2.08:1 · nút Export 2.71:1 · nút Add User 2.08:1 · badge 4.14:1 (cần 4.5). *(chỉ tính phần tử dùng màu rgb; 75 phần tử dùng lab() không quy đổi được nên chưa xét)* |
+| G-12 | Tỉ lệ tương phản chữ/nền ≥ 4.5:1 (chữ thường), ≥ 3:1 (chữ lớn) | Failed | Failed | Failed | **C1:** Tương phản dưới ngưỡng WCAG 1.4.3: sidebar active 2.08:1 · nút Export 2.71:1 · nút Add User 2.08:1 · badge 4.14:1 (cần 4.5). *(chỉ tính phần tử dùng màu rgb; 75 phần tử dùng lab() không quy đổi được nên chưa xét)*<br>**C2:** Nút **Save Changes**: chữ trắng trên nền xanh, tương phản **2.08:1** (cần 4.5). Bỏ qua 8 phần tử dùng lab()<br>**C3:** Nút **Create User**: chữ trắng trên nền xanh, tương phản **2.08:1** (cần 4.5). Bỏ qua 9 phần tử dùng lab() |
 | G-13 | Nội dung vẫn đọc được và không vỡ layout khi zoom trình duyệt **200%** | Failed |  |  | **C1:** Ở khung nhìn 720px (tương đương zoom 200%): scrollWidth **1031** vs clientWidth **705** → nội dung tràn ngang, phải cuộn để đọc |
 | G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình |  |  |  | **C1:** ⏳ Chưa mở được menu ngôn ngữ bằng script — bạn tự bấm cờ ở header rồi đối chiếu |
 | G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu |  |  |  | **C1:** ⏳ Phụ thuộc G-14 |
@@ -128,13 +128,13 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | F-03 | Submit khi thiếu trường bắt buộc → hệ thống **chặn**, không cho lưu |  |  | Passed | **C3:** Submit rỗng → dialog vẫn mở, không tạo user |
 | F-04 | Thông báo lỗi hiện **ngay cạnh trường bị lỗi**, không chỉ ở toast góc màn hình |  |  | Passed | **C3:** Lỗi hiện ngay dưới từng trường (class `mt-1 text-xs text-red-500`), không chỉ ở toast |
 | F-05 | Thông báo lỗi nói rõ **cách sửa**, không chỉ nói "dữ liệu không hợp lệ" |  |  | Passed | **C3:** Lỗi nói rõ từng trường: "Last name is required" · "Invalid email address" · "Role is required" · "Password must be at least 8 characters" |
-| F-06 | Giá trị mặc định của mỗi trường hợp lý (vd ngày bắt đầu = hôm nay), không rỗng hay vô nghĩa |  |  |  |  |
+| F-06 | Giá trị mặc định của mỗi trường hợp lý (vd ngày bắt đầu = hôm nay), không rỗng hay vô nghĩa |  |  |  | **C2:** ⏳ Giá trị mặc định C2: điền sẵn dữ liệu user đang sửa (Nguyen / Trang / email), Active=true. Bạn xét có hợp lý không<br>**C3:** ⏳ Giá trị mặc định C3: mọi ô rỗng, riêng checkbox Active=true. Bạn xét mặc định bật Active có hợp lý không |
 | F-07 | Ràng buộc được áp **ngay tại control** (date picker chặn ngày không hợp lệ) thay vì chỉ báo lỗi sau khi submit | N/A | N/A | N/A | Không có date picker / control ràng buộc kiểu này trên C1–C3 |
 | F-08 | Sau khi submit lỗi, **focus tự nhảy về trường lỗi đầu tiên** |  |  | Failed | **C3:** Sau submit lỗi, focus vẫn nằm trên **nút Create User**, không nhảy về trường lỗi đầu tiên |
 | F-09 | Upload nêu rõ **định dạng, dung lượng tối đa và tỉ lệ khung** yêu cầu *trước khi* người dùng chọn file | N/A | N/A | N/A | Không có upload file trong pool C |
 | F-10 | Upload có chỉ báo tiến trình, có thể huỷ; thất bại thì báo lỗi rõ và cho thử lại | N/A | N/A | N/A | Không có upload file trong pool C |
 | F-11 | Nút Submit bị khoá trong lúc đang gửi để tránh **submit trùng** (double-submit) |  |  |  |  |
-| F-12 | Rời form khi đang nhập dở → **cảnh báo mất dữ liệu** trước khi điều hướng |  |  |  |  |
+| F-12 | Rời form khi đang nhập dở → **cảnh báo mất dữ liệu** trước khi điều hướng |  | Failed | Failed | **C2:** Nhập dở một trường rồi bấm Esc → dialog **đóng ngay, mất sạch nội dung đã nhập**, không có cảnh báo nào<br>**C3:** Nhập dở một trường rồi bấm Esc → dialog **đóng ngay, mất sạch nội dung đã nhập**, không có cảnh báo nào |
 | F-13 | Mọi ô nhập và control thao tác được **hoàn toàn bằng bàn phím**, có viền focus nhìn thấy rõ |  | Passed | Passed | **C2:** Thao tác bàn phím được, ô đang focus có outline solid 1px<br>**C3:** Thao tác bàn phím được, outline solid 1px |
 | F-14 | **Validation chéo ngày/giờ:** ngày kết thúc trước ngày bắt đầu bị chặn, có báo lỗi rõ | N/A | N/A | N/A | Validation ngày/giờ sự kiện — kịch bản A |
 | F-15 | **Validation chéo:** thời gian đóng đăng ký không được sau thời điểm sự kiện kết thúc | N/A | N/A | N/A | Thời gian đóng đăng ký — kịch bản A |
@@ -164,11 +164,11 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | N-08 | **Deep link:** copy URL trang chi tiết, mở ở tab mới vẫn vào đúng bản ghi | Passed |  |  | **C1:** Mở thẳng URL /dashboard/admin/users → HTTP 200, bảng render đủ dữ liệu |
 | N-09 | **Bộ lọc / từ khoá tìm kiếm / số trang được giữ lại** khi quay về từ trang chi tiết | Passed |  |  | **C1:** Gõ "nguyen" (5 kết quả) → mở dialog → đóng → ô search vẫn giữ "nguyen" |
 | N-10 | Sau khi lưu, người dùng được trả về **đúng ngữ cảnh cũ**, không bị đá về dashboard |  |  |  |  |
-| N-11 | Thứ tự Tab bàn phím đi theo thứ tự đọc trực quan; **Esc đóng modal**; không có bẫy focus trong modal |  | Passed |  | **C2:** Bấm Esc đóng dialog |
+| N-11 | Thứ tự Tab bàn phím đi theo thứ tự đọc trực quan; **Esc đóng modal**; không có bẫy focus trong modal |  | Passed | Passed | **C2:** Bấm Esc đóng dialog<br>**C3:** Bấm Esc đóng dialog Create New User |
 | N-12 | **Kéo-thả reorder:** dòng đang kéo có phản hồi thị giác rõ (mờ đi), các nút khác bị vô hiệu trong lúc kéo | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
 | N-13 | Thứ tự sau khi kéo-thả được **lưu đúng** sau khi Save và giữ nguyên khi tải lại trang | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
 | N-14 | Kéo-thả có **phương án thay thế không dùng chuột** (nút lên/xuống hoặc nhập số thứ tự) | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
-| N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** |  |  |  |  |
+| N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** | Passed |  |  | **C1:** Chưa đăng nhập mở `/dashboard/admin/users` → chuyển hướng `/login?callbackUrl=%2Fdashboard%2Fadmin%2Fusers`, hiện form đăng nhập, không phải trang trắng |
 | N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang |  |  |  | **C1:** ⏳ Không bấm được tiêu đề cột bằng script, không có `aria-sort`. Bạn tự bấm để xem có sắp xếp và chỉ báo hướng không |
 | N-17 | Thông tin audit (ai tạo / ai sửa lần cuối, thời điểm) hiển thị đủ **người thực hiện và mốc thời gian**; giá trị thiếu có ký hiệu rõ ràng thay vì để tr |  |  |  |  |
 | N-18 | Danh sách support request có tab **Pending / Resolved** nhận biết được tab đang chọn; khi request được xử lý, bản ghi xuất hiện ở đúng tab trạng thái | N/A | N/A | N/A | Tab Pending/Resolved — kịch bản D |
@@ -180,9 +180,9 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 |---|---|---|---|---|---|
 | S-01 | Mọi hành động làm thay đổi dữ liệu đều có phản hồi rõ ràng (toast hoặc thông báo tại chỗ) |  |  |  |  |
 | S-02 | Mức độ phản hồi **tương xứng**: thao tác nhỏ phản hồi nhẹ, thao tác lớn/hiếm phản hồi rõ rệt |  |  |  |  |
-| S-03 | Thao tác kéo dài (> ~400ms) có chỉ báo đang xử lý; màn hình không đứng im vô cớ |  |  |  |  |
-| S-04 | Toast tự tắt sau 3–5 giây, **không che** nội dung đang thao tác, và đóng thủ công được |  |  |  |  |
-| S-05 | Thông báo lỗi hệ thống dùng ngôn ngữ thường — không lộ mã lỗi, stack trace hay tên bảng CSDL |  |  |  |  |
+| S-03 | Thao tác kéo dài (> ~400ms) có chỉ báo đang xử lý; màn hình không đứng im vô cớ |  |  |  | **C1:** ⏳ Đo được — thao tác Export mất 0,4s, không thấy chỉ báo nào. Ngưỡng trong mục là 400ms nên đây là ranh giới, bạn quyết |
+| S-04 | Toast tự tắt sau 3–5 giây, **không che** nội dung đang thao tác, và đóng thủ công được | N/A |  |  | **C1:** Không thao tác nào trên C1 sinh ra toast để đo (Export không hiện toast) |
+| S-05 | Thông báo lỗi hệ thống dùng ngôn ngữ thường — không lộ mã lỗi, stack trace hay tên bảng CSDL | Passed |  |  | **C1:** Mở route sai → trang 404 "Page Not Found · The page you are looking for does not exist or has been moved" kèm nút Go Back; không lộ stack trace, tên bảng hay mã lỗi kỹ thuật |
 | S-06 | Hành động phá huỷ (Delete, Block) có **dialog xác nhận** nêu rõ hậu quả và đối tượng bị tác động | Passed |  |  | **C1:** Dialog xoá nêu rõ đối tượng: "Are you sure you want to delete user Trang Nguyen?" |
 | S-07 | Trong dialog xác nhận: nút mặc định là nút **an toàn**; nút phá huỷ có nhãn động từ cụ thể ("Xoá sự kiện") thay vì "OK" |  |  |  | **C1:** ⏳ Đo được — nút Cancel nền trắng, nút Confirm nền đỏ. Bạn xét nhãn "Confirm" có đủ cụ thể không (so với "Xoá user") |
 | S-08 | Hành động **hoàn tác được**; nếu không hoàn tác được thì phải nói rõ điều đó *trước khi* xác nhận | Passed |  |  | **C1:** Dialog có câu "This action cannot be undone" trước khi xác nhận |
@@ -194,7 +194,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | S-14 | Danh sách **real-time** (log quét check-in) tự cập nhật mà không cần tải lại trang, và không làm mất vị trí đang đọc | N/A | N/A | N/A | Log check-in real-time — kịch bản A |
 | S-15 | Các nhánh kết quả khác nhau được hiển thị **phân biệt rõ** (SUCCESS / ALREADY_CHECKED_IN / OUTSIDE_CHECKIN_WINDOW / PENDING_REVIEW) | N/A | N/A | N/A | Bốn nhánh kết quả quét — kịch bản A |
 | S-16 | Hành động bị chặn vì ràng buộc nghiệp vụ phải giải thích **lý do** (vd không xoá được Campus/Category vì đang được sự kiện tham chiếu; không xoá được  |  |  |  |  |
-| S-17 | Xuất file (Export Excel) có chỉ báo đang xử lý và thông báo khi tải xong hoặc thất bại |  |  |  |  |
+| S-17 | Xuất file (Export Excel) có chỉ báo đang xử lý và thông báo khi tải xong hoặc thất bại | Failed |  |  | **C1:** Bấm Export → file `users-export-1785684262119.xlsx` tải về sau 0,4s nhưng **không có bất kỳ chỉ báo đang xử lý hay thông báo hoàn tất nào**. *(0,4s là nhanh nên spinner có thể không cần; nhưng yêu cầu "thông báo khi tải xong" thì không có — bạn cân nhắc hạ xuống Passed nếu thấy chấp nhận được)* |
 | S-18 | Badge / chấm thông báo phản ánh **đúng số lượng thật** và biến mất sau khi đã xử lý | N/A | N/A | N/A | Badge duyệt đăng ký — kịch bản A |
 | S-19 | Sau khi đổi công tắc trạng thái (Active) và lưu, cột trạng thái trên danh sách cập nhật **ngay** mà không cần tải lại trang |  |  |  |  |
 | S-20 | Trường mật khẩu nêu rõ **ràng buộc trước khi submit** (độ dài tối thiểu, ký tự bắt buộc), không để người dùng đoán rồi mới báo lỗi |  | N/A | Failed | **C2:** Dialog Edit User không có trường mật khẩu<br>**C3:** Ràng buộc "at least 8 characters" **chỉ hiện sau khi submit**; trước đó quanh ô mật khẩu không có gợi ý nào |
@@ -204,7 +204,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | S-24 | Khi nhấn Save hoặc Unsave trên Event Card ở Dashboard, trạng thái nút được cập nhật ngay mà không cần tải lại toàn bộ trang | N/A | N/A | N/A | Save/Unsave Event Card — kịch bản B |
 | S-25 | Carousel sự kiện nổi bật tự chuyển sau mỗi 7 giây phải tạm dừng khi người dùng đưa chuột vào để có đủ thời gian đọc nội dung | N/A | N/A | N/A | Carousel 7 giây — kịch bản B |
 
-**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **130** (Passed 23 · Failed 7 · N/A 100) · **còn trống 134**
+**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **146** (Passed 31 · Failed 12 · N/A 103) · **còn trống 118**
 
 ---
 
