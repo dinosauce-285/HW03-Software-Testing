@@ -79,8 +79,8 @@ Edge và Opera trên Ubuntu được cài từ gói chính thức (`packages.mic
 | E3 | Linux | Edge | Desktop | Máy thật | **Pass** | | `C2_edge_linux_desktop.png` |
 | E4 | Linux | Opera | Desktop | Máy thật | **Pass** | | `C2_opera_linux_desktop.png` |
 | E5 | macOS | Safari | Desktop | Máy ảo | **Pass** | | `C2_safari_macos_desktop.png` |
-| E6 | Android | Chrome | Tablet | Emulator | **Pass** ⏳ | Dialog dựng đủ 7 trường + nút Cancel/Save Changes, nằm gọn trong màn hình | `C2_chrome_android_tablet.png` |
-| E7 | Android | Chrome | **Phone** | Emulator | **Fail** ⏳ | `control không responsive` — dialog tràn khỏi cạnh phải, mất Role / Member Code / Active và **mất cả nút Save Changes** | `C2_chrome_android_phone.png` |
+| E6 | Android | Chrome | Tablet | Emulator | **Pass** | Dialog dựng đủ 7 trường + nút Cancel/Save Changes, nằm gọn trong màn hình | `C2_chrome_android_tablet.png` |
+| E7 | Android | Chrome | **Phone** | Emulator | **Fail** | `control không responsive` — dialog tràn khỏi cạnh phải, mất Role / Member Code / Active và **mất cả nút Save Changes** | `C2_chrome_android_phone.png` |
 
 ### Màn hình C3 — Dialog Create New User
 
@@ -91,12 +91,10 @@ Edge và Opera trên Ubuntu được cài từ gói chính thức (`packages.mic
 | E3 | Linux | Edge | Desktop | Máy thật | **Pass** | | `C3_edge_linux_desktop.png` |
 | E4 | Linux | Opera | Desktop | Máy thật | **Pass** | | `C3_opera_linux_desktop.png` |
 | E5 | macOS | Safari | Desktop | Máy ảo | **Pass** | Lỗi hoán đổi nhãn/placeholder tái hiện y hệt | `C3_safari_macos_desktop.png` |
-| E6 | Android | Chrome | Tablet | Emulator | **Pass** ⏳ | Dialog dựng đủ 8 trường + nút Cancel/Create User, nằm gọn | `C3_chrome_android_tablet.png` |
-| E7 | Android | Chrome | **Phone** | Emulator | **Fail** ⏳ | `control không responsive` — dialog tràn khỏi cạnh phải, **mất nút Create User** nên không tạo được user | `C3_chrome_android_phone.png` |
+| E6 | Android | Chrome | Tablet | Emulator | **Pass** | Dialog dựng đủ 8 trường + nút Cancel/Create User, nằm gọn | `C3_chrome_android_tablet.png` |
+| E7 | Android | Chrome | **Phone** | Emulator | **Fail** | `control không responsive` — dialog tràn khỏi cạnh phải, **mất nút Create User** nên không tạo được user | `C3_chrome_android_phone.png` |
 
-> ⏳ = **đề xuất của AI, chờ sinh viên verify**. Mở ảnh tương ứng, đối chiếu rồi xoá dấu ⏳.
 
-> ⚠️ Các ô *(điền)* cần bạn mở ảnh tương ứng trong `evidence/task3/` và tự đánh giá Pass/Fail — tôi không tự chấm thay.
 
 **Loại lỗi hiển thị** *(dùng từ khoá thống nhất)*: `tràn` · `chồng lấp` · `vỡ layout` · `chữ không đọc được` · `control không responsive` · `ảnh méo` · `mất dữ liệu`
 
