@@ -17,6 +17,10 @@
 
 ## 1. Bảng log tương tác
 
+> **Về các con số trong bảng:** đây là nhật ký lịch sử, số mục ghi lại **đúng thời điểm đó** và không được sửa về sau.
+> Diễn biến: **68 mục** (AI sinh lần đầu) → **74 mục** (bổ sung Pool C sau khảo sát EMS 01/08) → **88 mục** (nhóm bổ sung Pool A, B, D — 02/08).
+
+
 | # | Giờ | Prompt (nguyên văn) | Output của AI | Nhóm đã làm gì với output |
 |---|---|---|---|---|
 | 1 | *(điền)* | "đọc các tài liệu và giải thích về đề bài, nhớ nói thông tin bạn giải thích là từ cái docs nào" | Phân tích 3 tài liệu (đề .md, slide intro EN, kịch bản E2E .docx), tách rõ nguồn từng thông tin | Dùng làm cơ sở hiểu phạm vi bài; đối chiếu lại với bản .md gốc |

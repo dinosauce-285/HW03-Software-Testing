@@ -1,6 +1,6 @@
 # Task 1B — Chạy checklist trên các màn hình đã chọn
 
-> Yêu cầu: đề §6 Task 1B — chạy **checklist dùng chung của nhóm** (68 mục) trên **≥ 3 màn hình**, đánh `Passed` / `Failed` theo từng màn hình, cột **Notes** ghi lý do fail, **ảnh chụp chỉ cho mục Failed**.
+> Yêu cầu: đề §6 Task 1B — chạy **checklist dùng chung của nhóm** (88 mục) trên **≥ 3 màn hình**, đánh `Passed` / `Failed` theo từng màn hình, cột **Notes** ghi lý do fail, **ảnh chụp chỉ cho mục Failed**.
 
 **Sinh viên:** 23127262 – Lý Quốc Thạnh
 **Kịch bản đã chọn:** **C — Admin quản lý người dùng**
@@ -15,7 +15,7 @@
 
 | # | Mã | Tên màn hình | URL / cách mở | Lý do chọn | Chất liệu giao diện *(đã khảo sát thực tế)* |
 |---|---|---|---|---|---|
-| 1 | **C1** | Users Management | `/dashboard/admin/users` | Màn hình gốc của pool C, giàu chất liệu bảng và điều hướng nhất | 7 cột (USER · ROLE · MEMBER CODE · STATUS · CREATED · UPDATED · ACTIONS), ô Search, bộ lọc trên cột ROLE và STATUS, 2 cột sắp xếp được, phân trang **79 user / 16 trang**, chọn số dòng 5–100, nút **Export** và **Add User**, avatar dạng chữ viết tắt |
+| 1 | **C1** | Users Management | `/dashboard/admin/users` | Màn hình gốc của pool C, giàu chất liệu bảng và điều hướng nhất | 7 cột (USER · ROLE · MEMBER CODE · STATUS · CREATED · UPDATED · ACTIONS), ô Search, bộ lọc trên cột ROLE và STATUS, 2 cột sắp xếp được, phân trang (số user thay đổi theo thời điểm — 79→108 trong các lần khảo sát), chọn số dòng 5–100, nút **Export** và **Add User**, avatar dạng chữ viết tắt |
 | 2 | **C2** | Dialog **Edit User** | Mở từ nút bút chì ở cột ACTIONS của C1 | Form sửa user — **nơi hiện thực cả Assign Role lẫn Block/Unblock** trong build này | 7 trường: First Name · Last Name · Email · Phone Number · **Role** (dropdown Admin/Guest/Lecturer/Student) · Member Code · **Active** (công tắc). Nút Cancel / Save Changes |
 | 3 | **C3** | Dialog **Create New User** | Mở từ nút **Add User** ở C1 | Bề mặt validation lớn nhất của pool C — 8 trường, nhiều loại ràng buộc khác nhau | 8 trường (thêm **Password** có nút hiện/ẩn), validation inline khi submit rỗng, Active mặc định bật. Nút Cancel / Create User |
 
@@ -81,7 +81,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 ## 2. Bảng chạy checklist
 
-> Sao chép toàn bộ 68 mục từ [`../task1a-checklist/GUI-Checklist.md`](../task1a-checklist/GUI-Checklist.md) vào bảng dưới.
+> Sao chép toàn bộ 88 mục từ [`../task1a-checklist/GUI-Checklist.md`](../task1a-checklist/GUI-Checklist.md) vào bảng dưới.
 > Giá trị mỗi ô: `Passed` · `Failed` · `N/A`. **Không được để trống.**
 > Mỗi `Failed` bắt buộc có **Notes** và **ảnh** trong `evidence/task1b/`.
 
@@ -91,28 +91,28 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 |---|---|---|---|---|---|---|
 | G-01 | Tiêu đề trang khớp với mục đang chọn trên sidebar | | | | | |
 | G-02 | Cùng chức năng dùng cùng nhãn ở mọi màn hình | | | | | |
-| … | *(chép tiếp G-03 → G-16)* | | | | | |
+| … | *(chép tiếp G-03 → G-18)* | | | | | |
 
 ### IA-02 — Forms
 
 | ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
 |---|---|---|---|---|---|---|
 | F-01 | Mọi ô nhập có nhãn thường trực | | | | | |
-| … | *(chép tiếp F-02 → F-19)* | | | | | |
+| … | *(chép tiếp F-02 → F-26)* | | | | | |
 
 ### IA-03 — Navigation
 
 | ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
 |---|---|---|---|---|---|---|
 | N-01 | Menu chính truy cập được mọi khu vực lớn | | | | | |
-| … | *(chép tiếp N-02 → N-15)* | | | | | |
+| … | *(chép tiếp N-02 → N-19)* | | | | | |
 
 ### IA-04 — Feedback / State
 
 | ID | Mục kiểm tra | MH1 | MH2 | MH3 | Notes | Ảnh |
 |---|---|---|---|---|---|---|
 | S-01 | Mọi hành động đổi dữ liệu có phản hồi rõ ràng | | | | | |
-| … | *(chép tiếp S-02 → S-18)* | | | | | |
+| … | *(chép tiếp S-02 → S-25)* | | | | | |
 
 ---
 

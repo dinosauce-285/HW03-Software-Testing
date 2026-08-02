@@ -30,7 +30,7 @@
 
 | # | Ngày giờ | Công cụ | Task | Prompt (nguyên văn) | Output của AI | Đã review / chỉnh sửa gì |
 |---|---|---|---|---|---|---|
-| 1 | 01/08/2026 | Claude Code | 1A | *(xem AI-Prompts-Log.md — 12 lượt)* | Checklist 68 mục + tra cứu nguồn sơ cấp | Chờ nhóm review trên EMS thật |
+| 1 | 01/08/2026 | Claude Code | 1A | *(xem AI-Prompts-Log.md — 12 lượt)* | Checklist 68 mục + tra cứu nguồn sơ cấp | Nhóm đã review, chốt bản 88 mục (02/08) |
 | 2 | 01/08/2026 | Claude Code | Setup | *"cần có file claude.md để hướng dẫn làm các task xuyên suốt để tránh bỏ quên khi đang làm bài"* + thông tin git repo | Tạo `CLAUDE.md` (7 quy tắc thường trực), khung mẫu cho Task 1B/2/3, findings, phụ lục; init repo + push GitHub | Rút gọn CLAUDE.md thành file hướng dẫn thuần; loại 3 mục Peer Review / PDF / đóng gói zip ra khỏi phạm vi AI |
 | 3 | 01/08/2026 | Claude Code | 1B | *"làm web chọn màn hình luôn nhé… bạn cứ lên web trong đề rồi chọn"* | Truy cập EMS → **thất bại**, tunnel ngrok offline (`ERR_NGROK_3200`, 05:15 UTC). Đề xuất C1+C2+C3 dựa trên đề §5 + tài liệu E2E, loại C4 vì quá mỏng | Chấp nhận đề xuất; **chưa xác minh trên app thật** — cần kiểm lại khi EMS online |
 | 4 | | | | | | |
