@@ -102,20 +102,20 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 |---|---|---|---|---|---|
 | G-01 | Tiêu đề trang khớp với mục đang được chọn trên sidebar/menu | Passed |  |  | **C1:** Tiêu đề "Users Management" khớp mục sidebar đang active |
 | G-02 | Cùng một chức năng dùng cùng một nhãn ở mọi màn hình (không lúc "Export" lúc "Xuất file") |  |  |  |  |
-| G-03 | Trong bảng dữ liệu: text canh trái, số canh phải, trạng thái canh giữa — nhất quán ở mọi bảng |  |  |  |  |
+| G-03 | Trong bảng dữ liệu: text canh trái, số canh phải, trạng thái canh giữa — nhất quán ở mọi bảng |  |  |  | **C1:** ⏳ Đo được — canh lề: USER=start, sáu cột còn lại=center. Bạn xét: MEMBER CODE là số nhưng canh giữa, có nhất quán với quy ước không |
 | G-04 | Toàn hệ thống dùng tối đa 2 họ font; cỡ chữ theo thang nhất quán (tiêu đề / nội dung / chú thích) | Passed |  |  | **C1:** 1 họ font (ui-sans-serif), 6 cỡ chữ theo thang: 11/12/14/16/18/24px |
-| G-05 | Màu dùng đúng ngữ nghĩa: màu chính cho hành động chính, **đỏ chỉ dành cho lỗi / hành động phá huỷ** |  |  |  |  |
+| G-05 | Màu dùng đúng ngữ nghĩa: màu chính cho hành động chính, **đỏ chỉ dành cho lỗi / hành động phá huỷ** |  |  |  | **C1:** ⏳ Đo được — phần tử màu đỏ duy nhất là nút "Delete user". Bạn xét xem có chỗ nào dùng đỏ sai ngữ cảnh không |
 | G-06 | Mỗi màn hình chỉ có **một** nút hành động chính; các nút còn lại ở dạng phụ |  |  |  |  |
 | G-07 | Nội dung không tràn ngang gây thanh cuộn ngang ở độ rộng màn hình ≥ 1280px | Passed |  |  | **C1:** scrollWidth 1425 = clientWidth 1425 → không cuộn ngang ở 1440px |
-| G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn |  |  |  |  |
+| G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn |  |  |  | **C1:** ⏳ Tìm chuỗi vô nghĩa "zzzqqq-khong-ton-tai-9999" → vẫn còn 1 dòng, có thông điệp rỗng. Bộ lọc không rỗng hẳn nên chưa kết luận được |
 | G-09 | Trạng thái đang tải có skeleton/spinner; khi dữ liệu về **không gây nhảy layout** |  |  |  |  |
 | G-10 | Ảnh giữ đúng tỉ lệ khung, không bị méo hay co giãn sai | N/A | N/A | N/A | Avatar là chữ viết tắt, không có thẻ ảnh nào trên C1–C3 |
 | G-11 | Thuật ngữ dùng ngôn ngữ người dùng — **không lộ mã trạng thái nội bộ** ra giao diện (vd hiện thẳng `OUTSIDE_CHECKIN_WINDOW`) | Passed |  |  | **C1:** Không tìm thấy chuỗi dạng UPPER_SNAKE lộ ra giao diện |
 | G-12 | Tỉ lệ tương phản chữ/nền ≥ 4.5:1 (chữ thường), ≥ 3:1 (chữ lớn) | Failed |  |  | **C1:** Tương phản dưới ngưỡng WCAG 1.4.3: sidebar active 2.08:1 · nút Export 2.71:1 · nút Add User 2.08:1 · badge 4.14:1 (cần 4.5). *(chỉ tính phần tử dùng màu rgb; 75 phần tử dùng lab() không quy đổi được nên chưa xét)* |
-| G-13 | Nội dung vẫn đọc được và không vỡ layout khi zoom trình duyệt **200%** |  |  |  |  |
-| G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình |  |  |  |  |
-| G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu |  |  |  |  |
-| G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác |  |  |  |  |
+| G-13 | Nội dung vẫn đọc được và không vỡ layout khi zoom trình duyệt **200%** | Failed |  |  | **C1:** Ở khung nhìn 720px (tương đương zoom 200%): scrollWidth **1031** vs clientWidth **705** → nội dung tràn ngang, phải cuộn để đọc |
+| G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình |  |  |  | **C1:** ⏳ Chưa mở được menu ngôn ngữ bằng script — bạn tự bấm cờ ở header rồi đối chiếu |
+| G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu |  |  |  | **C1:** ⏳ Phụ thuộc G-14 |
+| G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác |  |  |  | **C1:** ⏳ Phụ thuộc G-14 |
 | G-17 | Avatar dạng chữ viết tắt phải nằm gọn trong vòng tròn với **tên dài nhiều từ** (vd "KHOA NGUYỄN QUANG ĐĂNG" → "KNQĐ"), không tràn, không đè lên tên | Passed |  |  | **C1:** 4 avatar viết tắt (AÂTN, KL, TPĐ, NAQ), không cái nào tràn khỏi vòng tròn |
 | G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột; giá trị rỗng có ký hiệu thống nhất và định dạng đồng nhất giữa các dòng | Passed |  |  | **C1:** Member Code hiển thị đủ, không bị cắt; giá trị rỗng dùng ký hiệu "-" thống nhất |
 
@@ -160,16 +160,16 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | N-04 | Mọi trang chi tiết có đường quay lại danh sách cha (nút Back hoặc breadcrumb) |  |  |  |  |
 | N-05 | Link và nút dẫn tới **đúng** màn hình/hành động kỳ vọng; không có link chết | Passed |  |  | **C1:** Mọi thẻ a đều có href thật, không có href="#" hay javascript:void(0) |
 | N-06 | Tab trong trang giữ đúng nội dung khi chuyển qua lại; tab đang chọn nhận biết được | N/A | N/A | N/A | Không có tab trong trang ở C1–C3 |
-| N-07 | **Nút Back của trình duyệt** hoạt động đúng — không mất trạng thái, không submit lại form |  |  |  |  |
-| N-08 | **Deep link:** copy URL trang chi tiết, mở ở tab mới vẫn vào đúng bản ghi |  |  |  |  |
-| N-09 | **Bộ lọc / từ khoá tìm kiếm / số trang được giữ lại** khi quay về từ trang chi tiết |  |  |  |  |
+| N-07 | **Nút Back của trình duyệt** hoạt động đúng — không mất trạng thái, không submit lại form | Passed |  |  | **C1:** Bấm Back trình duyệt từ /users → về đúng /dashboard/admin, không mất trạng thái |
+| N-08 | **Deep link:** copy URL trang chi tiết, mở ở tab mới vẫn vào đúng bản ghi | Passed |  |  | **C1:** Mở thẳng URL /dashboard/admin/users → HTTP 200, bảng render đủ dữ liệu |
+| N-09 | **Bộ lọc / từ khoá tìm kiếm / số trang được giữ lại** khi quay về từ trang chi tiết | Passed |  |  | **C1:** Gõ "nguyen" (5 kết quả) → mở dialog → đóng → ô search vẫn giữ "nguyen" |
 | N-10 | Sau khi lưu, người dùng được trả về **đúng ngữ cảnh cũ**, không bị đá về dashboard |  |  |  |  |
 | N-11 | Thứ tự Tab bàn phím đi theo thứ tự đọc trực quan; **Esc đóng modal**; không có bẫy focus trong modal |  | Passed |  | **C2:** Bấm Esc đóng dialog |
 | N-12 | **Kéo-thả reorder:** dòng đang kéo có phản hồi thị giác rõ (mờ đi), các nút khác bị vô hiệu trong lúc kéo | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
 | N-13 | Thứ tự sau khi kéo-thả được **lưu đúng** sau khi Save và giữ nguyên khi tải lại trang | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
 | N-14 | Kéo-thả có **phương án thay thế không dùng chuột** (nút lên/xuống hoặc nhập số thứ tự) | N/A | N/A | N/A | Kéo-thả reorder — Categories/Settings |
 | N-15 | Truy cập URL khu vực admin bằng tài khoản không đủ quyền → chuyển hướng hoặc báo lỗi rõ ràng, **không hiện trang trắng** |  |  |  |  |
-| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang |  |  |  |  |
+| N-16 | Cột bảng sắp xếp được phải có **chỉ báo hướng sắp xếp** (mũi tên tăng/giảm) và giữ nguyên tiêu chí sắp xếp khi chuyển trang |  |  |  | **C1:** ⏳ Không bấm được tiêu đề cột bằng script, không có `aria-sort`. Bạn tự bấm để xem có sắp xếp và chỉ báo hướng không |
 | N-17 | Thông tin audit (ai tạo / ai sửa lần cuối, thời điểm) hiển thị đủ **người thực hiện và mốc thời gian**; giá trị thiếu có ký hiệu rõ ràng thay vì để tr |  |  |  |  |
 | N-18 | Danh sách support request có tab **Pending / Resolved** nhận biết được tab đang chọn; khi request được xử lý, bản ghi xuất hiện ở đúng tab trạng thái | N/A | N/A | N/A | Tab Pending/Resolved — kịch bản D |
 | N-19 | Khi nhấn **Clear filters** trên Dashboard, hệ thống xoá từ khoá tìm kiếm và các lựa chọn Category, Academic Context, Campus, Event Date, đồng thời làm | N/A | N/A | N/A | Clear filters Dashboard — kịch bản B |
@@ -183,9 +183,9 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | S-03 | Thao tác kéo dài (> ~400ms) có chỉ báo đang xử lý; màn hình không đứng im vô cớ |  |  |  |  |
 | S-04 | Toast tự tắt sau 3–5 giây, **không che** nội dung đang thao tác, và đóng thủ công được |  |  |  |  |
 | S-05 | Thông báo lỗi hệ thống dùng ngôn ngữ thường — không lộ mã lỗi, stack trace hay tên bảng CSDL |  |  |  |  |
-| S-06 | Hành động phá huỷ (Delete, Block) có **dialog xác nhận** nêu rõ hậu quả và đối tượng bị tác động |  |  |  |  |
-| S-07 | Trong dialog xác nhận: nút mặc định là nút **an toàn**; nút phá huỷ có nhãn động từ cụ thể ("Xoá sự kiện") thay vì "OK" |  |  |  |  |
-| S-08 | Hành động **hoàn tác được**; nếu không hoàn tác được thì phải nói rõ điều đó *trước khi* xác nhận |  |  |  |  |
+| S-06 | Hành động phá huỷ (Delete, Block) có **dialog xác nhận** nêu rõ hậu quả và đối tượng bị tác động | Passed |  |  | **C1:** Dialog xoá nêu rõ đối tượng: "Are you sure you want to delete user Trang Nguyen?" |
+| S-07 | Trong dialog xác nhận: nút mặc định là nút **an toàn**; nút phá huỷ có nhãn động từ cụ thể ("Xoá sự kiện") thay vì "OK" |  |  |  | **C1:** ⏳ Đo được — nút Cancel nền trắng, nút Confirm nền đỏ. Bạn xét nhãn "Confirm" có đủ cụ thể không (so với "Xoá user") |
+| S-08 | Hành động **hoàn tác được**; nếu không hoàn tác được thì phải nói rõ điều đó *trước khi* xác nhận | Passed |  |  | **C1:** Dialog có câu "This action cannot be undone" trước khi xác nhận |
 | S-09 | Kết thúc một chuỗi thao tác nhiều bước có thông báo **hoàn tất** rõ ràng |  |  |  |  |
 | S-10 | Trạng thái được phân biệt **không chỉ bằng màu** — có thêm icon hoặc nhãn chữ | Passed |  |  | **C1:** Cột STATUS có nhãn chữ ("Active"), không chỉ dựa vào màu |
 | S-11 | Bảng có nhiều màu trạng thái (EMS: 6 màu ở tab Participants) phải có **chú giải** hoặc tooltip giải nghĩa | N/A | N/A | N/A | Bảng 6 màu tab Participants — kịch bản A |
@@ -204,7 +204,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | S-24 | Khi nhấn Save hoặc Unsave trên Event Card ở Dashboard, trạng thái nút được cập nhật ngay mà không cần tải lại toàn bộ trang | N/A | N/A | N/A | Save/Unsave Event Card — kịch bản B |
 | S-25 | Carousel sự kiện nổi bật tự chuyển sau mỗi 7 giây phải tạm dừng khi người dùng đưa chuột vào để có đủ thời gian đọc nội dung | N/A | N/A | N/A | Carousel 7 giây — kịch bản B |
 
-**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **124** (Passed 18 · Failed 6 · N/A 100) · **còn trống 140**
+**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **130** (Passed 23 · Failed 7 · N/A 100) · **còn trống 134**
 
 ---
 
