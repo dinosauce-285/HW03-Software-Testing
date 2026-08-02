@@ -4,7 +4,7 @@
 
 **3 màn hình:** C1 Users Management `/dashboard/admin/users` · C2 dialog *Edit User* · C3 dialog *Create New User*
 
-> Quy trình làm việc và các quy tắc bắt buộc: xem [`CLAUDE.md`](CLAUDE.md)
+> Quy trình làm việc: [`CLAUDE.md`](CLAUDE.md) · Checklist nộp bài đầy đủ: [`SUBMISSION-CHECKLIST.md`](SUBMISSION-CHECKLIST.md)
 
 ---
 
@@ -13,6 +13,7 @@
 ```
 hw03/
 ├── CLAUDE.md        quy trình làm việc xuyên suốt (đọc đầu mỗi phiên)
+├── SUBMISSION-CHECKLIST.md   đối chiếu toàn bộ yêu cầu đề + policy
 │
 ├── docs/            tài liệu đề bài & SUT — CHỈ ĐỌC
 │   ├── 2026.HW03.GUI Usability EMS_Vi.md        đề bài chính thức
