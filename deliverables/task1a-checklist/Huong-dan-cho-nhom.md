@@ -68,7 +68,7 @@ Checklist đã được kiểm chứng trực tiếp trên **kịch bản A, C**
 |---|---|---|---|
 | Lý Quốc Thạnh | 23127262 | **C** | C1 Users Management · C2 dialog Edit User · C3 dialog Create New User |
 | Đoàn Thành Phát | 23127241 | **B** | B1 Dashboard & Tìm kiếm · B1-b Trang Saved Events · B2 Trang chi tiết sự kiện |
-| Nguyễn Đình Thái Hưng | `<điền>` | **D** | D1–D4 support request |
+| Nguyễn Đình Thái Hưng | 23127373 | **D** | D1–D4 support request |
 | Lê Thiên Phú | 23127244 | **A** | A1 Events list · A2 Add/Edit Event form · A4 Participants & Reviews approval |
 | | | | |
 

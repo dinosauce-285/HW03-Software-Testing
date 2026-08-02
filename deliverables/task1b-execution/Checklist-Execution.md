@@ -54,7 +54,7 @@ Cả 4 IA đều có màn hình đại diện; ba màn hình không chồng lấ
 | **Lý Quốc Thạnh** | **23127262** | **C** | **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User** |
 | Lê Thiên Phú | 23127244 | A | A1 Events list · A2 Add/Edit Event form · A4 Participants & Reviews |
 | Đoàn Thành Phát | 23127241 | B | B1 Dashboard & Tìm kiếm · B1-b Saved Events · B2 Chi tiết sự kiện |
-| Nguyễn Đình Thái Hưng | `<điền MSSV>` | **D** | D1–D4 support request *(xác nhận lại đúng 3 màn hình phụ trách)* |
+| Nguyễn Đình Thái Hưng | 23127373 | **D** | D1–D4 support request |
 
 Không có thành viên nào trùng kịch bản, cũng không trùng màn hình.
 
