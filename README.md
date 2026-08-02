@@ -45,8 +45,8 @@ hw03/
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **74 mục**, đã đối chiếu EMS thật 01/08/2026 — chờ nhóm chốt |
 | 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 74 mục |
 | 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
-| 3 | Task 3 — Cross-browser / platform | 25 | 🟡 **21/21 ô**, 18 Pass / 3 Fail — 4 ô chờ sinh viên verify |
-| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 3 phát hiện đã ghi log — **chưa nộp Google Form** |
+| 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
+| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 3 phát hiện đã ghi log — nộp form **một lần cuối** sau khi xong Task 1B và 2 |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
 | — | Phụ lục *(AI Audit · AI Critique · Peer Review · Git log)* | bắt buộc | ⬜ Mẫu đã sẵn sàng |
 
@@ -82,8 +82,9 @@ hw03/
 
 ## Việc cần làm ngay
 
-1. **Tuyển 5 người tham gia Task 2** — phần duy nhất phụ thuộc người khác, không nén lại được. Bắt đầu càng sớm càng tốt.
+1. **Tuyển 5 người tham gia Task 2** — phần duy nhất phụ thuộc người khác, độ trễ dài nhất. Bắt đầu sớm nhất có thể.
 2. **Chạy 74 mục checklist trên C1/C2/C3** (Task 1B) — không phụ thuộc ai, EMS đang chạy.
-3. **Chấm Pass/Fail cho 4 ô còn trống** trong ma trận Task 3 — mở ảnh trong `evidence/task3/` và tự đánh giá.
-4. **Nộp 2 findings đã có lên Google Form** — đề §7 bắt buộc báo cáo hai lần, log và form phải khớp số lượng.
-5. **Gửi nhóm 4 file Task 1A** — xem `task1a-checklist/Huong-dan-cho-nhom.md`.
+3. **Gửi nhóm 4 file Task 1A** — xem [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md).
+4. **Agent Skill + video demo** (10đ) — chưa bắt đầu.
+
+Đối chiếu đầy đủ mọi yêu cầu: [`SUBMISSION-CHECKLIST.md`](SUBMISSION-CHECKLIST.md)
