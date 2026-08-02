@@ -5,43 +5,46 @@
 
 ---
 
-## 1. Chuẩn bị trước khi người tham gia đến — 5 phút
+## 1. Chuẩn bị
 
-- [ ] Mở Chrome, đăng nhập sẵn admin `admin@gmail.com` / `Admin@123`
-- [ ] Đứng ở `https://prod-dev.ems-fitus.cloud/dashboard/admin/users`, **đóng hết dialog**
-- [ ] Đặt zoom 100%, cửa sổ tối đa hoá
-- [ ] Bật ghi màn hình *(chưa bấm Start)*
-- [ ] Chọn sẵn **một user có thật** trong danh sách để làm "người đã rời câu lạc bộ" — ghi tên vào phiếu
-- [ ] Chuẩn bị đồng hồ bấm giờ
+### 1a. Làm MỘT LẦN trước phiên đầu tiên — tạo user mồi
+
+Người tham gia sẽ vô hiệu hoá user này. Tạo sẵn để không đụng tài khoản của người thật.
+
+| Trường | Giá trị |
+|---|---|
+| First Name | `Hùng` |
+| Last Name | `Lê Văn` |
+| Email | `cuthanhvien.test@example.com` |
+| Phone | *(bỏ trống)* |
+| Role | `Student` |
+| Member Code | `88009999` |
+| Password | `Clb@2026` |
+| Active | ✔ bật |
+
+> Tên bắt đầu bằng "Hùng" nên **không nằm đầu bảng** — người tham gia buộc phải dùng ô Search hoặc lật trang mới tìm ra. Đó chính là phần màn hình C1 được test.
+
+Dùng chung cho cả 5 phiên. **Sau mỗi phiên bật lại `Active`. Sau phiên cuối xoá hẳn.**
+
+### 1b. Làm trước MỖI phiên — 5 phút
+
+- [ ] Kiểm user mồi `Hùng Lê Văn` đang ở trạng thái **Active**
+- [ ] Gửi người tham gia link + tài khoản, dặn đăng nhập sẵn và share màn hình
+- [ ] Vào Meet, bảo họ mở `/dashboard/admin/users`, đóng hết dialog
+- [ ] Bật **Record** của Meet
 - [ ] Mở phiếu ghi chép của phiên tương ứng ở §3
+- [ ] Chuẩn bị đồng hồ bấm giờ
 
-### ✅ Dữ liệu test đã kiểm trước — 02/08/2026
+### 1c. Dữ liệu test đã kiểm — 02/08/2026
 
-Đã đối chiếu trực tiếp trên EMS (chỉ đọc, không ghi gì):
+Đối chiếu trực tiếp trên EMS, chỉ đọc:
 
 | Kiểm | Kết quả |
 |---|---|
-| Mã `99001234` có trùng không | **Không trùng** ✔ |
-| Tên `Minh Trần Văn` có trùng không | **Không trùng** ✔ |
-| Email `minhtv.test+pX@example.com` có bị từ chối không | **Không báo lỗi** ✔ |
-| Role có tuỳ chọn `Student` không | **Có** — Select a Role · Admin · Guest · Lecturer · Student ✔ |
-
-Vậy cả bốn rủi ro dữ liệu test đều đã loại. Người tham gia sẽ không bị kẹt vì lỗi của bộ dữ liệu.
-
-### ⚠️ Chọn user "đã rời câu lạc bộ" — cân nhắc trước
-
-Trang 1 hiện có 5 ứng viên đang `Active` và không phải Admin. **Nhưng đây là hệ thống dùng chung**: vô hiệu hoá tài khoản của một người thật khiến họ **không đăng nhập được** trong suốt phiên của bạn.
-
-Hai cách xử lý, chọn một:
-
-| Cách | Ưu | Nhược |
-|---|---|---|
-| **Chọn user trông rõ là dữ liệu test** *(tên viết tắt lạ, email `@example`, tên kiểu "test abc")* | Không ảnh hưởng ai | Phải tìm, và có thể đã Inactive sẵn |
-| **Tự tạo trước một user mồi** tên kiểu `Cũ Thành Viên` rồi dùng nó cho cả 5 phiên | Chắc chắn không đụng người thật, tái dùng được | Bạn phải tạo trước, và nhớ xoá sau khi xong toàn bộ |
-
-**Tôi nghiêng về cách thứ hai** — tạo một user mồi dùng chung cho cả 5 phiên, bật lại `Active` sau mỗi phiên, xoá hẳn sau phiên cuối. Vừa an toàn vừa khiến 5 phiên có cùng điều kiện đầu vào, so sánh được với nhau.
-
-> Ghi tên user mồi đã chọn vào từng phiếu ở §3.
+| Mã `99001234` có trùng không | **Không** ✔ |
+| Tên `Minh Trần Văn` có trùng không | **Không** ✔ |
+| Email `@example.com` có bị từ chối không | **Không báo lỗi** ✔ |
+| Role có tuỳ chọn `Student` không | **Có** ✔ |
 
 ---
 
@@ -69,9 +72,9 @@ Hai cách xử lý, chọn một:
 >
 > *Có hai việc cần xử lý hôm nay.*
 >
-> ***Thứ nhất**, có một bạn sinh viên mới xin vào câu lạc bộ. Bạn ấy tên là **Minh Trần Văn**, email **minhtv.test+pX@example.com**, mã số **99001234**. Hãy đưa bạn ấy vào hệ thống.*
+> ***Thứ nhất**, có một bạn sinh viên mới xin vào câu lạc bộ. Bạn ấy tên là **Minh Trần Văn**, email **minhtv.test+pX@example.com**, mã số **99001234**, mật khẩu đặt là **Clb@2026**. Hãy đưa bạn ấy vào hệ thống.*
 >
-> ***Thứ hai**, bạn **[TÊN USER ĐÃ CHỌN]** đã rời câu lạc bộ. Bạn ấy không được vào hệ thống nữa, nhưng câu lạc bộ vẫn muốn giữ lại hồ sơ để đối chiếu về sau — **đừng xoá hẳn**.*
+> ***Thứ hai**, bạn **Hùng Lê Văn** đã rời câu lạc bộ. Bạn ấy không được vào hệ thống nữa, nhưng câu lạc bộ vẫn muốn giữ lại hồ sơ để đối chiếu về sau — **đừng xoá hẳn**.*
 >
 > *Bạn cứ làm theo cách bạn thấy tự nhiên nhất. Nhớ nói to suy nghĩ giúp mình nhé."*
 
@@ -104,6 +107,45 @@ Hai cách xử lý, chọn một:
 - [ ] Xoá user `minhtv.test+pX@example.com` vừa tạo
 - [ ] Bật lại `Active` cho user đã bị vô hiệu hoá
 - [ ] Đánh dấu "đã dọn" vào phiếu
+
+---
+
+## 2b. Đáp án — đường đi đúng và những đường sai cần rình
+
+> Phần này **chỉ người điều phối biết**. Tuyệt đối không nói ra.
+
+### Việc 1 — Thêm thành viên
+
+```
+Users Management → nút "Add User" (xanh, góc phải trên)
+→ dialog "Create New User"
+→ điền First Name · Last Name · Email · Role=Student · Member Code · Password
+→ bấm "Create User"
+→ dialog đóng, user xuất hiện trong bảng — KHÔNG có thông báo nào
+```
+
+### Việc 2 — Ngừng quyền truy cập
+
+```
+Gõ "Hùng" vào ô Search  (hoặc lật trang tìm)
+→ bấm icon BÚT CHÌ ở cột ACTIONS
+→ dialog "Edit User"
+→ BỎ TICK ô "Active" ở gần cuối form
+→ bấm "Save Changes"
+→ cột STATUS đổi Active → Inactive — KHÔNG có thông báo nào
+```
+
+### Đường sai cần ghi nhận
+
+| Họ làm gì | Ghi là |
+|---|---|
+| Bấm **icon thùng rác đỏ** → dialog "Delete User… cannot be undone" → bấm **Confirm** | **THẤT BẠI** — xoá mất hồ sơ, trái yêu cầu. Dữ liệu quý nhất của phiên |
+| Bấm thùng rác rồi **kịp bấm Cancel** | **1 lỗi**, tự sửa được |
+| Đi tìm nút "Block" / "Khoá" / "Vô hiệu hoá" riêng | **do dự** — mong có nút riêng mà app không có |
+| Vào Settings hoặc menu khác tìm | **lỗi điều hướng** |
+| Mở dialog Edit nhưng không thấy ô Active *(nằm gần cuối, phải cuộn)* | **do dự** |
+| Điền **Họ vào ô First Name** *(placeholder ghi ngược)* | tick ô `T1B-01` trong phiếu |
+| Bấm Save xong ngập ngừng, kiểm lại, hoặc bấm Save lần hai | tick ô `T1B-10` |
 
 ---
 
