@@ -15,7 +15,33 @@
 - [ ] Chuẩn bị đồng hồ bấm giờ
 - [ ] Mở phiếu ghi chép của phiên tương ứng ở §3
 
-> ⚠️ **Chọn user cẩn thận.** Đừng chọn user của bạn cùng lớp hay tài khoản admin. Chọn một user có vẻ là dữ liệu test.
+### ✅ Dữ liệu test đã kiểm trước — 02/08/2026
+
+Đã đối chiếu trực tiếp trên EMS (chỉ đọc, không ghi gì):
+
+| Kiểm | Kết quả |
+|---|---|
+| Mã `99001234` có trùng không | **Không trùng** ✔ |
+| Tên `Minh Trần Văn` có trùng không | **Không trùng** ✔ |
+| Email `minhtv.test+pX@example.com` có bị từ chối không | **Không báo lỗi** ✔ |
+| Role có tuỳ chọn `Student` không | **Có** — Select a Role · Admin · Guest · Lecturer · Student ✔ |
+
+Vậy cả bốn rủi ro dữ liệu test đều đã loại. Người tham gia sẽ không bị kẹt vì lỗi của bộ dữ liệu.
+
+### ⚠️ Chọn user "đã rời câu lạc bộ" — cân nhắc trước
+
+Trang 1 hiện có 5 ứng viên đang `Active` và không phải Admin. **Nhưng đây là hệ thống dùng chung**: vô hiệu hoá tài khoản của một người thật khiến họ **không đăng nhập được** trong suốt phiên của bạn.
+
+Hai cách xử lý, chọn một:
+
+| Cách | Ưu | Nhược |
+|---|---|---|
+| **Chọn user trông rõ là dữ liệu test** *(tên viết tắt lạ, email `@example`, tên kiểu "test abc")* | Không ảnh hưởng ai | Phải tìm, và có thể đã Inactive sẵn |
+| **Tự tạo trước một user mồi** tên kiểu `Cũ Thành Viên` rồi dùng nó cho cả 5 phiên | Chắc chắn không đụng người thật, tái dùng được | Bạn phải tạo trước, và nhớ xoá sau khi xong toàn bộ |
+
+**Tôi nghiêng về cách thứ hai** — tạo một user mồi dùng chung cho cả 5 phiên, bật lại `Active` sau mỗi phiên, xoá hẳn sau phiên cuối. Vừa an toàn vừa khiến 5 phiên có cùng điều kiện đầu vào, so sánh được với nhau.
+
+> Ghi tên user mồi đã chọn vào từng phiếu ở §3.
 
 ---
 

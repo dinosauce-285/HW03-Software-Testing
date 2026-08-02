@@ -180,9 +180,9 @@ Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng ch
 | Có liên hệ kiểm chứng được | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Đã đồng ý cho ghi màn hình | ☐ | ☐ | ☐ | ☐ | ☐ |
 
-**Ghi nhận sau pilot — đã chỉnh sửa gì trước khi chạy P1–P5:**
+**Về pilot:** sinh viên quyết định **không chạy pilot với người thứ 6**. Thay vào đó, bốn rủi ro dữ liệu test mà pilot thường phát hiện đã được kiểm trực tiếp trên EMS ngày 02/08/2026 *(mã số trùng · tên trùng · email bị từ chối · thiếu tuỳ chọn Role)* — kết quả và cách kiểm ghi ở [`03_Session-Kit.md` §1](03_Session-Kit.md).
 
-*(điền sau khi chạy P0)*
+> ⚠️ Ghi nhận trung thực: đây **không thay thế** được pilot theo [đề §6 dòng 112](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L112). Việc kiểm dữ liệu loại được rủi ro kỹ thuật, nhưng **không kiểm được kịch bản có bị hiểu sai hay không** và **không hiệu chỉnh được benchmark 4 phút** — hai thứ chỉ người thật mới cho biết. Benchmark 4 phút vì vậy là **ước lượng chưa hiệu chỉnh**, cần ghi rõ khi phân tích.
 
 ---
 
