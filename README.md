@@ -44,8 +44,8 @@ hw03/
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **74 mục**, đã đối chiếu EMS thật 01/08/2026 — chờ nhóm chốt |
 | 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 74 mục |
 | 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
-| 3 | Task 3 — Cross-browser / platform | 25 | 🟡 **21/21 ô đã chụp**, ma trận đã điền — còn 4 ô chờ tự chấm Pass/Fail |
-| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 2 phát hiện đã ghi log — **chưa nộp Google Form** |
+| 3 | Task 3 — Cross-browser / platform | 25 | 🟡 **21/21 ô**, 18 Pass / 3 Fail — 4 ô chờ sinh viên verify |
+| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 3 phát hiện đã ghi log — **chưa nộp Google Form** |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
 | — | Phụ lục *(AI Audit · AI Critique · Peer Review · Git log)* | bắt buộc | ⬜ Mẫu đã sẵn sàng |
 
