@@ -1,7 +1,7 @@
 # Task 2 — Bộ chạy phiên
 
 > In file này ra hoặc mở trên máy thứ hai. Mỗi phiên dùng một khối §3.
-> Thứ tự: **P0 pilot trước** → sửa kịch bản nếu cần → rồi P1…P5.
+> Mỗi phiên dùng một khối phiếu ở §3.
 
 ---
 
@@ -76,7 +76,7 @@ Hai cách xử lý, chọn một:
 > *Bạn cứ làm theo cách bạn thấy tự nhiên nhất. Nhớ nói to suy nghĩ giúp mình nhé."*
 
 - [ ] **Bấm giờ ngay khi đọc xong câu cuối**
-- [ ] Thay `pX` bằng số phiên: `+p1` … `+p5`, pilot dùng `+p0`
+- [ ] Thay `pX` bằng số phiên: `+p1` … `+p5`
 
 ### 2.3 Trong lúc chạy — câu được phép nói
 
@@ -109,7 +109,7 @@ Hai cách xử lý, chọn một:
 
 ## 3. Phiếu ghi chép — mỗi phiên một khối
 
-### Phiên P0 — PILOT *(không tính vào 5 người)*
+### Phiên P1
 
 ```
 Người tham gia: ____________________  Ngày/giờ: ______________
@@ -179,24 +179,9 @@ DỌN DẸP
 [ ] Đã bật lại Active cho user bị vô hiệu hoá
 ```
 
-**Sau pilot — bắt buộc trả lời:**
-
-| Câu hỏi | Trả lời |
-|---|---|
-| Có chỗ nào trong kịch bản người tham gia hiểu sai ý không? | |
-| Có luồng nào hỏng khiến tác vụ không thể hoàn thành? | |
-| 4 phút benchmark có hợp lý không? | |
-| **Đã sửa gì trước khi chạy P1–P5:** | |
-
----
-
-### Phiên P1
-
-*(chép nguyên khối phiếu của P0, đổi số phiên và email thành `+p1`)*
-
 ### Phiên P2 · P3 · P4 · P5
 
-*(tương tự)*
+*(chép nguyên khối phiếu của P1, đổi số phiên và email thành `+p2` … `+p5`)*
 
 ---
 
