@@ -28,11 +28,11 @@
 
 | # | Hạng mục | File | Trạng thái |
 |---|---|---|---|
-| A1 | Checklist GUI dùng chung — **> 40 mục**, phủ IA-01…IA-04 | [`GUI-Checklist.md`](deliverables/task1a-checklist/GUI-Checklist.md) — **74 mục** | ✅ |
+| A1 | Checklist GUI dùng chung — **> 40 mục**, phủ IA-01…IA-04 | [`GUI-Checklist.md`](deliverables/task1a-checklist/GUI-Checklist.md) — **88 mục** | ✅ |
 | A2 | Danh sách nguồn tham khảo | [`Task1A_Heuristics-Reference.md`](references/Task1A_Heuristics-Reference.md) — R1…R10 | ✅ |
 | A3 | Các **prompt AI** dùng xây checklist | [`AI-Prompts-Nhom.md`](deliverables/task1a-checklist/AI-Prompts-Nhom.md) — 5 prompt | ✅ |
 | A4 | Giải thích **vì sao AI bỏ sót** từng mục tự thêm | §5 của checklist — 3 nhóm nguyên nhân | ✅ |
-| A5 | Nhóm review và chốt bản cuối | [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md) đã gửi | 🟡 chờ nhóm |
+| A5 | Nhóm review và chốt bản cuối | Pool A/C/D đã kiểm trên EMS thật; Pool B tích hợp 3 mục, **chưa có nhật ký kiểm chứng** | ✅ |
 
 ---
 
@@ -43,7 +43,7 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | B1 | Liệt kê **≥ 3 màn hình** và lý do chọn | ✅ [`Checklist-Execution.md §1`](deliverables/task1b-execution/Checklist-Execution.md) |
-| B2 | Chạy checklist trên **từng** màn hình | ⬜ **chưa chạy** — 74 mục × 3 màn hình |
+| B2 | Chạy checklist trên **từng** màn hình | ⬜ **chưa chạy** — 88 mục × 3 màn hình |
 | B3 | Mỗi mục có `Passed` / `Failed` / `N/A` — **không ô trống** | ⬜ |
 | B4 | Cột **Notes** ghi lý do cho mỗi mục `Failed` | ⬜ |
 | B5 | Ảnh chụp **chỉ cho mục Failed** | ⬜ |

@@ -71,10 +71,10 @@
 
 | Chỉ số | Giá trị |
 |---|---|
-| Tổng số mục | 74 |
+| Tổng số mục | 88 |
 | Do AI sinh | 30 |
-| Nhóm bổ sung sau review | 44 |
-| Mục phải viết lại sau khi đối chiếu app thật | 6 |
+| Nhóm bổ sung sau review | 58 |
+| Mục phải viết lại sau khi đối chiếu app thật | 8 |
 
 ---
 

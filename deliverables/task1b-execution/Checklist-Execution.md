@@ -47,7 +47,15 @@
 
 Cả 4 IA đều có màn hình đại diện; ba màn hình không chồng lấn phạm vi chức năng.
 
-**Không trùng với thành viên khác trong nhóm:** *(ghi rõ ai làm kịch bản/màn hình nào)*
+**Không trùng với thành viên khác trong nhóm** *(đề §5 · Policies "Work Allocation")*:
+
+| Thành viên | MSSV | Kịch bản | 3 màn hình phụ trách |
+|---|---|---|---|
+| **Lý Quốc Thạnh** | **23127262** | **C** | **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User** |
+| Lê Thiên Phú | 23127244 | A | A1 Events list · A2 Add/Edit Event form · A4 Participants & Reviews |
+| Đoàn Thành Phát | 23127241 | B | B1 Dashboard & Tìm kiếm · B1-b Saved Events · B2 Chi tiết sự kiện |
+
+Không có thành viên nào trùng kịch bản, cũng không trùng màn hình.
 
 ---
 

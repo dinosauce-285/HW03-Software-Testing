@@ -26,7 +26,7 @@ hw03/
 │   └── Task1A_Heuristics-Reference.md    Nielsen · Norman · Shneiderman · SUS · severity · compat
 │
 ├── deliverables/    bài làm
-│   ├── task1a-checklist/     GUI-Checklist.md (74 mục) · AI-Prompts-Nhom.md · AI-Prompts-Log.md
+│   ├── task1a-checklist/     GUI-Checklist.md (88 mục) · AI-Prompts-Nhom.md · AI-Prompts-Log.md
 │   ├── task1b-execution/     Checklist-Execution.md
 │   ├── task2-usability/      01_Test-Plan-and-Kit.md · 02_Usability-Report.md
 │   ├── task3-crossplatform/  Compatibility-Matrix.md
@@ -42,8 +42,8 @@ hw03/
 
 | # | Hạng mục | Điểm | Trạng thái |
 |---|---|---|---|
-| 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **74 mục**, đã đối chiếu EMS thật 01/08/2026 — chờ nhóm chốt |
-| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 74 mục |
+| 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **88 mục** — nhóm đã review, kiểm chứng Pool A/C/D trên EMS thật |
+| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 88 mục |
 | 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
 | 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
 | 4 | Findings (Form + log tổng hợp) | 10 | 🟡 3 phát hiện đã ghi log — nộp form **một lần cuối** sau khi xong Task 1B và 2 |
@@ -58,7 +58,7 @@ hw03/
 |---|---|
 | Kịch bản đã chọn | C — Admin quản lý người dùng |
 | Màn hình đã kiểm | C1 Users Management · C2 Edit User · C3 Create New User |
-| Số mục checklist thiết kế | 74 |
+| Số mục checklist thiết kế | 88 |
 | Số mục đã chạy / Passed / Failed | |
 | Số lỗi phát hiện | |
 | Số người tham gia user-testing | 5 |
@@ -83,7 +83,7 @@ hw03/
 ## Việc cần làm ngay
 
 1. **Tuyển 5 người tham gia Task 2** — phần duy nhất phụ thuộc người khác, độ trễ dài nhất. Bắt đầu sớm nhất có thể.
-2. **Chạy 74 mục checklist trên C1/C2/C3** (Task 1B) — không phụ thuộc ai, EMS đang chạy.
+2. **Chạy 88 mục checklist trên C1/C2/C3** (Task 1B) — không phụ thuộc ai, EMS đang chạy.
 3. **Gửi nhóm 4 file Task 1A** — xem [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md).
 4. **Agent Skill + video demo** (10đ) — chưa bắt đầu.
 

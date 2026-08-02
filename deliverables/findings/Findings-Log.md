@@ -74,7 +74,7 @@ Nộp **một lần duy nhất** sau khi hoàn tất cả ba task — không n�
 
 | Nguồn | Trạng thái | Số phát hiện |
 |---|---|---|
-| Task 1B — chạy 74 mục × 3 màn hình | ⬜ **chưa chạy** | 1 *(mới có từ khảo sát ban đầu)* |
+| Task 1B — chạy 88 mục × 3 màn hình | ⬜ **chưa chạy** | 1 *(mới có từ khảo sát ban đầu)* |
 | Task 2 — 5 phiên user testing | ⬜ **chưa chạy** | 0 |
 | Task 3 — ma trận 21 ô | ✅ xong | 2 |
 | **Tổng hiện tại** | | **3** |
