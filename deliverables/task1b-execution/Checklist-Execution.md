@@ -68,7 +68,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 |---|---|
 | **Không có breadcrumb** ở khu admin | `N-03` sẽ Failed hoặc N/A ở cả 3 màn hình |
 | Avatar là **chữ viết tắt trong vòng tròn**, không phải ảnh (`<img>` = 0) | `G-17` cần đổi cách kiểm: xem tên dài như "KHOA NGUYỄN QUANG ĐĂNG" → viết tắt "KNQĐ" có tràn vòng tròn không |
-| Cột CREATED/UPDATED hiển thị chuỗi **"Tôi là Admin"** (tiếng Việt) trong giao diện đang để **English** | Ứng viên Failed cho `G-14` (i18n phủ toàn bộ) |
+| Cột CREATED/UPDATED hiển thị chuỗi **"Tôi là Admin"** trong giao diện English | ~~Ứng viên Failed cho `G-14`~~ → **đã bác bỏ**: đó là *tên hiển thị của tài khoản admin* (dữ liệu), không phải chuỗi giao diện. Kiểm thực tế cho thấy i18n phủ 13/13 chuỗi |
 | Trường bắt buộc **không có dấu `*`** trước khi submit | Ứng viên Failed cho `F-02` |
 | Thông báo lỗi hiện **inline ngay dưới từng trường** | Ứng viên Passed cho `F-04` |
 | Dialog xoá có câu *"This action cannot be undone"* | Ứng viên Passed cho `S-08` |
@@ -107,15 +107,15 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | G-05 | Màu dùng đúng ngữ nghĩa: màu chính cho hành động chính, **đỏ chỉ dành cho lỗi / hành động phá huỷ** |  |  |  | **C1:** ⏳ Đo được — phần tử màu đỏ duy nhất là nút "Delete user". Bạn xét xem có chỗ nào dùng đỏ sai ngữ cảnh không |
 | G-06 | Mỗi màn hình chỉ có **một** nút hành động chính; các nút còn lại ở dạng phụ |  |  |  |  |
 | G-07 | Nội dung không tràn ngang gây thanh cuộn ngang ở độ rộng màn hình ≥ 1280px | Passed | Passed | Passed | **C1:** scrollWidth 1425 = clientWidth 1425 → không cuộn ngang ở 1440px<br>**C2:** dialog scrollWidth 448 = clientWidth 448, không tràn ở desktop<br>**C3:** dialog scrollWidth 448 = clientWidth 448, không tràn ở desktop |
-| G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn |  |  |  | **C1:** ⏳ Tìm chuỗi vô nghĩa "zzzqqq-khong-ton-tai-9999" → vẫn còn 1 dòng, có thông điệp rỗng. Bộ lọc không rỗng hẳn nên chưa kết luận được |
+| G-08 | Trạng thái rỗng (empty state) có thông điệp giải thích **và** gợi ý hành động tiếp theo, không phải vùng trắng trơn | Failed |  |  | **C1:** Empty state hiện đúng thông điệp giải thích: *"No users found matching your filters."* nhưng **không có gợi ý hành động tiếp theo** — không nút "Xoá bộ lọc", không link nào. Mục này đòi cả hai. *(Ranh giới — câu chữ có ám chỉ "filters" nên bạn có thể nâng lên Passed nếu thấy đủ)* |
 | G-09 | Trạng thái đang tải có skeleton/spinner; khi dữ liệu về **không gây nhảy layout** | Passed |  |  | **C1:** Thấy 2 phần tử skeleton/animate-pulse trong lúc tải dữ liệu bảng |
 | G-10 | Ảnh giữ đúng tỉ lệ khung, không bị méo hay co giãn sai | N/A | N/A | N/A | Avatar là chữ viết tắt, không có thẻ ảnh nào trên C1–C3 |
 | G-11 | Thuật ngữ dùng ngôn ngữ người dùng — **không lộ mã trạng thái nội bộ** ra giao diện (vd hiện thẳng `OUTSIDE_CHECKIN_WINDOW`) | Passed |  |  | **C1:** Không tìm thấy chuỗi dạng UPPER_SNAKE lộ ra giao diện |
 | G-12 | Tỉ lệ tương phản chữ/nền ≥ 4.5:1 (chữ thường), ≥ 3:1 (chữ lớn) | Failed | Failed | Failed | **C1:** Tương phản dưới ngưỡng WCAG 1.4.3: sidebar active 2.08:1 · nút Export 2.71:1 · nút Add User 2.08:1 · badge 4.14:1 (cần 4.5). *(chỉ tính phần tử dùng màu rgb; 75 phần tử dùng lab() không quy đổi được nên chưa xét)*<br>**C2:** Nút **Save Changes**: chữ trắng trên nền xanh, tương phản **2.08:1** (cần 4.5). Bỏ qua 8 phần tử dùng lab()<br>**C3:** Nút **Create User**: chữ trắng trên nền xanh, tương phản **2.08:1** (cần 4.5). Bỏ qua 9 phần tử dùng lab() |
 | G-13 | Nội dung vẫn đọc được và không vỡ layout khi zoom trình duyệt **200%** | Failed |  |  | **C1:** Ở khung nhìn 720px (tương đương zoom 200%): scrollWidth **1031** vs clientWidth **705** → nội dung tràn ngang, phải cuộn để đọc |
-| G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình |  |  |  | **C1:** ⏳ Chưa mở được menu ngôn ngữ bằng script — bạn tự bấm cờ ở header rồi đối chiếu |
-| G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu |  |  |  | **C1:** ⏳ Phụ thuộc G-14 |
-| G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác |  |  |  | **C1:** ⏳ Phụ thuộc G-14 |
+| G-14 | Chuyển EN/VI dịch **toàn bộ** text hiển thị — không còn chuỗi lẫn ngôn ngữ trên cùng màn hình | Passed |  |  | **C1:** Chuyển sang Tiếng Việt → **0/13** chuỗi EN kiểm tra còn sót. Toàn bộ sidebar, tiêu đề, nút và tiêu đề cột đều dịch: "Quản lý người dùng", "Xuất", "Thêm người dùng", "NGƯỜI DÙNG", "VAI TRÒ", "MÃ THÀNH VIÊN", "TRẠNG THÁI" |
+| G-15 | Text tiếng Việt (dài hơn EN) không làm vỡ nút, cắt chữ, hay xuống dòng xấu | Passed |  |  | **C1:** Ở tiếng Việt không phần tử nào bị tràn hay cắt chữ (`scrollWidth` ≤ `clientWidth` với mọi button/th/span/a) |
+| G-16 | Ngôn ngữ đã chọn được **lưu lại** và giữ nguyên sau khi tải lại trang / mở trang khác | Passed |  |  | **C1:** Tải lại trang sau khi đổi → ngôn ngữ vẫn giữ Tiếng Việt |
 | G-17 | Avatar dạng chữ viết tắt phải nằm gọn trong vòng tròn với **tên dài nhiều từ** (vd "KHOA NGUYỄN QUANG ĐĂNG" → "KNQĐ"), không tràn, không đè lên tên | Passed |  |  | **C1:** 4 avatar viết tắt (AÂTN, KL, TPĐ, NAQ), không cái nào tràn khỏi vòng tròn |
 | G-18 | Member Code hiển thị đầy đủ, không bị cắt bởi độ rộng cột; giá trị rỗng có ký hiệu thống nhất và định dạng đồng nhất giữa các dòng | Passed |  |  | **C1:** Member Code hiển thị đủ, không bị cắt; giá trị rỗng dùng ký hiệu "-" thống nhất |
 
@@ -204,7 +204,7 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 | S-24 | Khi nhấn Save hoặc Unsave trên Event Card ở Dashboard, trạng thái nút được cập nhật ngay mà không cần tải lại toàn bộ trang | N/A | N/A | N/A | Save/Unsave Event Card — kịch bản B |
 | S-25 | Carousel sự kiện nổi bật tự chuyển sau mỗi 7 giây phải tạm dừng khi người dùng đưa chuột vào để có đủ thời gian đọc nội dung | N/A | N/A | N/A | Carousel 7 giây — kịch bản B |
 
-**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **146** (Passed 31 · Failed 12 · N/A 103) · **còn trống 118**
+**Tiến độ:** 88 mục × 3 màn hình = 264 ô · đã có kết quả **150** (Passed 34 · Failed 13 · N/A 103) · **còn trống 114**
 
 ---
 
