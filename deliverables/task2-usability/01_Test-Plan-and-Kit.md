@@ -161,14 +161,11 @@ Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng ch
 
 | # | Họ tên | Vai trò / bối cảnh quản lý danh sách | Liên hệ (đã ẩn) | Ngày chạy | Thiết bị |
 |---|---|---|---|---|---|
-| **P0** *(pilot)* | | | | | |
 | P1 | | | | | |
 | P2 | | | | | |
 | P3 | | | | | |
 | P4 | | | | | |
 | P5 | | | | | |
-
-> **P0 chạy trước và KHÔNG tính** vào 5 người chính thức — [đề §6](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L112).
 
 **Kiểm tra điều kiện tuyển — đánh dấu cho từng người:**
 

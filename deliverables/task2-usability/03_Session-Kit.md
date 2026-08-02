@@ -174,7 +174,7 @@ Nếu sửa MỘT thứ duy nhất:
    ____________________________________________________
 
 DỌN DẸP
-[ ] Đã chụp ảnh trước khi dọn → evidence/task2/P0-*.png
+[ ] Đã chụp ảnh trước khi dọn → evidence/task2/P1-*.png
 [ ] Đã xoá user test
 [ ] Đã bật lại Active cho user bị vô hiệu hoá
 ```
