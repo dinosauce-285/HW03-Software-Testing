@@ -10,7 +10,7 @@
 | Phiên | File gốc | Dài | Người tham gia | Việc 1 | Việc 2 |
 |---|---|---|---|---|---|
 | P1 | `Nguyễn Thành Dâng.mkv` | 3:55 | **Nguyễn Thành Dâng** | ✅ | ✅ |
-| P2 | `Trương Thành Đạt.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
+| P2 | `Trương Thành Đạt.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ✅ vô hiệu hoá **Phú Lê Thiên** — đúng tên người điều phối đọc ở `[03:21]` |
 | P3 | `Tô Minh Thắng.mkv` | 6:19 | **Tô Minh Thắng** | ✅ | ✅ |
 | P4 | `Ngô Bảo Long.mkv` | 6:07 | **Ngô Bảo Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
 | P5 | `Võ Hoàng Xuân Quyên.mkv` | 6:00 | **Võ Hoàng Xuân Quyên** | ✅ | ✅ |
@@ -31,7 +31,7 @@
 | Phiên | Thiếu riêng |
 |---|---|
 | P1 | — |
-| P2 | **Việc 2 làm trên user Phú Lê Thiên**, không phải user mồi — cần xác nhận đã bật lại Active |
+| P2 | Việc 2 làm trên **Phú Lê Thiên** vì người điều phối đọc nhầm tên ở `[03:21]` *(đáng lẽ là `Hùng`)*. P2 làm **đúng** yêu cầu được giao — sai sót thuộc khâu điều phối. Đã xác nhận bật lại Active |
 | P3 | — |
 | P5 | Người điều phối **can thiệp gợi ý** ở 02:01 → thời gian tìm màn hình không còn là số đo sạch |
 | P4 | **Việc 2 không hợp lệ** — user mồi đã Inactive từ trước nên người tham gia làm ngược (bật lại hoạt động). Cần ghi rõ khi phân tích, hoặc chạy lại |
@@ -131,5 +131,5 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 - [x] ~~Thu điểm SUS~~ — **đủ 5/5**, TB 77,0
 - [ ] Gửi 5 người **Google Form**: 3 câu probe còn thiếu *(error recovery · speed · trust)*
 - [ ] Thu **tên · vai trò · liên hệ ẩn 4 số giữa** của cả 5 người
-- [ ] Xác nhận đã **bật lại Active** cho `Phú Lê Thiên` sau phiên P2
-- [ ] Quyết định về P4: ghi nhận việc 2 không hợp lệ, hay chạy lại với người đó
+- [x] ~~Xác nhận đã **bật lại Active** cho `Phú Lê Thiên`~~ — xong
+- [x] ~~Quyết định về P4~~ — ghi nhận việc 2 không hợp lệ, loại khỏi phép tính trung bình, nêu ở §8 Usability Report

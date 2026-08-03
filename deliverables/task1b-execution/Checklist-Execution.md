@@ -249,9 +249,26 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 > Mỗi lỗi đáng kể → một dòng trong [`../findings/Findings-Log.md`](../findings/Findings-Log.md) **và** một submission Google Form.
 
+**25 ô Failed → 10 lỗi.** Nhiều ô cùng mô tả một khiếm khuyết trên nhiều màn hình *(ví dụ `S-01` Failed ở cả C1, C2, C3 nhưng chỉ là một lỗi: hệ thống không phản hồi sau thao tác ghi)*, nên gộp lại theo lỗi thay vì theo ô.
+
 | ID Finding | Mục checklist | Màn hình | Bước tái hiện | Kỳ vọng | Thực tế | Mức | Ảnh |
 |---|---|---|---|---|---|---|---|
-| T1B-01 | | | | | | | |
+| **T1B-01** | `F-01` `F-04` `F-05` | C3 | Add User → để trống → **Create User** → đối chiếu nhãn ↔ placeholder ↔ thông báo lỗi của 2 ô tên | Ba thứ cùng nói về một trường | Ô nhãn *First Name* có placeholder *Last Name* và báo *"Last name is required"*; ô kia ngược lại | **3** | [`T1B-01-swapped-name-validation.png`](../../evidence/task1b/T1B-01-swapped-name-validation.png) |
+| **T1B-02** | `F-02` | C2 · C3 | Mở dialog → quan sát nhãn **trước khi** bấm gì | Biết trường nào bắt buộc trước khi điền | Dấu `*` xuất hiện **0 lần**; ràng buộc chỉ nằm ở thuộc tính HTML `required`, không render ra giao diện | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
+| **T1B-03** | `F-08` | C2 · C3 | Submit form rỗng → đọc `document.activeElement` | Focus nhảy về trường lỗi đầu tiên | Vẫn là `BUTTON` — người dùng bàn phím phải Tab ngược lên | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
+| **T1B-04** | `S-20` | C3 | Mở Add User → quan sát vùng quanh ô Password | Ghi sẵn "tối thiểu 8 ký tự" | Không có gợi ý nào; ràng buộc chỉ hiện **sau khi** submit thất bại | **1** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
+| **T1B-05** | `G-12` | C1 · C2 · C3 | Đo tỉ lệ tương phản chữ/nền của sidebar active, nút Export, nút Add User | ≥ 4.5:1 *(WCAG 1.4.3)* | Sidebar **2.08:1** · Export **2.71:1** · Add User **2.08:1** · badge **4.14:1** | **3** | [`C1-G-12-contrast.png`](../../evidence/task1b/C1-G-12-contrast.png) |
+| **T1B-06** | `N-03` | C1 | Mở bất kỳ trang nào dưới `/dashboard/admin` → tìm breadcrumb | Có breadcrumb định vị | Không có phần tử nào ở mọi cấp | **3** | [`C1-N-03-no-breadcrumb.png`](../../evidence/task1b/C1-N-03-no-breadcrumb.png) |
+| **T1B-07** | `G-13` | C1 · C2 · C3 | Zoom 200% *(khung nhìn ~720px)* → so `scrollWidth` với `clientWidth` | Nội dung xuống dòng, không cuộn ngang | Tràn **326px** — 1031 so với 705 *(WCAG 1.4.4)* | **2** | [`C1-G-13-zoom200.png`](../../evidence/task1b/C1-G-13-zoom200.png) |
+| **T1B-08** | `F-12` | C2 · C3 | Nhập dở dữ liệu → bấm **Esc** | Hỏi xác nhận trước khi bỏ dữ liệu chưa lưu | Đóng thẳng, mất sạch nội dung; không có chuỗi *unsaved/discard* nào trong DOM | **3** | [`C3-F-12-no-warning.png`](../../evidence/task1b/C3-F-12-no-warning.png) |
+| **T1B-09** | `F-01` `G-01` | C2 · C3 | Kiểm `[role="dialog"]`: tìm `h1–h4`, `aria-labelledby`, `aria-label` | Dialog có tên đọc được | Cả ba đều **rỗng** — trình đọc màn hình chỉ đọc "dialog" *(WCAG 4.1.2)* | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
+| **T1B-10** | `S-01` `S-02` `S-09` `S-17` | C1 · C2 · C3 | Chạy trọn chuỗi **tạo → sửa → xoá** một user, sau mỗi bước đọc `[class*=toast],[role=status],[role=alert]` | Mỗi thao tác có thông báo xác nhận | Cả ba lần đều **rỗng**. Nếu máy chủ thất bại, admin cũng không biết | **3** | [`C3-S-01-no-toast.png`](../../evidence/task1b/C3-S-01-no-toast.png) |
+
+**Phân bố mức nghiêm trọng:** 3 → 5 lỗi · 2 → 4 lỗi · 1 → 1 lỗi. Không lỗi nào ở mức **4**, vì cả 10 đều còn đường vòng: người dùng vẫn hoàn thành được tác vụ trên desktop. Diễn giải từng mức ở [`Findings-Log.md §Diễn giải`](../findings/Findings-Log.md).
+
+**Hai lỗi được người dùng thật xác nhận độc lập ở Task 2:**
+- `T1B-01` — P4 Ngô Bảo Long tự phát hiện: *"nó bị ngược nhá đúng không bạn… thì nó là 1 cái lỗi"*
+- `T1B-06` — **3/5 người** không tìm được màn hình Users Management
 
 ---
 
@@ -259,7 +276,24 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 > Chính sách môn: công việc **không được trùng** với thành viên khác. Đây là phần cá nhân hoá checklist nhóm.
 
-| ID | IA | Mục kiểm tra | Phát hiện khi nào | Vì sao AI/nhóm bỏ sót |
-|---|---|---|---|---|
-| MY-01 | | | | |
-| MY-02 | | | | |
+Ba mục dưới đây **không có trong bộ 88 mục của nhóm**. Cả ba đều nảy ra khi tôi chạy checklist bằng script DOM chứ không chỉ nhìn mắt — đó chính là lý do nhóm bỏ sót: nhìn bằng mắt thì màn hình *trông* đúng.
+
+| ID | IA | Mục kiểm tra | Cách kiểm | Phát hiện khi nào | Vì sao AI/nhóm bỏ sót |
+|---|---|---|---|---|---|
+| **MY-01** | IA-02 | Mỗi ô nhập phải có `<label>` **gắn đúng** vào ô bằng cặp `for`/`id` *(hoặc bọc trong label)* — không chỉ có chữ nằm cạnh | `document.querySelectorAll('label[for]')` rồi đối chiếu `for` ↔ `id` của input | Khi kiểm `F-01` ở C3: script báo "thiếu nhãn" nhưng ảnh chụp cho thấy **có** chữ nhãn. Đào ra thì nhãn tồn tại nhưng **không liên kết** với ô | Mục `F-01` của nhóm chỉ hỏi *"ô nhập có nhãn không"* — hỏi về **thứ nhìn thấy**. Nhãn có gắn hay không là thứ chỉ trình đọc màn hình mới biết, mắt thường không phân biệt được |
+| **MY-02** | IA-01 | `[role="dialog"]` phải có **tên truy cập được** — heading `h1–h4` bên trong kèm `aria-labelledby`, hoặc `aria-label` | Kiểm 3 thứ trong dialog: `querySelectorAll('h1,h2,h3,h4')`, `aria-labelledby`, `aria-label` | Khi kiểm `G-01` *(tiêu đề trang)* ở C2/C3 và nhận ra dialog không phải trang nên phải chấm N/A — nhưng dialog **cũng cần** tiêu đề, chỉ là theo chuẩn khác | Checklist nhóm xây quanh mô hình **trang**: tiêu đề trang, breadcrumb, URL. Không ai nghĩ tới việc dialog có bộ quy tắc ngữ nghĩa riêng *(WCAG 4.1.2)*, trong khi kịch bản C có **2 trong 3 màn hình là dialog** |
+| **MY-03** | IA-03 | Bảng dữ liệu nhiều dòng phải cho **sắp xếp theo cột chính** *(tên, ngày tạo, trạng thái)* | Kiểm `th` có `aria-sort`, `role="columnheader"` có thể bấm, hoặc icon sắp xếp | Khi chạy `S-19` trên bảng Users C1 — bảng chỉ có phân trang và tìm kiếm, **không cột nào bấm để sắp xếp** | Nhóm có mục cho **lọc** và **tìm kiếm** nhưng không có mục cho **sắp xếp**. Ba thứ này hay bị gộp làm một khi liệt kê nhanh, mà chúng giải quyết ba nhu cầu khác nhau |
+
+### Kết quả chạy 3 mục này trên C1 · C2 · C3
+
+| ID | C1 Users Management | C2 Edit User | C3 Create New User |
+|---|---|---|---|
+| MY-01 | **Failed** — ô tìm kiếm không có nhãn gắn | **Failed** — nhãn có chữ nhưng không gắn `for`/`id` | **Failed** — như C2 |
+| MY-02 | N/A — không phải dialog | **Failed** — không heading, không `aria-labelledby`, không `aria-label` | **Failed** — như C2 |
+| MY-03 | **Failed** — không cột nào sắp xếp được | N/A — không có bảng | N/A — không có bảng |
+
+→ Thêm **7 ô**: 6 Failed, 3 N/A. Cả ba mục đều Failed ở mọi màn hình áp dụng được — cho thấy đây là **vùng mù có hệ thống** của checklist nhóm, không phải ba lỗi lẻ.
+
+MY-01 và MY-02 đã được ghi thành lỗi `T1B-09`; MY-03 chưa đủ nghiêm trọng để lập finding riêng *(bảng hiện chỉ vài chục dòng, tìm kiếm vẫn thay thế được)* nhưng sẽ thành vấn đề thật khi dữ liệu lớn dần.
+
+☐ **Cần verify:** MY-03 chấm từ lần audit `S-19`. Bấm thử vào tiêu đề cột **USER** và **CREATED** ở C1 một lần cho chắc.
