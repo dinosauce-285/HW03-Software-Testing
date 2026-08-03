@@ -28,7 +28,7 @@ Nhưng con số trung bình che mất điều quan trọng nhất: **3 trong 5 n
 
 ## 2. Kịch bản tác vụ đã dùng
 
-Kịch bản viết theo **mục tiêu**, không chỉ đường. Người tham gia được cho vai trò và kết quả cần đạt, còn đường đi thì họ tự tìm — nguyên văn ở [`P2 §2 Lời thoại`](phu-luc/P2_Kit-dieu-phoi-va-ghi-chep-phien.md).
+Kịch bản viết theo **mục tiêu**, không chỉ đường. Người tham gia được cho vai trò và kết quả cần đạt, còn đường đi thì họ tự tìm — nguyên văn ở [`P2 §2 Lời thoại`](appendix/a2-session-notes.md).
 
 **Bối cảnh cho người tham gia:**
 > *"Bạn là quản trị viên của hệ thống quản lý sự kiện một khoa. Đây là tài khoản admin, mời bạn tự khám phá."*
@@ -102,7 +102,7 @@ Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](e
 
 ### 4.3 Chi tiết chấm SUS
 
-Bảng đầy đủ 10 câu × 5 người, cách quy đổi và phân tích theo từng câu ở [`P3_SUS-chi-tiet.md`](phu-luc/P3_SUS-chi-tiet.md).
+Bảng đầy đủ 10 câu × 5 người, cách quy đổi và phân tích theo từng câu ở [`a3-sus-scoring.md`](appendix/a3-sus-scoring.md).
 
 | | P1 | P2 | P3 | P4 | P5 |
 |---|---|---|---|---|---|

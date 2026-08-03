@@ -62,7 +62,7 @@ done homework
 ## Xuất log trước khi nộp
 
 ```bash
-git log --pretty=format:"%h | %ad | %s" --date=format:"%d/%m/%Y %H:%M" > submission/phu-luc/git-log.txt
+git log --pretty=format:"%h | %ad | %s" --date=format:"%d/%m/%Y %H:%M" > submission/appendix/git-log.txt
 ```
 
 ---

@@ -1,6 +1,6 @@
 # Task 2 — Bảng chấm SUS
 
-> **Nguồn:** Brooke, J. (1996) *SUS: A quick and dirty usability scale*; mốc tham chiếu từ MeasuringU — chi tiết ở [`references/Task1A_Heuristics-Reference.md` §6](../nhom/Nguon-tham-khao.md).
+> **Nguồn:** Brooke, J. (1996) *SUS: A quick and dirty usability scale*; mốc tham chiếu từ MeasuringU — chi tiết ở [`references/Task1A_Heuristics-Reference.md` §6](../team/references.md).
 
 ---
 

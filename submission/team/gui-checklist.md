@@ -30,7 +30,7 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 > Do checklist phủ rộng cả 4 IA, **N/A là bình thường và được dự kiến**: một màn hình chỉ hiển thị sẽ N/A gần hết nhóm IA-02. Ước tính mỗi màn hình thực chạy khoảng **35–45 mục**.
 > Tỉ lệ pass tính trên `Passed / (Passed + Failed)`, **không tính N/A vào mẫu số**.
 
-**Ký hiệu cột Nguồn:** `R1` Nielsen · `R2` Norman · `R3` Shneiderman · `R4` Slide S13 · `R8` Tài liệu E2E EMS · `R10` WCAG 2.2 — chi tiết ở [Task1A_Heuristics-Reference.md](../nhom/Nguon-tham-khao.md)
+**Ký hiệu cột Nguồn:** `R1` Nielsen · `R2` Norman · `R3` Shneiderman · `R4` Slide S13 · `R8` Tài liệu E2E EMS · `R10` WCAG 2.2 — chi tiết ở [Task1A_Heuristics-Reference.md](../team/references.md)
 
 **Ký hiệu cột Nguồn gốc:** `AI` = do AI sinh ở lượt đầu · `RV` = bổ sung ở lượt review phản biện của nhóm (xem §5 để biết lý do AI bỏ sót)
 
@@ -275,6 +275,6 @@ Khảo sát trực tiếp ngày 02/08/2026 trên 3 màn hình: A1 (Events list),
 
 | # | Sản phẩm | Vị trí |
 |---|---|---|
-| 1 | Checklist GUI (file này) | `nhom/GUI-Checklist.md` |
-| 2 | Danh sách nguồn tham khảo | [`references/Task1A_Heuristics-Reference.md`](../nhom/Nguon-tham-khao.md) |
-| 3 | Log prompt AI | [`AI-Prompts-Nhom.md`](AI-Prompts-Nhom.md) |
+| 1 | Checklist GUI (file này) | `team/gui-checklist.md` |
+| 2 | Danh sách nguồn tham khảo | [`references/Task1A_Heuristics-Reference.md`](../team/references.md) |
+| 3 | Log prompt AI | [`ai-prompts.md`](ai-prompts.md) |

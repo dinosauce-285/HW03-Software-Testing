@@ -17,7 +17,7 @@
 - `Bug` — hệ thống làm **sai** so với thứ nó phải làm
 - `Usability` — hệ thống làm đúng nhưng người dùng vẫn khó dùng
 
-**Mức nghiêm trọng** — thang Nielsen 0–4, nguyên văn ở [`references/Task1A_Heuristics-Reference.md` §5](nhom/Nguon-tham-khao.md).
+**Mức nghiêm trọng** — thang Nielsen 0–4, nguyên văn ở [`references/Task1A_Heuristics-Reference.md` §5](team/references.md).
 Ba yếu tố quyết định: **frequency** (bao nhiêu người gặp, gặp bao lâu một lần) · **impact** (vượt qua được không) · **persistence** (một lần rồi quen, hay lặp lại mãi).
 
 | Mức | Nghĩa |
@@ -91,7 +91,7 @@ Nộp **một lần duy nhất** sau khi hoàn tất cả ba task — không n�
 | Task 3 — ma trận 21 ô | ✅ xong | **2** |
 | **Tổng** | | **15** |
 
-> **Ba phát hiện Task 2 không trùng với Task 1B.** `T2-01` là hệ quả quan sát được của `T1B-06` nhưng rộng hơn *(khả năng khám phá lối vào, không chỉ thiếu breadcrumb)*. `T2-02` và `T2-03` là **vùng checklist không phủ** — checklist hỏi *"có thông báo lỗi không"* và *"ô nhập có nhãn không"*, không hỏi *"lỗi báo **lúc nào**"* và *"hai ô cạnh nhau có phân biệt được không"*. Phân tích đầy đủ ở [`02_Usability-Report.md §7`](02_Task2_Usability-Report.md).
+> **Ba phát hiện Task 2 không trùng với Task 1B.** `T2-01` là hệ quả quan sát được của `T1B-06` nhưng rộng hơn *(khả năng khám phá lối vào, không chỉ thiếu breadcrumb)*. `T2-02` và `T2-03` là **vùng checklist không phủ** — checklist hỏi *"có thông báo lỗi không"* và *"ô nhập có nhãn không"*, không hỏi *"lỗi báo **lúc nào**"* và *"hai ô cạnh nhau có phân biệt được không"*. Phân tích đầy đủ ở [`02_Usability-Report.md §7`](02-usability-report.md).
 
 **Checklist trước khi nộp form:**
 

@@ -12,12 +12,12 @@
 
 | File | Nội dung |
 |---|---|
-| **`00_Bao-cao-chinh.md`** *(file này)* | Kịch bản · 3 màn hình và lý do chọn · tóm tắt kết quả cả ba task |
-| [`01_Task1B_Ket-qua-checklist.md`](01_Task1B_Ket-qua-checklist.md) | Bảng 264 ô · bug report · mục checklist tự bổ sung |
-| [`02_Task2_Usability-Report.md`](02_Task2_Usability-Report.md) | User testing 5 người · bảng chỉ số · phát hiện xếp hạng · khuyến nghị |
-| [`03_Task3_Ma-tran-tuong-thich.md`](03_Task3_Ma-tran-tuong-thich.md) | Ma trận 21 ô cross-browser / cross-platform |
-| [`04_Bug-Usability-Findings-Log.md`](04_Bug-Usability-Findings-Log.md) | 15 phát hiện, khớp với 15 submission trên Google Form |
-| [`phu-luc/`](phu-luc/) · [`nhom/`](nhom/) · [`evidence/`](evidence/) | Phụ lục, sản phẩm cấp nhóm, bằng chứng |
+| **`00-main-report.md`** *(file này)* | Kịch bản · 3 màn hình và lý do chọn · tóm tắt kết quả cả ba task |
+| [`01-checklist-execution.md`](01-checklist-execution.md) | Bảng 264 ô · bug report · mục checklist tự bổ sung |
+| [`02-usability-report.md`](02-usability-report.md) | User testing 5 người · bảng chỉ số · phát hiện xếp hạng · khuyến nghị |
+| [`03-compatibility-matrix.md`](03-compatibility-matrix.md) | Ma trận 21 ô cross-browser / cross-platform |
+| [`04-findings-log.md`](04-findings-log.md) | 15 phát hiện, khớp với 15 submission trên Google Form |
+| [`appendix/`](appendix/) · [`team/`](team/) · [`evidence/`](evidence/) | Phụ lục, sản phẩm cấp nhóm, bằng chứng |
 
 ---
 
@@ -76,7 +76,7 @@ Không có thành viên nào trùng kịch bản, cũng không trùng màn hình
 
 ## 2. Tóm tắt kết quả
 
-### Task 1B — chạy checklist · chi tiết ở [chương 01](01_Task1B_Ket-qua-checklist.md)
+### Task 1B — chạy checklist · chi tiết ở [chương 01](01-checklist-execution.md)
 
 88 mục × 3 màn hình = **264 ô**, không ô nào để trống.
 
@@ -89,7 +89,7 @@ Không có thành viên nào trùng kịch bản, cũng không trùng màn hình
 
 25 ô Failed quy về **bốn nguyên nhân gốc** và gộp thành **10 lỗi** trong bug report. Bổ sung thêm **3 mục checklist của riêng tôi** — cả ba đều Failed ở mọi màn hình áp dụng được, cho thấy một vùng mù có hệ thống của checklist nhóm.
 
-### Task 2 — user testing · chi tiết ở [chương 02](02_Task2_Usability-Report.md)
+### Task 2 — user testing · chi tiết ở [chương 02](02-usability-report.md)
 
 5 người thật ngoài lớp và ngoài ngành CNTT, mỗi người 2 tác vụ hướng mục tiêu, có ghi màn hình.
 
@@ -101,7 +101,7 @@ Không có thành viên nào trùng kịch bản, cũng không trùng màn hình
 
 Phát hiện lớn nhất: **3/5 người không tự tìm được màn hình Users Management**. Điểm SUS tách thành hai cụm cách nhau ~18 điểm, và ranh giới đúng bằng biến "có tìm được đường vào hay không".
 
-### Task 3 — cross-platform · chi tiết ở [chương 03](03_Task3_Ma-tran-tuong-thich.md)
+### Task 3 — cross-platform · chi tiết ở [chương 03](03-compatibility-matrix.md)
 
 7 tổ hợp × 3 màn hình = **21 ô**, mỗi ô một ảnh có overlay MSSV.
 
@@ -114,7 +114,7 @@ Phát hiện lớn nhất: **3/5 người không tự tìm được màn hình U
 
 Cả **3 ô Fail đều ở điện thoại** — bảng mất 5/7 cột và dialog tràn khỏi màn hình khiến không bấm được nút xác nhận.
 
-### Findings · chi tiết ở [chương 04](04_Bug-Usability-Findings-Log.md)
+### Findings · chi tiết ở [chương 04](04-findings-log.md)
 
 **15 phát hiện** — 10 từ Task 1B · 3 từ Task 2 · 2 từ Task 3. Đã nộp **15/15** lên Google Form ngày 04/08/2026, khớp số dòng với file tổng hợp.
 

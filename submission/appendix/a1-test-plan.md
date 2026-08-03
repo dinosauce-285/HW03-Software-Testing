@@ -29,7 +29,7 @@ Task 1B đã đánh giá cùng ba màn hình này bằng **checklist heuristic**
 
 ## 3. Task scenario
 
-Hai tác vụ hướng mục tiêu giao cho người tham gia, kèm dữ liệu test và đường đi đúng — xem [`02_Task2_Usability-Report.md §2`](../02_Task2_Usability-Report.md). Lời thoại đọc nguyên văn khi chạy phiên ở [`P2_Kit-dieu-phoi-va-ghi-chep-phien.md §2`](P2_Kit-dieu-phoi-va-ghi-chep-phien.md).
+Hai tác vụ hướng mục tiêu giao cho người tham gia, kèm dữ liệu test và đường đi đúng — xem [`02-usability-report.md §2`](../02-usability-report.md). Lời thoại đọc nguyên văn khi chạy phiên ở [`a2-session-notes.md §2`](a2-session-notes.md).
 
 ---
 
@@ -102,7 +102,7 @@ Người điều phối: **Lý Quốc Thạnh (23127262)**.
 
 ## 9. Report — Sản phẩm đầu ra
 
-→ [`02_Usability-Report.md`](../02_Task2_Usability-Report.md), gồm: kịch bản · bảng 5 người đã che liên hệ · bảng chỉ số · phát hiện xếp hạng severity 0–4 kèm ảnh · khuyến nghị theo ưu tiên · **§7 đối chiếu với kết quả Task 1B**.
+→ [`02_Usability-Report.md`](../02-usability-report.md), gồm: kịch bản · bảng 5 người đã che liên hệ · bảng chỉ số · phát hiện xếp hạng severity 0–4 kèm ảnh · khuyến nghị theo ưu tiên · **§7 đối chiếu với kết quả Task 1B**.
 
 ---
 
@@ -119,20 +119,20 @@ Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng ch
 
 ## 10. Bảng người tham gia
 
-Danh sách 5 người, vai trò và liên hệ đã ẩn 4 số giữa — xem [`02_Task2_Usability-Report.md §3`](../02_Task2_Usability-Report.md).
+Danh sách 5 người, vai trò và liên hệ đã ẩn 4 số giữa — xem [`02-usability-report.md §3`](../02-usability-report.md).
 
 ---
 
 ## 11. Bảng hỏi SUS
 
-Nguyên văn 10 câu, cách quy đổi điểm, điểm thô của cả 5 người và phân tích theo từng câu — xem [`P3_SUS-chi-tiet.md`](P3_SUS-chi-tiet.md).
+Nguyên văn 10 câu, cách quy đổi điểm, điểm thô của cả 5 người và phân tích theo từng câu — xem [`a3-sus-scoring.md`](a3-sus-scoring.md).
 
 ---
 
 ## 12. Câu hỏi probe sau tác vụ
 
-Bốn chủ đề *clarity · error recovery · speed · trust*, câu hỏi nguyên văn và câu trả lời của cả 5 người — xem [`02_Task2_Usability-Report.md §4.4`](../02_Task2_Usability-Report.md).
+Bốn chủ đề *clarity · error recovery · speed · trust*, câu hỏi nguyên văn và câu trả lời của cả 5 người — xem [`02-usability-report.md §4.4`](../02-usability-report.md).
 
 ## 13. Mẫu ghi chép quan sát
 
-Phiếu ghi chép từng phiên ở [`P2_Kit-dieu-phoi-va-ghi-chep-phien.md §3`](P2_Kit-dieu-phoi-va-ghi-chep-phien.md).
+Phiếu ghi chép từng phiên ở [`a2-session-notes.md §3`](a2-session-notes.md).

@@ -9,13 +9,13 @@
 
 ## 1. Màn hình đã kiểm
 
-Ba màn hình **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User**, cùng lý do chọn, phần giải thích sai lệch so với đề §5, phân bố phủ IA và bảng phân công không trùng thành viên — tất cả nằm ở [`00_Bao-cao-chinh.md §1`](00_Bao-cao-chinh.md). Chương này chỉ trình bày **kết quả chạy**.
+Ba màn hình **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User**, cùng lý do chọn, phần giải thích sai lệch so với đề §5, phân bố phủ IA và bảng phân công không trùng thành viên — tất cả nằm ở [`00-main-report.md §1`](00-main-report.md). Chương này chỉ trình bày **kết quả chạy**.
 
 ---
 
 ## 2. Bảng chạy checklist
 
-> **Nguồn:** 88 mục của [`nhom/GUI-Checklist.md`](nhom/GUI-Checklist.md).
+> **Nguồn:** 88 mục của [`team/gui-checklist.md`](team/gui-checklist.md).
 > Mỗi ô nhận `Passed` · `Failed` · `N/A` — **264/264 ô đã có kết luận, không ô nào trống**.
 > Mỗi ô `Failed` kèm lý do ở cột Notes và ảnh trong [`evidence/task1b/`](evidence/task1b/).
 
@@ -178,7 +178,7 @@ Ba màn hình **C1 Users Management · C2 dialog Edit User · C3 dialog Create N
 
 ## 4. Bug report từ các mục Failed
 
-> Mỗi lỗi đáng kể → một dòng trong [`04_Bug-Usability-Findings-Log.md`](04_Bug-Usability-Findings-Log.md) **và** một submission Google Form.
+> Mỗi lỗi đáng kể → một dòng trong [`04-findings-log.md`](04-findings-log.md) **và** một submission Google Form.
 
 **25 ô Failed → 10 lỗi.** Nhiều ô cùng mô tả một khiếm khuyết trên nhiều màn hình *(ví dụ `S-01` Failed ở cả C1, C2, C3 nhưng chỉ là một lỗi: hệ thống không phản hồi sau thao tác ghi)*, nên gộp lại theo lỗi thay vì theo ô.
 
@@ -195,7 +195,7 @@ Ba màn hình **C1 Users Management · C2 dialog Edit User · C3 dialog Create N
 | **T1B-09** | `F-01` `G-01` | C2 · C3 | Kiểm `[role="dialog"]`: tìm `h1–h4`, `aria-labelledby`, `aria-label` | Dialog có tên đọc được | Cả ba đều **rỗng** — trình đọc màn hình chỉ đọc "dialog" *(WCAG 4.1.2)* | **2** | [`C3-validation-audit.png`](evidence/task1b/C3-validation-audit.png) |
 | **T1B-10** | `S-01` `S-02` `S-09` `S-17` | C1 · C2 · C3 | Chạy trọn chuỗi **tạo → sửa → xoá** một user, sau mỗi bước đọc `[class*=toast],[role=status],[role=alert]` | Mỗi thao tác có thông báo xác nhận | Cả ba lần đều **rỗng**. Nếu máy chủ thất bại, admin cũng không biết | **3** | [`C3-S-01-no-toast.png`](evidence/task1b/C3-S-01-no-toast.png) |
 
-**Phân bố mức nghiêm trọng:** 3 → 5 lỗi · 2 → 4 lỗi · 1 → 1 lỗi. Không lỗi nào ở mức **4**, vì cả 10 đều còn đường vòng: người dùng vẫn hoàn thành được tác vụ trên desktop. Diễn giải từng mức ở [`04_Bug-Usability-Findings-Log.md §Diễn giải`](04_Bug-Usability-Findings-Log.md).
+**Phân bố mức nghiêm trọng:** 3 → 5 lỗi · 2 → 4 lỗi · 1 → 1 lỗi. Không lỗi nào ở mức **4**, vì cả 10 đều còn đường vòng: người dùng vẫn hoàn thành được tác vụ trên desktop. Diễn giải từng mức ở [`04-findings-log.md §Diễn giải`](04-findings-log.md).
 
 **Hai lỗi được người dùng thật xác nhận độc lập ở Task 2:**
 - `T1B-01` — P4 Ngô Bảo Long tự phát hiện: *"nó bị ngược nhá đúng không bạn… thì nó là 1 cái lỗi"*
