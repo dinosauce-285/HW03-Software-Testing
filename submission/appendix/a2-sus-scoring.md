@@ -15,8 +15,6 @@ Người tham gia trả lời 10 câu, thang **1 = Rất không đồng ý → 5
 
 Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**, rồi **× 2,5** → điểm SUS **0–100**.
 
-> ⚠️ Điểm SUS **không phải phần trăm**. 68 điểm không có nghĩa "68 % hài lòng".
-
 ## Mốc tham chiếu
 
 | Điểm SUS | Nghĩa |

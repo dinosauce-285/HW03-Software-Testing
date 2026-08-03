@@ -24,8 +24,9 @@ Mỗi nội dung **chỉ nằm ở đúng một file**; các file khác dẫn ch
 ├── appendix/
 │   ├── a1-session-notes.md             lời thoại · đáp án · ghi chép 5 phiên
 │   ├── a2-sus-scoring.md               10 câu × 5 người, quy đổi, phân tích từng câu
-│   ├── a3-ai-audit-report.md           nhật ký mọi tương tác AI
-│   ├── a4-ai-critique.md               AI sai/thiên lệch ở đâu (291 chữ)
+│   ├── a3-ai-audit-report.md           biểu mẫu AI-02, 15 artifact có verdict
+│   ├── a4-ai-prompt-log.md             nhật ký từng lượt tương tác AI (đề §10)
+│   ├── a5-ai-critique.md               AI sai/thiên lệch ở đâu (291 chữ)
 │   └── git-log.txt                     lịch sử commit dạng văn bản
 │
 ├── team/                               sản phẩm cấp nhóm
