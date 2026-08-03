@@ -1,18 +1,19 @@
 # Task 2 — Đối chiếu dữ liệu đã thu vs còn thiếu
 
-> Lập từ 4 bản ghi phiên ngày 03/08/2026, đã nhận dạng lời nói bằng faster-whisper chạy offline.
+> Lập từ 5 bản ghi phiên ngày 03/08/2026, đã nhận dạng lời nói bằng faster-whisper chạy offline.
 > Transcript thô ở `scratchpad/*-transcript.txt`; chất lượng chữ có sai chính tả, nội dung đọc hiểu được.
 
 ---
 
-## Tổng quan 4 phiên
+## Tổng quan 5 phiên
 
 | Phiên | File gốc | Dài | Người tham gia | Việc 1 | Việc 2 |
 |---|---|---|---|---|---|
 | P1 | `2026-08-03 17-54-32.mkv` | 3:55 | **Nguyễn Thành Dâng** | ✅ | ✅ |
 | P2 | `2026-08-03 22-34-36.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
 | P3 | `2026-08-03 22-43-03.mkv` | 6:19 | **Tô Minh Thắng** | ✅ | ✅ |
-| P4 | `2026-08-03 22-53-46.mkv` | 6:07 | **Ngô Bảo Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
+| P4 | `Ngô Bảo Long.mkv` | 6:07 | **Ngô Bảo Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
+| P5 | `Võ Hoàng Xuân Quyên.mkv` | 6:00 | **Võ Hoàng Xuân Quyên** | ✅ | ✅ |
 
 ---
 
@@ -22,10 +23,9 @@
 
 | Hạng mục | Vì sao cần |
 |---|---|
-| **Điểm SUS 10 câu** | Đề §6 liệt kê là chỉ số bắt buộc. Không phiên nào có |
+| **Điểm SUS của P5** | 4/5 người đã có; thiếu Võ Hoàng Xuân Quyên |
 | **3/4 câu probe** | Chỉ hỏi *"có thấy khó khăn gì không"*. Thiếu **error recovery · speed · trust** |
 | **Bảng người tham gia** | Tên đầy đủ · vai trò/bối cảnh · liên hệ ẩn 4 số giữa · ngày chạy |
-| **Phiên thứ 5** | Mới có 4 bản ghi, đề yêu cầu 5 người |
 
 ### Thiếu riêng từng phiên
 
@@ -59,16 +59,23 @@ Gửi kèm form SUS, mỗi người 2 phút:
 
 Đây là xác nhận thực nghiệm cho **`T1B-01`** — lỗi checklist bắt được ở Task 1B, nay có người dùng thật tự nhận ra và gọi tên là lỗi. Bằng chứng mạnh nhất trong cả bộ dữ liệu.
 
-### 2. Khó tìm trang quản lý người dùng
+### 2. Khó tìm trang Users Management — **3/5 người**, điểm đau lớn nhất
 
-**P4, phút 05:46–05:55**:
-> *"…tìm cái trang quản lý người dùng này… mình thấy **khá là khó khăn**… cái trang quản lý này **phải nằm ở ngoài thì dễ thấy**"*
+**P5 Võ Hoàng Xuân Quyên** — nặng nhất:
+> [01:40] *"**Ở đâu gì ta?**"* → [01:44] *"Ở đâu phải bấm như ở đâu vậy?"*
+> [05:30] *"cái hồi mới vô để mà vô được cái chỗ quản lý này thì **tôi khó tìm**"*
+> [05:48] *"cái khúc mới vô để vô được cái user management này thì **tôi không biết kiếm ở đâu**"*
 
-**P3, phút 01:19–01:49** — mất ~30 giây mò tìm mục Users Management.
+Người điều phối phải **can thiệp** ở phút 02:01 — gợi ý thử bấm avatar và các nút ở trên cùng. Mất ~50 giây mới tìm ra.
 
-**P4, phút 01:36** — thử bấm vào **avatar** để tìm chỗ quản lý user.
+**P4 Ngô Bảo Long**, phút 05:46–05:55:
+> *"…tìm cái trang quản lý người dùng này… **khá là khó khăn**… cái trang quản lý này **phải nằm ở ngoài thì dễ thấy**"*
 
-→ Ít nhất **2/4 người** vấp ở bước tìm màn hình. Điểm đau lặp lại, không phải cá biệt.
+**P3 Tô Minh Thắng**, phút 01:19–01:49 — mò ~30 giây mới thấy mục Users Management.
+
+**P4 và P5 đều thử bấm vào avatar** để tìm chỗ quản lý user — cùng một mô hình tư duy sai.
+
+→ **3/5 người vấp cùng một chỗ.** Theo quy tắc ≥3/5, đây là **vấn đề thiết kế hệ thống**, không phải lỗi cá biệt. Và trùng khớp với `N-03` ở Task 1B — khu admin **không có breadcrumb** nào để định vị.
 
 ### 3. Nhầm ô Member Code với Phone Number
 
@@ -98,6 +105,11 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 **P4, phút 05:39–05:44**:
 > *"thấy nó ok, nó ổn… thao tác thì **rất là nhanh và ổn**… **dễ dùng**"*
 
+**P5, phút 05:39–05:45**:
+> *"lúc thêm hay là lúc điền… thì tôi thấy **thao tác cũng dễ, cũng dễ hiểu**, hình dung ra được"*
+
+→ Mô hình chung: **vào được rồi thì dễ dùng, nhưng vào được là khó.**
+
 ---
 
 ## ⚠️ Vấn đề phương pháp — cần ghi vào mục Hạn chế
@@ -106,7 +118,6 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 |---|---|---|
 | **Người điều phối dẫn dắt** | P1 *"Đúng rồi"* ×2 · P2 *"rất là đúng"* (01:47) · P3 *"tìm đến chỗ quản lý user"* · P4 *"Đúng rồi"* (01:33) | Sau khi được xác nhận, không còn đo được họ **tự** tìm ra hay không |
 | **Chỉ 1 câu probe** | Cả 4 phiên | Thiếu 3 chủ đề đề bắt buộc |
-| **Không thu SUS** | Cả 4 phiên | Thiếu chỉ số bắt buộc |
 | **User mồi không được reset** | P4 gặp `Hùng` đã Inactive | Việc 2 của P4 không so sánh được với các phiên khác |
 | **Không đếm được lần do dự** | Transcript báo 0 lần im lặng ≥ 5 giây ở cả 4 phiên | Vì người điều phối nói liên tục, không có khoảng lặng để đo |
 
@@ -116,7 +127,6 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 
 ## Việc cần làm
 
-- [ ] Chạy **phiên thứ 5** *(hiện mới có 4)*
 - [ ] Gửi 5 người **Google Form**: 10 câu SUS + 4 câu probe
 - [ ] Thu **tên · vai trò · liên hệ ẩn 4 số giữa** của cả 5 người
 - [ ] Xác nhận đã **bật lại Active** cho `Phú Lê Thiên` sau phiên P2

@@ -1,0 +1,56 @@
+# Transcript — Võ Hoàng Xuân Quyên.mkv
+# mô hình: small · ngôn ngữ vi
+
+[00:01] Xin chào bạn Bổ Hoàng Xuân Nguyên đã đến với buổi mức tiên ngày hôm nay
+[00:06] thì mình sẽ nhờ bạn kiểm tra thử cái áp này một vài lồn để xem xem cảm nhận của người dùng như thế nào
+[00:13] thì mình có gửi thông tin về việc đăng nhập
+[00:18] thì nhờ bạn bấm vào cái link trong phòng cháp và đăng nhập với cái tài khoản mình cung cấp nha
+[00:24] Ok
+[00:25] Thì mình có gửi trong cái chat box của Meet ở góc dưới bên phải
+[00:43] và nhờ bạn bấm một cái link đó và đăng nhập với cái tài khoản để giúp mình
+[00:46] Bộ tôi có phải xem hình hình không?
+[00:52] Bạn đang xe rồi
+[00:54] Sau khi đăng nhập được vào hệ thống này thì bạn hiện tại đang là admin của hệ thống
+[01:17] thì bây giờ lồn đầu tiên mình muốn nhờ bạn
+[01:20] bạn hãy tìm kiếm và khám phá trong cái ấn dụng này xem xem là chỗ nào để quản lý người dùng
+[01:28] và bạn thêm một người dùng với cái thông tin ở bên dưới của cái chat mình gửi
+[01:34] là tìm cái chỗ quản lý người dùng và thêm người dùng đó
+[01:40] Ở đâu gì ta?
+[01:44] Ở đâu phải bấm như ở đâu vậy?
+[02:01] Thử bấm vào những cái núp nghi ngờ có thể có ví dụ như là avatar
+[02:06] và những cái núp ở trên cùng thì bạn có thấy chỗ quản lý người dùng không?
+[02:29] Thấy hả?
+[02:33] Thì ok, bạn hãy thử thêm một cái người dùng theo cái thông tin mình đã gửi
+[02:39] Email, mình có thể đổi một cái email khác
+[03:35] Mình có thể ghi là minh tới với minh chắc
+[03:41] Ok, đó là lồn tạo người dùng
+[03:51] Bây giờ nhờ bạn hãy tìm một cái người dùng có tên là Hùng
+[03:56] và sau đó là cho họ bị chặn khỏi hệ thống này
+[04:01] Chứ không phải là xóa họ biến mất nhá
+[04:09] Không thấy vậy
+[04:12] Nếu mà mình không bỏ giấu thì nó sẽ không có
+[04:15] Mình thử mình bỏ giấu
+[04:17] Ok
+[04:19] Rồi
+[04:20] Mình thử cho họ ngưng hoạt động khỏi cái ấn dụng này
+[04:24] Sao nhờ?
+[04:36] Này
+[04:39] Và đó chỉ là hai lồn đã xong
+[04:41] Rồi thì mình xin bạn có một số cái nhận xét về cái việc
+[04:46] Nếu bạn là một người dùng của cái app này
+[04:48] Và thử hai cái lồn nữa thì bạn có nhận xét là hai cái lồn như thế nào
+[04:52] Đó với một người dùng
+[04:57] Hai cái lồn là một cái là thêm
+[04:59] Một cái là tiền người để inactive họ
+[05:04] Tại tôi cũng không có quản lý cái này
+[05:09] Nên tôi không có biết
+[05:11] Nhưng mà theo như có hướng dẫn cụ thể như vậy thì tôi nghĩ là cũng dễ thân tác và thực hiện thôi
+[05:18] Nếu mà bạn tự làm và không có ai hướng dẫn thì bạn nghĩ cái mức độ dễ xài
+[05:24] Hay là cái mức độ thân thiện với người dùng
+[05:30] Như cái hồi mới vô để mà vô được cái chỗ quản lý này
+[05:36] Thì tôi khó tìm nhưng mà tới vô đây rồi
+[05:39] Lúc thêm hay là lúc tiền tân này kia thì tôi thấy thảo tác cũng dễ
+[05:45] Cũng dễ hiểu hình dung ra được
+[05:48] Còn cái khúc mới vô để vô được cái user management này thì tôi không biết kiếm ở đâu
+[05:54] Và đó là thất cả của cái bội ngày hôm nay
+[05:58] Xin cảm ơn bạn đã tham gia
