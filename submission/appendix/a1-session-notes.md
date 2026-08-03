@@ -97,7 +97,7 @@ Dùng chung cho cả 5 phiên. **Sau mỗi phiên bật lại `Active`. Sau phi�
 
 - [ ] Dừng **bấm giờ** khi người tham gia nói "xong" hoặc bỏ cuộc
 - [ ] ⚠️ **VẪN GIỮ Record chạy** — câu trả lời probe là dữ liệu quan trọng nhất, dừng ghi sớm là mất hết
-- [ ] Đưa **bảng SUS** *(nguyên văn 10 câu ở [`a3-sus-scoring.md`](a3-sus-scoring.md))* — để họ tự điền, không giải thích từng câu
+- [ ] Đưa **bảng SUS** *(nguyên văn 10 câu ở [`a2-sus-scoring.md`](a2-sus-scoring.md))* — để họ tự điền, không giải thích từng câu
 - [ ] Hỏi **5 câu probe** *(§12)* — hỏi thành tiếng để transcript bắt được
 - [ ] Cảm ơn
 - [ ] **Bây giờ mới dừng Record + Transcript**

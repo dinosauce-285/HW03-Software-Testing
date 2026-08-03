@@ -15,7 +15,7 @@ Video đặt trên YouTube ở chế độ **Unlisted** vì bản gốc 2880×18
 
 ## Cách đối chiếu
 
-Mọi mốc thời gian trong [`../../appendix/a2-session-notes.md`](../../appendix/a2-session-notes.md) và trong [`../../02-usability-report.md`](../../02-usability-report.md) đều là mốc **trong video**, tua thẳng tới được.
+Mọi mốc thời gian trong [`../../appendix/a1-session-notes.md`](../../appendix/a1-session-notes.md) và trong [`../../02-usability-report.md`](../../02-usability-report.md) đều là mốc **trong video**, tua thẳng tới được.
 
 Ví dụ: `U-01` dẫn P5 `[01:40]` — *"Ở đâu gì ta?"* → mở video P5, tua tới 1 phút 40 giây.
 

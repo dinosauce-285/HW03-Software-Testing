@@ -60,7 +60,7 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](submission/appendix/a2-session-notes.md) |
+| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](submission/appendix/a1-session-notes.md) |
 | C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | 🟡 task success + time on task + SUS đã có; **số lần do dự = 0 ở cả 5 phiên** vì người điều phối nói liên tục → đã ghi vào mục Hạn chế |
 | C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | ✅ **đủ 4 chủ đề × 5 người** — clarity hỏi trong phiên, 3 chủ đề còn lại hỏi bù sau phiên. Kết quả và phân tích ở [§4.4](submission/02-usability-report.md) |
 | C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ✅ 5 người thật, 5 bản ghi, **ngoài lớp và ngoài ngành CNTT**. **P5 đang quản lý một tiệm nước** — có kinh nghiệm quản lý người thật |
@@ -82,7 +82,7 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ✅ **5/5** — TB **77,0** · trung vị 72,5 · sd 11,0 · +9,0 so mốc ngành |
-| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](submission/appendix/a2-session-notes.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
+| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](submission/appendix/a1-session-notes.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
 | C14 | Xếp hạng theo **severity 0–4** | ✅ 5 phát hiện `U-01`…`U-05` — 3 ở mức 3, 2 ở mức 2, kèm lý do frequency/impact/persistence |
 | C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ✅ [`02_Usability-Report.md`](submission/02-usability-report.md) — 8 mục, có cả §7 đối chiếu Task 1B và §8 hạn chế |
 

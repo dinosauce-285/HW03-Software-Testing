@@ -22,12 +22,10 @@ Mỗi nội dung **chỉ nằm ở đúng một file**; các file khác dẫn ch
 ├── 04-findings-log.md   15 phát hiện, khớp 15 submission Google Form
 │
 ├── appendix/
-│   ├── a1-test-plan.md                 phương pháp, hồ sơ người dùng, chỉ số
-│   ├── a2-session-notes.md             lời thoại · đáp án · ghi chép 5 phiên
-│   ├── a3-sus-scoring.md               10 câu × 5 người, quy đổi, phân tích từng câu
-│   ├── a4-ai-audit-report.md           nhật ký mọi tương tác AI
-│   ├── a5-ai-critique.md               AI sai/thiên lệch ở đâu (200–300 chữ)
-│   ├── a6-git-conventions.md           quy ước commit message
+│   ├── a1-session-notes.md             lời thoại · đáp án · ghi chép 5 phiên
+│   ├── a2-sus-scoring.md               10 câu × 5 người, quy đổi, phân tích từng câu
+│   ├── a3-ai-audit-report.md           nhật ký mọi tương tác AI
+│   ├── a4-ai-critique.md               AI sai/thiên lệch ở đâu (291 chữ)
 │   └── git-log.txt                     lịch sử commit dạng văn bản
 │
 ├── team/                               sản phẩm cấp nhóm
@@ -120,4 +118,4 @@ Cả 5 phiên đều được quay đầy đủ — **dữ liệu phiên thô** 
 
 **Danh sách link: [`evidence/task2/recordings.md`](evidence/task2/recordings.md)**
 
-Kèm theo trong zip: 5 bản gỡ băng có mốc thời gian ([`evidence/task2/`](evidence/task2/)) và ghi chép quan sát từng phiên ([`appendix/a2-session-notes.md`](appendix/a2-session-notes.md)). Mọi mốc thời gian trích dẫn trong báo cáo đều tua thẳng được trong video.
+Kèm theo trong zip: 5 bản gỡ băng có mốc thời gian ([`evidence/task2/`](evidence/task2/)) và ghi chép quan sát từng phiên ([`appendix/a1-session-notes.md`](appendix/a1-session-notes.md)). Mọi mốc thời gian trích dẫn trong báo cáo đều tua thẳng được trong video.
