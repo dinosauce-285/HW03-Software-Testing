@@ -99,7 +99,7 @@ Mỗi nội dung **chỉ nằm ở đúng một file**; các file khác dẫn ch
 | 4 | Findings — Form + log tổng hợp | 10 | ✅ **15/15** nộp form 04/08/2026, khớp số dòng |
 | 5 | Agent Skill + video demo | 10 | 🟡 skill **xong** — [`skill/SKILL.md`](skill/SKILL.md) + 2 script chạy được. Chờ link video demo |
 | — | AI Audit Report | bắt buộc | ✅ 10 dòng, phủ cả 4 task |
-| — | AI Critique 200–300 chữ | bắt buộc | ⬜ khung có, chưa viết |
+| — | AI Critique 200–300 chữ | bắt buộc | ✅ **291 chữ**, đã đếm bằng lệnh |
 | — | Git commit log | bắt buộc | ✅ [`appendix/git-log.txt`](appendix/git-log.txt) |
 | — | PDF cho mọi file `.md` | bắt buộc | ⬜ |
 
@@ -109,9 +109,8 @@ Mỗi nội dung **chỉ nằm ở đúng một file**; các file khác dẫn ch
 
 ## Việc còn lại
 
-1. **Quay video demo Agent Skill** rồi dán link YouTube vào bảng test summary bên trên
-2. **AI Critique 200–300 chữ** — nguyên liệu đã có sẵn trong file
-3. **Xuất PDF** cho mọi file `.md`, rồi đóng gói zip `23127262_HW03_AI_GUIUsability_EMS_096.zip`
+1. **Quay video demo Agent Skill** rồi dán link YouTube vào bảng test summary bên trên; và 5 link phiên user testing vào [`evidence/task2/recordings.md`](evidence/task2/recordings.md)
+2. **Xuất PDF** cho mọi file `.md`, rồi đóng gói zip `23127262_HW03_AI_GUIUsability_EMS_096.zip`
 
 ---
 
