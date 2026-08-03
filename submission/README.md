@@ -115,11 +115,10 @@ Mỗi nội dung **chỉ nằm ở đúng một file**; các file khác dẫn ch
 
 ---
 
-## Ghi chú về bản ghi màn hình
+## Bản ghi màn hình 5 phiên
 
-Năm phiên user testing **đều có quay màn hình đầy đủ** (tổng 27 phút, 1,55 GB). Bản ghi **không nằm trong zip** vì vượt giới hạn 20 MB/file của link nộp; thay vào đó bài nộp có:
+Cả 5 phiên đều được quay đầy đủ — **dữ liệu phiên thô** theo đề §12. Bản gốc 2880×1800 @ 60 fps tổng 1,55 GB, vượt giới hạn 20 MB/file của link nộp, nên đặt trên YouTube chế độ Unlisted.
 
-- **5 bản gỡ băng có mốc thời gian** — [`evidence/task2/`](evidence/task2/)
-- **Ghi chép quan sát từng phiên** kèm trích dẫn nguyên văn và mốc thời gian đối chiếu được — [`appendix/a2-session-notes.md`](appendix/a2-session-notes.md)
+**Danh sách link: [`evidence/task2/recordings.md`](evidence/task2/recordings.md)**
 
-Đề §15 xếp bản ghi màn hình vào diện *"nếu có"*. Bản gốc được giữ lại và cung cấp ngay khi được yêu cầu.
+Kèm theo trong zip: 5 bản gỡ băng có mốc thời gian ([`evidence/task2/`](evidence/task2/)) và ghi chép quan sát từng phiên ([`appendix/a2-session-notes.md`](appendix/a2-session-notes.md)). Mọi mốc thời gian trích dẫn trong báo cáo đều tua thẳng được trong video.

@@ -153,7 +153,7 @@ Gõ "Hùng" vào ô Search  (hoặc lật trang tìm)
 
 ## 3. Ghi chép quan sát từng phiên
 
-> Lập lại từ **5 bản ghi màn hình** và **5 bản gỡ băng** ở [`../evidence/task2/`](../evidence/task2/). Mốc thời gian trong ngoặc vuông là mốc trong bản gỡ băng, đối chiếu được với video.
+> Lập lại từ **5 bản ghi màn hình** *(link ở [`../evidence/task2/recordings.md`](../evidence/task2/recordings.md))* và **5 bản gỡ băng** ở [`../evidence/task2/`](../evidence/task2/). Mốc thời gian trong ngoặc vuông là mốc trong bản gỡ băng, đối chiếu được với video.
 > Mọi phiên chạy ngày **03/08/2026** qua Google Meet, người tham gia dùng máy riêng, trình duyệt Chrome trên desktop.
 
 **Năm điểm dự đoán từ Task 1B** — theo dõi ở mọi phiên xem có xảy ra không:
