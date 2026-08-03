@@ -113,9 +113,9 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | E1 | File tổng hợp đủ **9 cột** | ✅ [`Findings-Log.md`](deliverables/findings/Findings-Log.md) |
-| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ⬜ **0/15** — email MSSV là hộp Microsoft, không login Google được → nộp bằng `lqthanh23@clc.fitus.edu.vn`, ghi MSSV trong mô tả |
-| E3 | Điền **Thời điểm gửi form** cho từng dòng | ⬜ |
-| E4 | **Số dòng log = số submission form** | ⬜ hiện **15 ↔ 0** |
+| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ✅ **15/15** lúc 04/08/2026 00:45. Email MSSV là hộp **Microsoft**, không login Google được → nộp bằng `lqthanh23@clc.fitus.edu.vn` *(đề §7 cho phép "hoặc địa chỉ form yêu cầu")*, **MSSV ghi ở đầu mỗi mô tả** |
+| E3 | Điền **Thời điểm gửi form** cho từng dòng | ✅ đủ 15 dòng |
+| E4 | **Số dòng log = số submission form** | ✅ **15 ↔ 15** |
 
 ---
 
@@ -198,7 +198,7 @@
 | B · Task 1B chạy checklist | 15 | ✅ **xong** — 264 ô + §4 bug report 10 lỗi + §5 ba mục bổ sung |
 | C · Task 2 user testing | 25 | 🟡 Usability Report **xong**; chỉ còn 3 câu probe hỏi bù *(error recovery · speed · trust)* |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
-| E · Findings | 10 | 🟡 log **15 dòng** xong, **chưa nộp form** |
+| E · Findings | 10 | ✅ **xong** — log 15 dòng, form 15 submission, khớp |
 | F · Agent Skill | 10 | ⬜ **chưa bắt đầu** — phần thiếu lớn nhất |
 | G · Phụ lục | bắt buộc | 🟡 AI Audit ✅ · còn AI Critique, git log, README số cuối |
 | H · Đóng gói | bắt buộc | ⬜ cuối cùng |

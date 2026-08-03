@@ -46,7 +46,7 @@ hw03/
 | 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | ✅ **Xong** — 264 ô *(63 P · 25 F · 176 N/A)* · 24 ảnh · §4 bug report 10 lỗi · §5 ba mục bổ sung |
 | 2 | Task 2 — User testing 5 người | 25 | 🟡 **Usability Report xong** — 5 phiên · SUS TB 77,0 · 5 phát hiện xếp hạng. Còn 3 câu probe hỏi bù |
 | 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
-| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 **15 phát hiện** đã ghi log đủ 9 cột — đang nộp form |
+| 4 | Findings (Form + log tổng hợp) | 10 | ✅ **Xong** — 15 phát hiện, log đủ 9 cột, **15/15 đã nộp form** 04/08/2026 |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
 | — | Phụ lục *(AI Audit · AI Critique · Peer Review · Git log)* | bắt buộc | ⬜ Mẫu đã sẵn sàng |
 
@@ -83,7 +83,7 @@ hw03/
 ## Việc cần làm ngay
 
 1. **Nhắn 5 người tham gia** 3 câu probe còn thiếu *(error recovery · speed · trust)* — mẫu tin nhắn ở [`06_Thu-thap-bo-sung.md`](deliverables/task2-usability/06_Thu-thap-bo-sung.md). Phần duy nhất phụ thuộc người khác.
-2. **Nộp 15 findings lên Google Form**, rồi điền cột *Thời điểm gửi form*.
+2. **Điền bảng tự đánh giá** ở README *(đề §16)* — hiện còn trống.
 3. **Agent Skill + video demo** (10đ) — chưa bắt đầu, là phần thiếu lớn nhất.
 4. **AI Critique 200–300 chữ** và **xuất git log** ra file văn bản.
 5. **Gửi nhóm 4 file Task 1A** — xem [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md).
