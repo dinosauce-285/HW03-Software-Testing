@@ -84,7 +84,7 @@ Khuyến nghị cho kiểm thử GUI: dùng AI để sinh giả thuyết và đo
 | **Môn học:** | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:** | TS. Lâm Quang Vũ / TS. Trần Duy Hoàng / ThS. Trần Thị Bích Hạnh / ThS. Trương Phước Lộc / ThS. Hồ Tuấn Thanh |
 | **Ngày:** | 04/08/2026 |
-| **Chữ ký:** |  |
+| **Chữ ký:** | *Thạnh* |
 
 ## **Tham khảo**
 
