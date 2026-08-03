@@ -45,11 +45,13 @@ Trả lời ngắn gọn thôi cũng được, cảm ơn bạn nhiều!
 
 | # | Họ tên | Vai trò / bối cảnh | Liên hệ *(ẩn 4 số giữa)* | Ngày chạy phiên |
 |---|---|---|---|---|
-| P1 | Nguyễn Thành Dâng | | | 03/08/2026 |
-| P2 | Trương Thành Đạt | | | 03/08/2026 |
-| P3 | Tô Minh Thắng | | | 03/08/2026 |
+| P1 | Nguyễn Thành Dâng | Sinh viên ngành **Du lịch** | `0919****52` | 03/08/2026 |
+| P2 | Trương Thành Đạt | Sinh viên ngành **Kinh tế** | `0989****57` | 03/08/2026 |
+| P3 | Tô Minh Thắng | Sinh viên ngành **Kinh tế** | `0922****79` | 03/08/2026 |
 | P4 | Ngô Bảo Long | | | 03/08/2026 |
 | P5 | Võ Hoàng Xuân Quyên | | | 03/08/2026 |
+
+☐ **Cần verify:** P1–P3 được gán theo **thứ tự người dùng gửi**, chưa xác nhận tên khớp số. Đọc lại một lượt trước khi nộp — TA gọi nhầm người là hỏng cả Task 2.
 
 **Cách che số:** `0912345678` → `0912****78` *(giữ 4 số đầu và 2 số cuối, thay 4 số giữa bằng `****`)*
 

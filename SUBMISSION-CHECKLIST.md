@@ -81,7 +81,7 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ✅ **5/5** — TB **77,0** · trung vị 72,5 · sd 11,0 · +9,0 so mốc ngành |
+| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | 🟡 **4/5** — TB 79,4 · trung vị 80,0 · sd 10,6. Thiếu điểm của P5 |
 | C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](deliverables/task2-usability/05_Gap-Analysis.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
 | C14 | Xếp hạng theo **severity 0–4** | ⬜ chờ viết trong Usability Report |
 | C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ⬜ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) chưa viết |
@@ -196,7 +196,7 @@
 |---|---|---|
 | A · Task 1A checklist nhóm | 15 | ✅ chờ nhóm chốt |
 | B · Task 1B chạy checklist | 15 | 🟡 264/264 ô xong; còn §4 bug report + §5 mục bổ sung |
-| C · Task 2 user testing | 25 | 🟡 5 phiên + 5 transcript + SUS đủ 5/5 + phân tích xong; còn liên hệ đã che, 3 câu probe, và Usability Report |
+| C · Task 2 user testing | 25 | 🟡 5 phiên + 5 transcript + phân tích xong; còn SUS của P5, liên hệ đã che, 3 câu probe, và Usability Report |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
 | E · Findings | 10 | 🟡 log xong, chưa nộp form |
 | F · Agent Skill | 10 | ⬜ chưa bắt đầu |
