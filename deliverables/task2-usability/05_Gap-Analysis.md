@@ -23,7 +23,6 @@
 
 | Hạng mục | Vì sao cần |
 |---|---|
-| **Điểm SUS của P5** | 4/5 người đã có; thiếu Võ Hoàng Xuân Quyên |
 | **3/4 câu probe** | Cả 5 phiên chỉ hỏi *"có thấy khó khăn gì không"*. Thiếu **error recovery · speed · trust** |
 | **Bảng người tham gia** | Tên đầy đủ · vai trò/bối cảnh · liên hệ ẩn 4 số giữa · ngày chạy |
 
@@ -128,7 +127,8 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 
 ## Việc cần làm
 
-- [ ] Gửi 5 người **Google Form**: 10 câu SUS + 4 câu probe
+- [x] ~~Thu điểm SUS~~ — **đủ 5/5**, TB 77,0
+- [ ] Gửi 5 người **Google Form**: 3 câu probe còn thiếu *(error recovery · speed · trust)*
 - [ ] Thu **tên · vai trò · liên hệ ẩn 4 số giữa** của cả 5 người
 - [ ] Xác nhận đã **bật lại Active** cho `Phú Lê Thiên` sau phiên P2
 - [ ] Quyết định về P4: ghi nhận việc 2 không hợp lệ, hay chạy lại với người đó

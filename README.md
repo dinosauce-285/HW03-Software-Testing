@@ -44,7 +44,7 @@ hw03/
 |---|---|---|---|
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **88 mục** — nhóm đã review, kiểm chứng Pool A/C/D trên EMS thật |
 | 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 **264/264 ô** — 63 Passed · 25 Failed · 176 N/A · 24 ảnh. Còn §4 bug report + §5 mục bổ sung |
-| 2 | Task 2 — User testing 5 người | 25 | 🟡 **5/5 phiên đã quay + transcript**, phân tích xong. Còn SUS của P5, liên hệ đã che, 3 câu probe, và Usability Report |
+| 2 | Task 2 — User testing 5 người | 25 | 🟡 **5/5 phiên + transcript + SUS (TB 77,0)**, phân tích xong. Còn liên hệ đã che, 3 câu probe, và Usability Report |
 | 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
 | 4 | Findings (Form + log tổng hợp) | 10 | 🟡 **12 phát hiện** đã ghi log — nộp form **một lần cuối** sau khi xong Task 1B và 2 |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
@@ -82,7 +82,7 @@ hw03/
 
 ## Việc cần làm ngay
 
-1. **Nhắn 5 người tham gia** — bảng SUS cho P5 Võ Hoàng Xuân Quyên · **liên hệ ẩn 4 số giữa** của cả 5 · 3 câu probe *(error recovery · speed · trust)*. Phần duy nhất phụ thuộc người khác.
+1. **Nhắn 5 người tham gia** — **liên hệ ẩn 4 số giữa** của cả 5 · 3 câu probe *(error recovery · speed · trust)*. Phần duy nhất phụ thuộc người khác.
 2. **Viết Usability Report** — làm được ngay phần kịch bản, bảng chỉ số, xếp hạng severity; chừa ô chờ dữ liệu ở mục 1.
 3. **Điền §4 và §5 của Task 1B** — §4 rút từ Findings Log, §5 cần chốt 2 mục bổ sung của riêng mình.
 4. **Agent Skill + video demo** (10đ) — chưa bắt đầu.

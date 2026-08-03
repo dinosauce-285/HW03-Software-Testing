@@ -29,22 +29,22 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 
 ---
 
-## Bảng điểm thô — đã thu
+## Bảng điểm thô — **đủ 5/5 người**
 
-| # | Câu hỏi | Loại | P1<br>Dâng | P2<br>Đạt | P3<br>Thắng | P4<br>Long |
-|---|---|---|---|---|---|---|
-| 1 | Tôi nghĩ tôi sẽ muốn dùng hệ thống này thường xuyên | + | 5 | 4 | 3 | 4 |
-| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết | − | 2 | 1 | 3 | 2 |
-| 3 | Tôi thấy hệ thống dễ sử dụng | + | 5 | 5 | 4 | 4 |
-| 4 | Tôi nghĩ tôi cần người hỗ trợ kỹ thuật mới dùng được | − | 1 | 2 | 2 | 2 |
-| 5 | Tôi thấy các chức năng được tích hợp tốt với nhau | + | 5 | 4 | 4 | 4 |
-| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán | − | 2 | 2 | 3 | 2 |
-| 7 | Tôi nghĩ hầu hết mọi người sẽ học dùng rất nhanh | + | 4 | 5 | 4 | 4 |
-| 8 | Tôi thấy hệ thống rất cồng kềnh khi sử dụng | − | 1 | 1 | 2 | 3 |
-| 9 | Tôi cảm thấy tự tin khi sử dụng hệ thống | + | 5 | 4 | 4 | 4 |
-| 10 | Tôi cần học rất nhiều thứ trước khi bắt đầu dùng được | − | 2 | 1 | 2 | 2 |
-| | **Tổng thô (0–40)** | | **36** | **35** | **27** | **29** |
-| | **× 2,5 → SUS** | | **90,0** | **87,5** | **67,5** | **72,5** |
+| # | Câu hỏi | Loại | P1<br>Dâng | P2<br>Đạt | P3<br>Thắng | P4<br>Long | P5<br>Quyên | TB quy đổi<br>*(0–4)* |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Tôi nghĩ tôi sẽ muốn dùng hệ thống này thường xuyên | + | 5 | 4 | 3 | 4 | 4 | 3,0 |
+| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết | − | 2 | 1 | 3 | 2 | 2 | 3,0 |
+| 3 | Tôi thấy hệ thống dễ sử dụng | + | 5 | 5 | 4 | 4 | 4 | **3,4** |
+| 4 | Tôi nghĩ tôi cần người hỗ trợ kỹ thuật mới dùng được | − | 1 | 2 | 2 | 2 | 3 | 3,0 |
+| 5 | Tôi thấy các chức năng được tích hợp tốt với nhau | + | 5 | 4 | 4 | 4 | 4 | 3,2 |
+| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán | − | 2 | 2 | 3 | 2 | 2 | **2,8** |
+| 7 | Tôi nghĩ hầu hết mọi người sẽ học dùng rất nhanh | + | 4 | 5 | 4 | 4 | 4 | 3,2 |
+| 8 | Tôi thấy hệ thống rất cồng kềnh khi sử dụng | − | 1 | 1 | 2 | 3 | 2 | 3,2 |
+| 9 | Tôi cảm thấy tự tin khi sử dụng hệ thống | + | 5 | 4 | 4 | 4 | 3 | 3,0 |
+| 10 | Tôi cần học rất nhiều thứ trước khi bắt đầu dùng được | − | 2 | 1 | 2 | 2 | 3 | 3,0 |
+| | **Tổng thô (0–40)** | | **36** | **35** | **27** | **29** | **27** | |
+| | **× 2,5 → SUS** | | **90,0** | **87,5** | **67,5** | **72,5** | **67,5** | |
 
 | Phiên | Người tham gia | Video gốc | SUS | Hạng |
 |---|---|---|---|---|
@@ -52,36 +52,56 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 | P2 | Trương Thành Đạt | `Trương Thành Đạt.mkv` | **87,5** | **A** — top 10% |
 | P3 | Tô Minh Thắng | `Tô Minh Thắng.mkv` | **67,5** | ≈ trung bình |
 | P4 | Ngô Bảo Long | `Ngô Bảo Long.mkv` | **72,5** | B− |
-| P5 | Võ Hoàng Xuân Quyên | `Võ Hoàng Xuân Quyên.mkv` | *(chưa thu)* | — |
+| P5 | Võ Hoàng Xuân Quyên | `Võ Hoàng Xuân Quyên.mkv` | **67,5** | ≈ trung bình |
 
-## Tổng hợp — 4/5 người *(đã chạy đủ 5 phiên, còn thiếu điểm SUS của P5)*
+## Tổng hợp — **đủ 5/5 người**
 
 | Chỉ số | Giá trị |
 |---|---|
-| Trung bình | **79,4** |
-| Trung vị | **80,0** |
+| Trung bình | **77,0** |
+| Trung vị | **72,5** |
 | Thấp nhất – Cao nhất | 67,5 – 90,0 |
-| Độ lệch chuẩn (mẫu) | 10,6 |
-| So với mốc trung bình ngành 68 | **+11,4** |
+| Độ lệch chuẩn (mẫu) | 11,0 |
+| So với mốc trung bình ngành 68 | **+9,0** |
 
-> ⚠️ **Đã chạy đủ 5 phiên**, nhưng P5 chưa gửi bảng SUS → số liệu trên tính trên **4 người**. Phải ghi rõ khi đưa vào báo cáo.
+> Cả 5 người đều tự chấm sau khi làm xong hai tác vụ. Bảng phiếu gốc giữ trong tin nhắn với từng người.
 
 ## Đọc kết quả
 
-**Trung bình 79,4 là điểm khá** — trên mốc 68 khoảng 11 điểm, xấp xỉ ngưỡng hạng A (80,3).
+**Trung bình 77,0 — trên mốc ngành 68 khoảng 9 điểm**, tương đương hạng **C+ / B−** *(phân vị ~60)*. Hệ thống dùng được, không xuất sắc.
 
-**Nhưng độ phân tán rộng: 67,5 → 90,0**, lệch chuẩn 10,6. Với chỉ 4 người thì đây là chênh lệch đáng kể, và nó khớp với hành vi quan sát được:
+**Phân bố tách làm hai cụm rõ rệt**, không phải một dải liên tục:
 
-| Phiên | SUS | Hành vi trong phiên |
+| Cụm | Người | SUS | Đặc điểm chung |
+|---|---|---|---|
+| **Cao** | P1 Dâng · P2 Đạt | 87,5 – 90,0 | Tìm ra màn hình Users nhanh, không bị chặn ở bước nào |
+| **Thấp** | P3 Thắng · P5 Quyên · P4 Long | 67,5 – 72,5 | **Đều vấp ở bước tìm màn hình Users Management** |
+
+Chênh lệch giữa hai cụm là **~18 điểm SUS** — rất lớn với thang này. Trung vị 72,5 thấp hơn trung bình 77,0 cho thấy phân bố **lệch xuống**: 3/5 người nằm ở nửa dưới.
+
+| Phiên | SUS | Ma sát quan sát được trên video |
 |---|---|---|
 | P1 Dâng | 90,0 | Phiên **ngắn nhất** 3:55, ít ma sát nhất, làm xong cả hai việc |
 | P2 Đạt | 87,5 | Tự nhận xét *"khá dễ, khá logic"* |
-| P4 Long | 72,5 | Phát hiện lỗi Họ/Tên bị ngược · thấy khó tìm màn hình Users |
-| P3 Thắng | 67,5 | Điền mã số nhầm ô Phone · gặp lỗi trùng dữ liệu · *"tìm kiếm khá là lâu"* |
+| P4 Long | 72,5 | Phát hiện lỗi Họ/Tên bị ngược · *"khá là khó khăn"* khi tìm màn hình |
+| P3 Thắng | 67,5 | Điền mã số nhầm ô Phone · lỗi trùng dữ liệu · *"tìm kiếm khá là lâu"* |
+| P5 Quyên | 67,5 | **Phải được gợi ý** mới tìm ra màn hình (~50 giây) · lỗi trùng email |
 
-**Thứ tự điểm SUS trùng khớp với mức độ ma sát quan sát được** — người gặp nhiều trở ngại nhất cho điểm thấp nhất. Đây là dấu hiệu dữ liệu nhất quán giữa hai nguồn độc lập *(quan sát hành vi và tự đánh giá)*.
+**Thứ tự điểm SUS trùng khớp hoàn toàn với mức ma sát quan sát được.** Hai người vấp nặng nhất ở khâu điều hướng (P3, P5) cùng cho **đúng 67,5** — hai nguồn dữ liệu độc lập *(quan sát hành vi và tự đánh giá)* chỉ về cùng một kết luận.
 
----
+### Đọc theo từng câu
+
+Tính trung bình từng câu sau quy đổi *(thang 0–4, càng cao càng tốt)*:
+
+| Câu yếu nhất | TB | Ý nghĩa |
+|---|---|---|
+| **Q6** — *"quá nhiều điểm thiếu nhất quán"* | **2,8** | Câu **duy nhất dưới 3,0**. Khớp thẳng với `T1B-01` — nhãn, placeholder và thông báo lỗi của ô Họ/Tên gọi ba tên khác nhau |
+| Q1 · Q2 · Q4 · Q9 · Q10 | 3,0 | Nhóm trung bình |
+| **Q3** — *"dễ sử dụng"* | **3,4** | Câu **mạnh nhất** — xác nhận: form dễ, vấn đề không nằm ở form |
+
+**Q9 *"tự tin khi sử dụng"* = 3,0** trong khi Q3 *"dễ sử dụng"* = 3,4. Người dùng thấy **dễ nhưng không tự tin** — đúng với `T1B-10`: hệ thống im lặng sau mọi thao tác ghi, không ai chắc mình đã lưu thành công. P5 là người duy nhất chấm Q9 chỉ **3/5**, và cũng là người nói *"tôi không biết kiếm ở đâu"*.
+
+> **Kết luận:** SUS 77,0 không phản ánh một hệ thống khó dùng, mà một hệ thống **khó vào**. Sửa được khâu điều hướng vào Users Management thì cụm thấp có khả năng kéo lên ngang cụm cao.
 
 ---
 
