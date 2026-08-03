@@ -1,6 +1,6 @@
 # HW03 — GUI & Usability Testing trên EMS
 
-**Sinh viên:** 23127262 – Lý Quốc Thạnh · **Email:** `23127262@student.hcmus.edu.vn`
+**Sinh viên:** 23127262 – Lý Quốc Thạnh · **Lớp:** 23KTPM2 / Khoá 23 · **Email:** `23127262@student.hcmus.edu.vn`
 **Kịch bản:** **C — Admin quản lý người dùng**
 **3 màn hình:** C1 Users Management `/dashboard/admin/users` · C2 dialog *Edit User* · C3 dialog *Create New User*
 **Hệ thống kiểm thử:** `https://prod-dev.ems-fitus.cloud`

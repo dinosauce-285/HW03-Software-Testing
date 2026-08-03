@@ -7,11 +7,11 @@ Video đặt trên YouTube ở chế độ **Unlisted** vì bản gốc 2880×18
 
 | Phiên | Người tham gia | Dài | Link | Bản gỡ băng |
 |---|---|---|---|---|
-| P1 | Nguyễn Thành Dâng | 3:55 | *(điền link)* | [`P1-transcript.txt`](P1-transcript.txt) |
-| P2 | Trương Thành Đạt | 5:25 | *(điền link)* | [`P2-transcript.txt`](P2-transcript.txt) |
-| P3 | Tô Minh Thắng | 6:19 | *(điền link)* | [`P3-transcript.txt`](P3-transcript.txt) |
-| P4 | Ngô Bảo Long | 6:07 | *(điền link)* | [`P4-transcript.txt`](P4-transcript.txt) |
-| P5 | Võ Hoàng Xuân Quyên | 6:00 | *(điền link)* | [`P5-transcript.txt`](P5-transcript.txt) |
+| P1 | Nguyễn Thành Dâng | 3:55 | [https://youtu.be/V95AASOedSc](https://youtu.be/V95AASOedSc) | [`P1-transcript.txt`](P1-transcript.txt) |
+| P2 | Trương Thành Đạt | 5:25 | [https://youtu.be/ylzYM7UN8VM](https://youtu.be/ylzYM7UN8VM) | [`P2-transcript.txt`](P2-transcript.txt) |
+| P3 | Tô Minh Thắng | 6:19 | [https://youtu.be/_B_wb6TU7Qc](https://youtu.be/_B_wb6TU7Qc) | [`P3-transcript.txt`](P3-transcript.txt) |
+| P4 | Ngô Bảo Long | 6:07 | [https://youtu.be/LZGTrTJQcGw](https://youtu.be/LZGTrTJQcGw) | [`P4-transcript.txt`](P4-transcript.txt) |
+| P5 | Võ Hoàng Xuân Quyên | 6:00 | [https://youtu.be/BdsUhQjdQMg](https://youtu.be/BdsUhQjdQMg) | [`P5-transcript.txt`](P5-transcript.txt) |
 
 ## Cách đối chiếu
 
