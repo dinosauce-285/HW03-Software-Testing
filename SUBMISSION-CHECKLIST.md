@@ -81,7 +81,7 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | 🟡 **4/5** — TB 79,4 · trung vị 80,0 · sd 10,6. Thiếu điểm của P5 |
+| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ✅ **5/5** — TB **77,0** · trung vị 72,5 · sd 11,0 · +9,0 so mốc ngành |
 | C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](deliverables/task2-usability/05_Gap-Analysis.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
 | C14 | Xếp hạng theo **severity 0–4** | ⬜ chờ viết trong Usability Report |
 | C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ⬜ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) chưa viết |
@@ -113,9 +113,9 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | E1 | File tổng hợp đủ **9 cột** | ✅ [`Findings-Log.md`](deliverables/findings/Findings-Log.md) |
-| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ⬜ **0/3 — nộp một lần cuối** |
+| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ⬜ **0/12 — nộp một lần cuối**, sau khi có thêm phát hiện Task 2 |
 | E3 | Điền **Thời điểm gửi form** cho từng dòng | ⬜ |
-| E4 | **Số dòng log = số submission form** | ⬜ hiện 3 ↔ 0 |
+| E4 | **Số dòng log = số submission form** | ⬜ hiện **12 ↔ 0** |
 
 ---
 
@@ -134,7 +134,7 @@
 
 | # | Hạng mục | Nguồn | Trạng thái |
 |---|---|---|---|
-| G1 | **AI Audit Report** — mỗi tương tác: công cụ · ngày giờ · prompt · output | [đề §10 dòng 168](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L168) | 🟡 khung có, cần điền giờ |
+| G1 | **AI Audit Report** — mỗi tương tác: công cụ · ngày giờ · prompt · output | [đề §10 dòng 168](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L168) | ✅ 10 dòng, đủ Task 1A/1B/2/3 · ghi cả chỗ đã sửa lại output của AI |
 | G2 | Khai báo *"I use AI tools for the following tasks"* | [đề §10 dòng 168](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L168) | ✅ |
 | G3 | **AI Critique — 200–300 chữ**, đếm trước khi nộp | [đề §11 dòng 174](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L174) | ⬜ nguyên liệu đã có |
 | G4 | **Git commit log** dạng file văn bản | [đề §13 dòng 187](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L187) | ⬜ chạy lệnh xuất |
@@ -196,9 +196,9 @@
 |---|---|---|
 | A · Task 1A checklist nhóm | 15 | ✅ chờ nhóm chốt |
 | B · Task 1B chạy checklist | 15 | 🟡 264/264 ô xong; còn §4 bug report + §5 mục bổ sung |
-| C · Task 2 user testing | 25 | 🟡 5 phiên + 5 transcript + phân tích xong; còn SUS của P5, liên hệ đã che, 3 câu probe, và Usability Report |
+| C · Task 2 user testing | 25 | 🟡 5 phiên + transcript + SUS 5/5 + liên hệ đã che + phân tích xong; **còn 3 câu probe và Usability Report** |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
-| E · Findings | 10 | 🟡 log xong, chưa nộp form |
-| F · Agent Skill | 10 | ⬜ chưa bắt đầu |
-| G · Phụ lục | bắt buộc | 🟡 khung có, chờ số cuối |
+| E · Findings | 10 | 🟡 log 12 dòng xong, **chưa nộp form** |
+| F · Agent Skill | 10 | ⬜ **chưa bắt đầu** — phần thiếu lớn nhất |
+| G · Phụ lục | bắt buộc | 🟡 AI Audit ✅ · còn AI Critique, git log, README số cuối |
 | H · Đóng gói | bắt buộc | ⬜ cuối cùng |
