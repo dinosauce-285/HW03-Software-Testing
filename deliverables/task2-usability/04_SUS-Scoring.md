@@ -48,13 +48,13 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 
 | Phiên | Người tham gia | Video gốc | SUS | Hạng |
 |---|---|---|---|---|
-| P1 | Nguyễn Thành Dâng | `2026-08-03 17-54-32.mkv` | **90,0** | **A** — top 10% |
-| P2 | Trương Thành Đạt | `2026-08-03 22-34-36.mkv` | **87,5** | **A** — top 10% |
-| P3 | Tô Minh Thắng | `2026-08-03 22-43-03.mkv` | **67,5** | ≈ trung bình |
-| P4 | Ngô Bảo Long | `2026-08-03 22-53-46.mkv` | **72,5** | B− |
-| P5 | *(chưa chạy)* | — | — | — |
+| P1 | Nguyễn Thành Dâng | `Nguyễn Thành Dâng.mkv` | **90,0** | **A** — top 10% |
+| P2 | Trương Thành Đạt | `Trương Thành Đạt.mkv` | **87,5** | **A** — top 10% |
+| P3 | Tô Minh Thắng | `Tô Minh Thắng.mkv` | **67,5** | ≈ trung bình |
+| P4 | Ngô Bảo Long | `Ngô Bảo Long.mkv` | **72,5** | B− |
+| P5 | Võ Hoàng Xuân Quyên | `Võ Hoàng Xuân Quyên.mkv` | *(chưa thu)* | — |
 
-## Tổng hợp — 4/5 người
+## Tổng hợp — 4/5 người *(đã chạy đủ 5 phiên, còn thiếu điểm SUS của P5)*
 
 | Chỉ số | Giá trị |
 |---|---|
@@ -64,7 +64,7 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 | Độ lệch chuẩn (mẫu) | 10,6 |
 | So với mốc trung bình ngành 68 | **+11,4** |
 
-> ⚠️ Còn **thiếu phiên thứ 5** — số liệu trên tính trên 4 người, phải ghi rõ khi đưa vào báo cáo.
+> ⚠️ **Đã chạy đủ 5 phiên**, nhưng P5 chưa gửi bảng SUS → số liệu trên tính trên **4 người**. Phải ghi rõ khi đưa vào báo cáo.
 
 ## Đọc kết quả
 

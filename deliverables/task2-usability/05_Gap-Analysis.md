@@ -1,7 +1,7 @@
 # Task 2 — Đối chiếu dữ liệu đã thu vs còn thiếu
 
 > Lập từ 5 bản ghi phiên ngày 03/08/2026, đã nhận dạng lời nói bằng faster-whisper chạy offline.
-> Transcript thô ở `scratchpad/*-transcript.txt`; chất lượng chữ có sai chính tả, nội dung đọc hiểu được.
+> Transcript ở `evidence/task2/P1..P5-transcript.txt`; chất lượng chữ có sai chính tả, nội dung đọc hiểu được.
 
 ---
 
@@ -9,9 +9,9 @@
 
 | Phiên | File gốc | Dài | Người tham gia | Việc 1 | Việc 2 |
 |---|---|---|---|---|---|
-| P1 | `2026-08-03 17-54-32.mkv` | 3:55 | **Nguyễn Thành Dâng** | ✅ | ✅ |
-| P2 | `2026-08-03 22-34-36.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
-| P3 | `2026-08-03 22-43-03.mkv` | 6:19 | **Tô Minh Thắng** | ✅ | ✅ |
+| P1 | `Nguyễn Thành Dâng.mkv` | 3:55 | **Nguyễn Thành Dâng** | ✅ | ✅ |
+| P2 | `Trương Thành Đạt.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
+| P3 | `Tô Minh Thắng.mkv` | 6:19 | **Tô Minh Thắng** | ✅ | ✅ |
 | P4 | `Ngô Bảo Long.mkv` | 6:07 | **Ngô Bảo Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
 | P5 | `Võ Hoàng Xuân Quyên.mkv` | 6:00 | **Võ Hoàng Xuân Quyên** | ✅ | ✅ |
 
@@ -19,12 +19,12 @@
 
 ## Còn thiếu — cần liên hệ lại
 
-### Thiếu ở CẢ 4 phiên
+### Thiếu ở CẢ 5 phiên
 
 | Hạng mục | Vì sao cần |
 |---|---|
 | **Điểm SUS của P5** | 4/5 người đã có; thiếu Võ Hoàng Xuân Quyên |
-| **3/4 câu probe** | Chỉ hỏi *"có thấy khó khăn gì không"*. Thiếu **error recovery · speed · trust** |
+| **3/4 câu probe** | Cả 5 phiên chỉ hỏi *"có thấy khó khăn gì không"*. Thiếu **error recovery · speed · trust** |
 | **Bảng người tham gia** | Tên đầy đủ · vai trò/bối cảnh · liên hệ ẩn 4 số giữa · ngày chạy |
 
 ### Thiếu riêng từng phiên
@@ -34,6 +34,7 @@
 | P1 | — |
 | P2 | **Việc 2 làm trên user Phú Lê Thiên**, không phải user mồi — cần xác nhận đã bật lại Active |
 | P3 | — |
+| P5 | Người điều phối **can thiệp gợi ý** ở 02:01 → thời gian tìm màn hình không còn là số đo sạch |
 | P4 | **Việc 2 không hợp lệ** — user mồi đã Inactive từ trước nên người tham gia làm ngược (bật lại hoạt động). Cần ghi rõ khi phân tích, hoặc chạy lại |
 
 ### Câu probe cần hỏi bù
@@ -116,10 +117,10 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 
 | Vấn đề | Bằng chứng | Ảnh hưởng |
 |---|---|---|
-| **Người điều phối dẫn dắt** | P1 *"Đúng rồi"* ×2 · P2 *"rất là đúng"* (01:47) · P3 *"tìm đến chỗ quản lý user"* · P4 *"Đúng rồi"* (01:33) | Sau khi được xác nhận, không còn đo được họ **tự** tìm ra hay không |
-| **Chỉ 1 câu probe** | Cả 4 phiên | Thiếu 3 chủ đề đề bắt buộc |
+| **Người điều phối dẫn dắt** | P1 *"Đúng rồi"* ×2 · P2 *"rất là đúng"* (01:47) · P3 *"tìm đến chỗ quản lý user"* · P4 *"Đúng rồi"* (01:33) · **P5 được gợi ý thẳng** *"thử bấm vào avatar và những nút ở trên cùng"* (02:01) | Sau khi được xác nhận, không còn đo được họ **tự** tìm ra hay không |
+| **Chỉ 1 câu probe** | Cả 5 phiên | Thiếu 3 chủ đề đề bắt buộc |
 | **User mồi không được reset** | P4 gặp `Hùng` đã Inactive | Việc 2 của P4 không so sánh được với các phiên khác |
-| **Không đếm được lần do dự** | Transcript báo 0 lần im lặng ≥ 5 giây ở cả 4 phiên | Vì người điều phối nói liên tục, không có khoảng lặng để đo |
+| **Không đếm được lần do dự** | Transcript báo 0 lần im lặng ≥ 5 giây ở cả 5 phiên | Vì người điều phối nói liên tục, không có khoảng lặng để đo |
 
 > Ghi những điều này vào §8 *Hạn chế của nghiên cứu* trong Usability Report. Nêu ra là trung thực và cho thấy hiểu phương pháp; giấu đi mà TA xem video thì tệ hơn nhiều.
 
