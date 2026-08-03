@@ -48,14 +48,25 @@ Trả lời ngắn gọn thôi cũng được, cảm ơn bạn nhiều!
 | P1 | Nguyễn Thành Dâng | Sinh viên ngành **Du lịch** | `0919****52` | 03/08/2026 |
 | P2 | Trương Thành Đạt | Sinh viên ngành **Kinh tế** | `0989****57` | 03/08/2026 |
 | P3 | Tô Minh Thắng | Sinh viên ngành **Kinh tế** | `0922****79` | 03/08/2026 |
-| P4 | Ngô Bảo Long | | | 03/08/2026 |
-| P5 | Võ Hoàng Xuân Quyên | | | 03/08/2026 |
+| P4 | Ngô Bảo Long | Sinh viên ngành **Kinh tế đối ngoại** | `0369****70` | 03/08/2026 |
+| P5 | Võ Hoàng Xuân Quyên | Sinh viên ngành **Y Dược** | `0899****28` | 03/08/2026 |
 
-☐ **Cần verify:** P1–P3 được gán theo **thứ tự người dùng gửi**, chưa xác nhận tên khớp số. Đọc lại một lượt trước khi nộp — TA gọi nhầm người là hỏng cả Task 2.
+✅ **Đủ 5/5** — thứ tự P1 → P5 đã xác nhận.
+
+☐ Riêng P4: bạn gửi `0369****970` *(11 ký tự)*. Đã chuẩn hoá về `0369****70` cho đúng quy tắc **ẩn đúng 4 số giữa** của 10 số. Liếc lại 2 số cuối giúp mình.
 
 **Cách che số:** `0912345678` → `0912****78` *(giữ 4 số đầu và 2 số cuối, thay 4 số giữa bằng `****`)*
 
 > ⚠️ **Số thật KHÔNG ghi vào file nào trong repo.** Repo này public. Chỉ ghi dạng đã che; số đầy đủ giữ trong máy bạn phòng khi TA hỏi.
+
+**Nhận xét về hồ sơ người tham gia** — Du lịch · Kinh tế · Kinh tế · Kinh tế đối ngoại · Y Dược:
+
+| | |
+|---|---|
+| ✅ **Đạt yêu cầu "ngoài lớp này"** | Không ai học CNTT, không ai cùng lớp → thoả [đề §6](../../docs/2026.HW03.GUI%20Usability%20EMS_Vi.md) |
+| ⚠️ **Không khớp hoàn toàn hồ sơ người dùng đích** | Màn hình C1/C2/C3 dành cho **quản trị viên**, còn cả 5 người đều là sinh viên chưa từng quản trị hệ thống. P5 tự nói: *"tôi cũng không có quản lý cái này nên tôi không có biết"* |
+
+Điều này **giải thích** vì sao 3/5 người không tìm được Users Management, nên phải nêu ở mục Hạn chế — người quản trị thật, quen mô hình dashboard, có thể tìm ra nhanh hơn. Nhưng nó **không xoá** phát hiện: giao diện không có breadcrumb và không có lối vào rõ ràng là sự thật đo được ở Task 1B *(`N-03`)*, độc lập với việc ai ngồi test.
 
 ### B2. Câu trả lời probe
 
