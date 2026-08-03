@@ -95,11 +95,13 @@ Dùng chung cho cả 5 phiên. **Sau mỗi phiên bật lại `Active`. Sau phi�
 
 ### 2.4 Kết phiên
 
-- [ ] Dừng bấm giờ khi người tham gia nói "xong" hoặc bỏ cuộc
-- [ ] Dừng ghi màn hình
+- [ ] Dừng **bấm giờ** khi người tham gia nói "xong" hoặc bỏ cuộc
+- [ ] ⚠️ **VẪN GIỮ Record chạy** — câu trả lời probe là dữ liệu quan trọng nhất, dừng ghi sớm là mất hết
 - [ ] Đưa **bảng SUS** *(§11 của `01_Test-Plan-and-Kit.md`)* — để họ tự điền, không giải thích từng câu
-- [ ] Hỏi **5 câu probe** *(§12)*, ghi lại nguyên văn câu trả lời
+- [ ] Hỏi **5 câu probe** *(§12)* — hỏi thành tiếng để transcript bắt được
 - [ ] Cảm ơn
+- [ ] **Bây giờ mới dừng Record + Transcript**
+- [ ] Lưu điểm SUS thô ngay *(video không bắt được vì họ tick chứ không nói)*
 
 ### 2.5 Dọn dữ liệu — làm ngay sau khi người tham gia rời
 
