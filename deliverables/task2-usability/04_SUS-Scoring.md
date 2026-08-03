@@ -31,7 +31,7 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 
 ## Bảng điểm thô — đã thu
 
-| # | Câu hỏi | Loại | P1 | P2 | P3 | P4 |
+| # | Câu hỏi | Loại | P1<br>Dâng | P2<br>Đạt | P3<br>Thắng | P4<br>Long |
 |---|---|---|---|---|---|---|
 | 1 | Tôi nghĩ tôi sẽ muốn dùng hệ thống này thường xuyên | + | 5 | 4 | 3 | 4 |
 | 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết | − | 2 | 1 | 3 | 2 |
@@ -49,7 +49,7 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 | Phiên | Người tham gia | Video gốc | SUS | Hạng |
 |---|---|---|---|---|
 | P1 | Nguyễn Thành Dâng | `2026-08-03 17-54-32.mkv` | **90,0** | **A** — top 10% |
-| P2 | *(chưa rõ tên)* | `2026-08-03 22-34-36.mkv` | **87,5** | **A** — top 10% |
+| P2 | Trương Thành Đạt | `2026-08-03 22-34-36.mkv` | **87,5** | **A** — top 10% |
 | P3 | Tô Minh Thắng | `2026-08-03 22-43-03.mkv` | **67,5** | ≈ trung bình |
 | P4 | Ngô Bảo Long | `2026-08-03 22-53-46.mkv` | **72,5** | B− |
 | P5 | *(chưa chạy)* | — | — | — |
@@ -75,7 +75,7 @@ Cộng 10 giá trị đã quy đổi → được số trong khoảng **0–40**
 | Phiên | SUS | Hành vi trong phiên |
 |---|---|---|
 | P1 Dâng | 90,0 | Phiên **ngắn nhất** 3:55, ít ma sát nhất, làm xong cả hai việc |
-| P2 | 87,5 | Tự nhận xét *"khá dễ, khá logic"* |
+| P2 Đạt | 87,5 | Tự nhận xét *"khá dễ, khá logic"* |
 | P4 Long | 72,5 | Phát hiện lỗi Họ/Tên bị ngược · thấy khó tìm màn hình Users |
 | P3 Thắng | 67,5 | Điền mã số nhầm ô Phone · gặp lỗi trùng dữ liệu · *"tìm kiếm khá là lâu"* |
 

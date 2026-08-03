@@ -161,11 +161,11 @@ Người tham gia sẽ **tạo user thật** trên EMS — hệ thống dùng ch
 
 | # | Họ tên | Vai trò / bối cảnh quản lý danh sách | Liên hệ (đã ẩn) | Ngày chạy | Thiết bị |
 |---|---|---|---|---|---|
-| P1 | | | | | |
-| P2 | | | | | |
-| P3 | | | | | |
-| P4 | | | | | |
-| P5 | | | | | |
+| P1 | **Nguyễn Thành Dâng** | *(điền)* | *(điền)* | 03/08/2026 | *(điền)* |
+| P2 | **Trương Thành Đạt** | *(điền)* | *(điền)* | 03/08/2026 | *(điền)* |
+| P3 | **Tô Minh Thắng** | *(điền)* | *(điền)* | 03/08/2026 | *(điền)* |
+| P4 | **Ngô Bảo Long** | *(điền)* | *(điền)* | 03/08/2026 | *(điền)* |
+| P5 | *(chưa chạy)* | | | | |
 
 **Kiểm tra điều kiện tuyển — đánh dấu cho từng người:**
 

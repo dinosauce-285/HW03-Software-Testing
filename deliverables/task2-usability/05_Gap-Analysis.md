@@ -9,10 +9,10 @@
 
 | Phiên | File gốc | Dài | Người tham gia | Việc 1 | Việc 2 |
 |---|---|---|---|---|---|
-| P1 | `2026-08-03 17-54-32.mkv` | 3:55 | *(chưa nêu tên trong ghi âm)* | ✅ | ✅ |
-| P2 | `2026-08-03 22-34-36.mkv` | 5:25 | *(chưa rõ tên)* | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
+| P1 | `2026-08-03 17-54-32.mkv` | 3:55 | **Nguyễn Thành Dâng** | ✅ | ✅ |
+| P2 | `2026-08-03 22-34-36.mkv` | 5:25 | **Trương Thành Đạt** | ✅ | ⚠️ vô hiệu hoá **Phú Lê Thiên** — không phải user mồi |
 | P3 | `2026-08-03 22-43-03.mkv` | 6:19 | **Tô Minh Thắng** | ✅ | ✅ |
-| P4 | `2026-08-03 22-53-46.mkv` | 6:07 | **Ngô … Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
+| P4 | `2026-08-03 22-53-46.mkv` | 6:07 | **Ngô Bảo Long** | ✅ | ❌ user mồi **đã Inactive sẵn** → làm ngược lại |
 
 ---
 
@@ -31,8 +31,8 @@
 
 | Phiên | Thiếu riêng |
 |---|---|
-| P1 | Tên người tham gia |
-| P2 | Tên người tham gia · **việc 2 làm trên user Phú Lê Thiên**, cần xác nhận đã bật lại Active |
+| P1 | — |
+| P2 | **Việc 2 làm trên user Phú Lê Thiên**, không phải user mồi — cần xác nhận đã bật lại Active |
 | P3 | — |
 | P4 | **Việc 2 không hợp lệ** — user mồi đã Inactive từ trước nên người tham gia làm ngược (bật lại hoạt động). Cần ghi rõ khi phân tích, hoặc chạy lại |
 
