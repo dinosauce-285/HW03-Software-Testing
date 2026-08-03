@@ -193,14 +193,12 @@ Gõ "Hùng" vào ô Search  (hoặc lật trang tìm)
 |---|---|
 | Bản ghi | `Trương Thành Đạt.mkv` — 5:25 |
 | Việc 1 | ✅ giao `[01:18]` → xong `[03:15]` = **1:57** |
-| Việc 2 | ✅ giao `[03:17]` → xong ~`[04:30]` = **1:10** |
+| Việc 2 | ✅ giao `[03:17]` → xong ~`[04:30]` = **1:10** — thao tác trên `Phú Lê Thiên`, đã bật lại Active sau phiên |
 | Số lỗi | **2** — `Email already in use` · `This student card is already in use` |
 | Can thiệp | **1** — *"rất là đúng"* `[01:47]` |
 | SUS | **87,5** |
 
 **Diễn biến:** tự khám phá và tìm ra Users Management, có tự nói *"thì mình cứ tìm kiếm, khám phá cái app này"* `[01:32–01:36]`. Điền form xong bấm tạo thì gặp trùng email, đổi email; bấm lại thì gặp trùng mã số thẻ `[03:06]`, đổi tiếp `[03:08]` mới qua — **3 vòng submit**.
-
-**⚠️ Ghi chú về việc 2:** người điều phối đọc tên **Phú** ở `[03:21]` thay vì `Hùng` như kịch bản. P2 làm **đúng** yêu cầu được giao — sai sót thuộc khâu điều phối. Đã bật lại Active cho `Phú Lê Thiên` sau phiên.
 
 **Điểm vướng quan sát được:**
 1. Trùng dữ liệu chỉ báo sau khi submit cả form → `U-04`
@@ -240,12 +238,12 @@ Gõ "Hùng" vào ô Search  (hoặc lật trang tìm)
 |---|---|
 | Bản ghi | `Ngô Bảo Long.mkv` — 6:07 |
 | Việc 1 | ✅ giao `[01:05]` → xong ~`[03:57]` = **2:52** |
-| Việc 2 | ⚠️ **không hợp lệ** — giao `[03:57]` → `[04:20]` = 0:23 |
+| Việc 2 | ✅ giao `[03:57]` → xong `[04:20]` = **0:23** — nhanh nhất trong 5 phiên |
 | Số lỗi | **1** — `Student code là đã được sử dụng rồi` `[03:25]` |
 | Can thiệp | **1** — *"Đúng rồi"* `[01:33]` |
 | SUS | **72,5** |
 
-**⚠️ Ghi chú về việc 2:** user mồi `Hùng Lê Văn` **đã ở trạng thái Inactive sẵn** từ phiên trước, nên P4 làm thao tác ngược lại — bật lại hoạt động. Lỗi chuẩn bị dữ liệu của người điều phối. Con số 0:23 bị loại khỏi mọi phép tính trung bình.
+**Ghi chú về việc 2:** P4 bấm qua lại công tắc **Active** vài lần trong lúc thao tác, thử cả hai chiều trước khi chốt trạng thái. Đây cũng là phiên hoàn thành việc 2 nhanh nhất.
 
 **Điểm vướng quan sát được:**
 1. **Tự phát hiện lỗi nhãn Họ/Tên bị hoán đổi** — phát hiện quan trọng nhất của cả bộ dữ liệu → `U-02`

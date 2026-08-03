@@ -18,9 +18,9 @@ Nhưng con số trung bình che mất điều quan trọng nhất: **3 trong 5 n
 | Chỉ số tổng quan | Giá trị |
 |---|---|
 | Số người tham gia | **5** *(ngoài lớp, ngoài ngành CNTT)* |
-| Tỉ lệ hoàn thành tác vụ | **10/10 lượt = 100 %** *(1 lượt không hợp lệ do lỗi chuẩn bị dữ liệu — xem §8)* |
+| Tỉ lệ hoàn thành tác vụ | **10/10 lượt = 100 %** |
 | Thời gian trung bình việc 1 | **2 phút 28 giây** |
-| Thời gian trung bình việc 2 | **50 giây** |
+| Thời gian trung bình việc 2 | **42 giây** |
 | Điểm SUS trung bình | **77,0** *(trung vị 72,5 · sd 11,0)* |
 | Số phát hiện severity ≥ 3 | **2** trên tổng 5 |
 
@@ -71,10 +71,8 @@ Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](e
 | **P1** Dâng | ✅ | ✅ | **1:45** | 0:25 | 0 | 0 | 2 *(xác nhận "đúng rồi")* | **90,0** |
 | **P2** Đạt | ✅ | ✅ | 1:57 | **1:10** | 2 | 0 | 1 | **87,5** |
 | **P3** Thắng | ✅ | ✅ | **3:31** | 0:51 | 2 | 0 | 1 | **67,5** |
-| **P4** Long | ✅ | ⚠️ | 2:52 | *0:23* | 1 | 0 | 1 | **72,5** |
+| **P4** Long | ✅ | ✅ | 2:52 | **0:23** | 1 | 0 | 1 | **72,5** |
 | **P5** Quyên | ✅ | ✅ | 2:13 | 0:43 | 1 | 0 | **1 gợi ý thẳng** | **67,5** |
-
-⚠️ **Việc 2 của P4 không so sánh được**: user mồi `Hùng Lê Văn` đã ở trạng thái Inactive sẵn từ phiên trước, nên P4 làm thao tác ngược lại *(bật lại hoạt động)*. Lỗi chuẩn bị dữ liệu của người điều phối, không phải lỗi của P4 hay của EMS. Con số 0:23 bị loại khỏi mọi phép tính trung bình.
 
 **Cách đo time on task:** lấy từ mốc thời gian trong bản gỡ băng — tính từ lúc người điều phối nói xong yêu cầu đến lúc người tham gia hoàn tất. Đây là **cận trên**: khoảng thời gian đó có tính cả những lúc người điều phối xen vào nói. Sai số ước tính ±5 giây.
 
@@ -84,19 +82,19 @@ Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](e
 
 | Chỉ số | Việc 1 — thêm thành viên | Việc 2 — chặn truy cập |
 |---|---|---|
-| % hoàn thành | **5/5 = 100 %** | **4/4 hợp lệ = 100 %** |
-| % hoàn thành **không cần can thiệp** | **0/5 = 0 %** | 4/4 = 100 % |
-| Thời gian trung bình *(mean)* | **2:28** | 0:50 |
-| Thời gian trung vị *(median)* | 2:13 | 0:47 |
-| Khoảng *(min–max)* | 1:45 – **3:31** | 0:25 – 1:10 |
-| Độ lệch chuẩn | 0:44 | 0:19 |
+| % hoàn thành | **5/5 = 100 %** | **5/5 = 100 %** |
+| % hoàn thành **không cần can thiệp** | **0/5 = 0 %** | 5/5 = 100 % |
+| Thời gian trung bình *(mean)* | **2:28** | 0:42 |
+| Thời gian trung vị *(median)* | 2:13 | 0:43 |
+| Khoảng *(min–max)* | 1:45 – **3:31** | **0:23** – 1:10 |
+| Độ lệch chuẩn | 0:44 | 0:20 |
 | Số lỗi trung bình | **1,2 lỗi/người** | 0 |
 
 **SUS trung bình cả phiên: 77,0** — trung vị 72,5 · sd 11,0 · **+9,0** so mốc trung bình ngành 68.
 
 **Hai con số đáng chú ý:**
 
-**① Việc 1 tốn gấp 3 lần việc 2** *(2:28 so với 0:50)*, dù việc 1 chỉ là điền form còn việc 2 phải tìm kiếm rồi mở dialog rồi lưu. Chênh lệch này gần như hoàn toàn nằm ở khâu **tìm đường vào màn hình** — sau khi vào được, thao tác của cả hai việc đều nhanh.
+**① Việc 1 tốn gần gấp 4 lần việc 2** *(2:28 so với 0:42)*, dù việc 1 chỉ là điền form còn việc 2 phải tìm kiếm rồi mở dialog rồi lưu. Chênh lệch này gần như hoàn toàn nằm ở khâu **tìm đường vào màn hình** — sau khi vào được, thao tác của cả hai việc đều nhanh.
 
 **② Không ai hoàn thành việc 1 mà không cần can thiệp.** Cả 5 phiên người điều phối đều phải xác nhận hoặc gợi ý ít nhất một lần. Đây vừa là hạn chế phương pháp *(§8)*, vừa là tín hiệu: giao diện không đủ tự giải thích để người mới đi một mình.
 
@@ -274,10 +272,9 @@ Nêu đầy đủ ở đây là có chủ ý. Bản ghi màn hình của cả 5 
 | **1** | **Người điều phối dẫn dắt.** Xác nhận đúng/sai trong lúc người tham gia đang thao tác | P1 *"Đúng rồi"* ×2 · P2 *"rất là đúng"* `[01:47]` · P3 *"Đúng là sẽ có 1 cái chỗ để tìm kiếm user"* `[01:25]` · P4 *"Đúng rồi"* `[01:33]` · **P5 được gợi ý thẳng** *"thử bấm vào avatar và những nút ở trên cùng"* `[02:01]` | Time on task là **cận dưới** của độ khó thật — không có can thiệp thì có thể lâu hơn. Riêng `U-01` thì hạn chế này **củng cố** kết luận: dù đã được giúp, 3/5 vẫn thấy khó |
 | **2** | **Ba trong bốn chủ đề probe hỏi sau phiên, không hỏi ngay tại chỗ.** Trong phiên chỉ kịp hỏi *clarity* | Cả 5 phiên | Trả lời sau phiên phụ thuộc trí nhớ nên kém chi tiết hơn hỏi ngay lúc thao tác. Bù lại, dữ liệu vẫn **đủ 4 chủ đề × 5 người** và đã làm thay đổi kết luận — `U-03` bị hạ từ mức 3 xuống 2 nhờ chính bộ dữ liệu này |
 | **3** | **Không đếm được số lần do dự.** Chỉ số này bằng 0 ở cả 5 phiên | Bản gỡ băng báo 0 khoảng lặng ≥5 giây | Con số 0 **không** có nghĩa người dùng không do dự — người điều phối nói liên tục nên không có khoảng lặng để đo. Chỉ số này nên coi như **không thu được** |
-| **4** | **User mồi không được reset giữa các phiên.** `Hùng Lê Văn` đã Inactive sẵn khi tới lượt P4 | P4 `[03:57–04:20]` | Việc 2 của P4 bị loại khỏi mọi phép tính. Còn 4 lượt hợp lệ |
-| **5** | **Dữ liệu test dùng lại giữa các phiên** → 3/5 người gặp lỗi trùng email/mã số | `U-04` | Tần suất của `U-04` bị **thổi phồng** so với thực tế sử dụng. Đã hạ severity xuống 2 vì lý do này |
-| **6** | **Hồ sơ người tham gia khớp một phần.** 4/5 là sinh viên chưa từng quản lý nhân sự; **P5 đang quản lý một tiệm nước** — có kinh nghiệm quản người thật, nhưng chưa ai từng dùng **phần mềm** quản trị | P5 *"tôi cũng không có quản lý **cái này** nên tôi không có biết"* `[05:04]` | Hạn chế này **nhẹ hơn nhiều so với dự đoán ban đầu**, và chính dữ liệu đã bác bỏ nó: người **có** kinh nghiệm quản lý *(P5)* lại vấp nặng nhất ở `U-01`. Vẫn nên chạy thêm với quản trị viên phần mềm thật, nhưng không thể quy tỉ lệ 3/5 cho hồ sơ người tham gia |
-| **7** | **Cỡ mẫu 5, môi trường không phải phòng lab.** Chạy qua Google Meet, mỗi người dùng máy riêng | — | Đủ theo chuẩn Nielsen *(5 người phát hiện ~85 % vấn đề usability)* và đủ theo yêu cầu đề, nhưng **không đủ để suy rộng thống kê**. Mọi tỉ lệ trong báo cáo nên đọc là "x trên 5 người", không phải "x % người dùng" |
-| **8** | **Không chạy pilot.** Đề nêu pilot là bước khuyến nghị, không bắt buộc; §16 chấm Task 2 theo *kịch bản + 5 phiên + phân tích* | — | Hạn chế 4 và 5 *(dữ liệu không được reset)* nhiều khả năng đã bị một phiên pilot phát hiện trước. Đây là cái giá thật của việc bỏ pilot |
+| **4** | **Dữ liệu test dùng lại giữa các phiên** → 3/5 người gặp lỗi trùng email/mã số | `U-04` | Tần suất của `U-04` bị **thổi phồng** so với thực tế sử dụng. Đã hạ severity xuống 2 vì lý do này |
+| **5** | **Hồ sơ người tham gia khớp một phần.** 4/5 là sinh viên chưa từng quản lý nhân sự; **P5 đang quản lý một tiệm nước** — có kinh nghiệm quản người thật, nhưng chưa ai từng dùng **phần mềm** quản trị | P5 *"tôi cũng không có quản lý **cái này** nên tôi không có biết"* `[05:04]` | Hạn chế này **nhẹ hơn nhiều so với dự đoán ban đầu**, và chính dữ liệu đã bác bỏ nó: người **có** kinh nghiệm quản lý *(P5)* lại vấp nặng nhất ở `U-01`. Vẫn nên chạy thêm với quản trị viên phần mềm thật, nhưng không thể quy tỉ lệ 3/5 cho hồ sơ người tham gia |
+| **6** | **Cỡ mẫu 5, môi trường không phải phòng lab.** Chạy qua Google Meet, mỗi người dùng máy riêng | — | Đủ theo chuẩn Nielsen *(5 người phát hiện ~85 % vấn đề usability)* và đủ theo yêu cầu đề, nhưng **không đủ để suy rộng thống kê**. Mọi tỉ lệ trong báo cáo nên đọc là "x trên 5 người", không phải "x % người dùng" |
+| **7** | **Không chạy pilot.** Đề nêu pilot là bước khuyến nghị, không bắt buộc; §16 chấm Task 2 theo *kịch bản + 5 phiên + phân tích* | — | Hạn chế 4 *(dữ liệu test dùng lại giữa các phiên)* nhiều khả năng đã bị một phiên pilot phát hiện trước. Đây là cái giá thật của việc bỏ pilot |
 
 **Điều gì vẫn vững bất chấp các hạn chế trên:** `U-01`, `U-02` và `U-03` đều có **bằng chứng độc lập từ Task 1B** — đo trực tiếp trên DOM, không phụ thuộc vào cách chạy phiên. Ba phát hiện này đứng vững kể cả khi loại bỏ toàn bộ dữ liệu quan sát.

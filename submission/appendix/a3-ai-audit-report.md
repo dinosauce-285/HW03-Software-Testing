@@ -4,7 +4,7 @@
 
 **CHÍNH SÁCH AI · BIỂU MẪU — 2026 v1.0**
 
-# **AI Audit Report — Mẫu 5 mục cho mỗi Artifact**
+# **AI Audit Report**
 
 *Phụ lục bắt buộc đính kèm cho mọi bài tập có dùng AI (HW#01–HW#06, Seminar).*
 
