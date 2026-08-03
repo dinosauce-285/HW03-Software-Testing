@@ -44,7 +44,7 @@ hw03/
 |---|---|---|---|
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **88 mục** — nhóm đã review, kiểm chứng Pool A/C/D trên EMS thật |
 | 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | ✅ **Xong** — 264 ô *(63 P · 25 F · 176 N/A)* · 24 ảnh · §4 bug report 10 lỗi · §5 ba mục bổ sung |
-| 2 | Task 2 — User testing 5 người | 25 | 🟡 **Usability Report xong** — 5 phiên · SUS TB 77,0 · 5 phát hiện xếp hạng. Còn 3 câu probe hỏi bù |
+| 2 | Task 2 — User testing 5 người | 25 | ✅ **Xong** — 5 phiên · SUS TB 77,0 · 4 chủ đề probe đủ 5/5 · 5 phát hiện xếp hạng · Usability Report 8 mục |
 | 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
 | 4 | Findings (Form + log tổng hợp) | 10 | ✅ **Xong** — 15 phát hiện, log đủ 9 cột, **15/15 đã nộp form** 04/08/2026 |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
@@ -62,7 +62,7 @@ hw03/
 | Số mục đã chạy / Passed / Failed | **264** / 63 / 25 *(176 N/A)* — tỉ lệ pass **71,6 %** |
 | Số lỗi phát hiện | **15** — 10 từ Task 1B · 3 từ Task 2 · 2 từ Task 3 *(4 `Bug` · 11 `Usability`)* |
 | Số người tham gia user-testing | **5** — SUS trung bình **77,0** *(trung vị 72,5 · sd 11,0)* |
-| Số vấn đề usability theo severity (4/3/2/1) | **0 / 7 / 7 / 1** |
+| Số vấn đề usability theo severity (4/3/2/1) | **0 / 6 / 8 / 1** |
 | Số ô tương thích đã phủ | **21** (7 tổ hợp × 3 màn hình) |
 | Link video demo Agent Skill | |
 

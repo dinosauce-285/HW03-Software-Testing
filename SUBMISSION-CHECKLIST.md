@@ -62,8 +62,8 @@
 |---|---|---|
 | C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](deliverables/task2-usability/03_Session-Kit.md) |
 | C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | 🟡 task success + time on task + SUS đã có; **số lần do dự = 0 ở cả 5 phiên** vì người điều phối nói liên tục → đã ghi vào mục Hạn chế |
-| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | 🟡 mẫu đủ 4 chủ đề nhưng **trong phiên chỉ hỏi clarity**; 3 chủ đề còn lại phải hỏi bù qua form |
-| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | 🟡 5 người thật, đủ 5 bản ghi, **ngoài lớp** ✅ — nhưng cả 5 là sinh viên ngoài ngành, **chưa từng làm quản trị** → lệch hồ sơ người dùng đích, đã nêu ở mục Hạn chế |
+| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | ✅ **đủ 4 chủ đề × 5 người** — clarity hỏi trong phiên, 3 chủ đề còn lại hỏi bù sau phiên. Kết quả và phân tích ở [§4.4](deliverables/task2-usability/02_Usability-Report.md) |
+| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ✅ 5 người thật, 5 bản ghi, **ngoài lớp và ngoài ngành CNTT**. **P5 đang quản lý một tiệm nước** — có kinh nghiệm quản lý người thật |
 | C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ✅ đủ 5/5 — [`06_Thu-thap-bo-sung.md §B1`](deliverables/task2-usability/06_Thu-thap-bo-sung.md). Số đầy đủ **không lưu trong repo** |
 | C6 | Chạy **pilot** với 1 người phụ — **không tính** vào 5 người | ➖ **chọn không làm** — đề nêu là bước khuyến nghị, [§16 rubric](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md) chấm Task 2 theo *kịch bản + 5 phiên + phân tích*, không tính pilot |
 
@@ -196,7 +196,7 @@
 |---|---|---|
 | A · Task 1A checklist nhóm | 15 | ✅ chờ nhóm chốt |
 | B · Task 1B chạy checklist | 15 | ✅ **xong** — 264 ô + §4 bug report 10 lỗi + §5 ba mục bổ sung |
-| C · Task 2 user testing | 25 | 🟡 Usability Report **xong**; chỉ còn 3 câu probe hỏi bù *(error recovery · speed · trust)* |
+| C · Task 2 user testing | 25 | ✅ **xong** — 5 phiên · SUS 5/5 · 4 chủ đề probe 5/5 · Usability Report đủ 8 mục |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
 | E · Findings | 10 | ✅ **xong** — log 15 dòng, form 15 submission, khớp |
 | F · Agent Skill | 10 | ⬜ **chưa bắt đầu** — phần thiếu lớn nhất |

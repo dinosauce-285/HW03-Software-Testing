@@ -23,7 +23,7 @@
 
 | Hạng mục | Vì sao cần |
 |---|---|
-| **3/4 câu probe** | Cả 5 phiên chỉ hỏi *"có thấy khó khăn gì không"*. Thiếu **error recovery · speed · trust** |
+
 | **Bảng người tham gia** | Tên đầy đủ · vai trò/bối cảnh · liên hệ ẩn 4 số giữa · ngày chạy |
 
 ### Thiếu riêng từng phiên
@@ -120,7 +120,7 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 | **Chỉ 1 câu probe** | Cả 5 phiên | Thiếu 3 chủ đề đề bắt buộc |
 | **User mồi không được reset** | P4 gặp `Hùng` đã Inactive | Việc 2 của P4 không so sánh được với các phiên khác |
 | **Không đếm được lần do dự** | Transcript báo 0 lần im lặng ≥ 5 giây ở cả 5 phiên | Vì người điều phối nói liên tục, không có khoảng lặng để đo |
-| **Hồ sơ người tham gia lệch khỏi người dùng đích** | Cả 5 là sinh viên *(Du lịch · Kinh tế ×2 · Kinh tế đối ngoại · Y Dược)*, không ai từng làm quản trị. P5: *"tôi cũng không có quản lý cái này nên tôi không có biết"* | Góp phần giải thích tỉ lệ 3/5 không tìm được màn hình. Người quản trị thật có thể tìm nhanh hơn — nhưng `N-03` *(không có breadcrumb)* vẫn đúng độc lập với người test |
+| **Hồ sơ người tham gia lệch một phần** | 4/5 sinh viên chưa từng quản lý; **P5 đang quản lý một tiệm nước** | Người **có** kinh nghiệm quản lý thật lại vấp nặng nhất ở khâu tìm màn hình → không quy được tỉ lệ 3/5 cho hồ sơ người tham gia |
 
 > Ghi những điều này vào §8 *Hạn chế của nghiên cứu* trong Usability Report. Nêu ra là trung thực và cho thấy hiểu phương pháp; giấu đi mà TA xem video thì tệ hơn nhiều.
 
@@ -129,7 +129,7 @@ Nguyên nhân: dùng lại cùng email và mã số giữa các phiên mà chưa
 ## Việc cần làm
 
 - [x] ~~Thu điểm SUS~~ — **đủ 5/5**, TB 77,0
-- [ ] Gửi 5 người **Google Form**: 3 câu probe còn thiếu *(error recovery · speed · trust)*
-- [ ] Thu **tên · vai trò · liên hệ ẩn 4 số giữa** của cả 5 người
+- [x] ~~3 câu probe còn thiếu~~ — **đủ 5/5 người**, kết quả ở §4.4 Usability Report
+- [x] ~~Thu tên · vai trò · liên hệ ẩn 4 số giữa~~ — **đủ 5/5**
 - [x] ~~Xác nhận đã **bật lại Active** cho `Phú Lê Thiên`~~ — xong
 - [x] ~~Quyết định về P4~~ — ghi nhận việc 2 không hợp lệ, loại khỏi phép tính trung bình, nêu ở §8 Usability Report
