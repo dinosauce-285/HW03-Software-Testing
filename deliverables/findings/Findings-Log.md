@@ -44,10 +44,13 @@ Ba yếu tố quyết định: **frequency** (bao nhiêu người gặp, gặp b
 | **T1B-08** | C / C2 + C3 — dialog Edit User và Create New User | **Bug** | Nhập dở dữ liệu rồi bấm **Esc** → dialog **đóng ngay và mất sạch nội dung đã nhập**, không có cảnh báo nào. Với form 8 trường như Create New User, một phím Esc lỡ tay là mất toàn bộ công nhập | 1. Mở dialog **Add User**<br>2. Nhập nội dung vào một hoặc nhiều trường<br>3. Bấm phím **Esc**.<br>**Kỳ vọng:** hỏi "Bạn có chắc muốn huỷ? Dữ liệu chưa lưu sẽ mất". **Thực tế:** đóng thẳng, không hỏi, mở lại thì form rỗng.<br>Đo được: sau Esc, `[role="dialog"]` biến mất; không có chuỗi "unsaved/discard/chưa lưu" nào trong DOM.<br>Heuristic: Nielsen #5 (Error prevention), Shneiderman #6 · checklist `F-12` | **3** | Chặn Esc khi form đã có thay đổi, hoặc hiện dialog xác nhận huỷ | `evidence/task1b/C3-F-12-no-warning.png` | |
 | **T1B-09** | C / C2 + C3 — dialog Edit User và Create New User | **Usability** | Dialog **không có tên có thể truy cập được**. Tiêu đề "Edit User" / "Create New User" chỉ là `<div>` bình thường, không phải thẻ heading, và dialog không có `aria-labelledby` lẫn `aria-label` → trình đọc màn hình chỉ đọc "dialog" mà không biết là dialog gì | 1. Mở dialog Add User<br>2. Kiểm `[role="dialog"]`: `querySelectorAll('h1,h2,h3,h4')` → **rỗng**; `aria-labelledby` và `aria-label` → **không có**.<br>**Kỳ vọng:** dialog có tên đọc được. **Thực tế:** chỉ có text trong div, không liên kết ngữ nghĩa.<br>Đi kèm: nhãn các trường cũng không gắn `for`/`id` với ô nhập.<br>Heuristic: WCAG 4.1.2 · Shneiderman #2 (Seek universal usability) · checklist `F-01`, `G-01` | **2** | Đổi tiêu đề dialog thành `<h2 id="dlg-title">` và thêm `aria-labelledby="dlg-title"` vào `[role="dialog"]`; gắn `for`/`id` cho từng cặp nhãn–ô nhập | `evidence/task1b/C3-validation-audit.png` | |
 | **T1B-10** | C / C1 + C2 + C3 — toàn luồng quản lý user | **Bug** | Hệ thống **im lặng hoàn toàn sau mọi thao tác ghi dữ liệu**. Chạy trọn chuỗi tạo → sửa → xoá một user: cả ba lần đều **không có toast, không có thông báo tại chỗ, không có dấu hiệu nào**. Người dùng chỉ suy ra kết quả nhờ bảng tự thay đổi | 1. Đăng nhập admin → `/dashboard/admin/users`<br>2. **Tạo**: Add User → điền đủ → Create User → quan sát<br>3. **Sửa**: mở Edit User → đổi công tắc Active → Save Changes → quan sát<br>4. **Xoá**: nút thùng rác → Confirm → quan sát.<br>**Kỳ vọng:** mỗi thao tác có thông báo xác nhận thành công. **Thực tế:** cả ba lần không có thông báo nào.<br>Đo được: sau mỗi thao tác, `document.querySelector('[class*=toast],[role=status],[role=alert],[data-sonner-toast]')` đều **rỗng**.<br>Hệ quả: nếu thao tác thất bại ở phía máy chủ, admin cũng **không biết** — dễ nghĩ đã lưu trong khi chưa.<br>Heuristic: Nielsen #1 (Visibility of system status), Shneiderman #3 (Offer informative feedback) · checklist `S-01`, `S-02`, `S-09` | **3** | Thêm toast xác nhận cho cả ba luồng tạo / sửa / xoá, và toast lỗi khi máy chủ trả về thất bại | `evidence/task1b/C3-S-01-no-toast.png` | |
+| **T2-01** | C / C1 — lối vào Users Management | **Usability** | **3 trên 5 người tham gia user-testing không tự tìm được đường vào màn hình Users Management** từ dashboard admin. P4 và P5 đều thử bấm vào **avatar** — cùng một mô hình tư duy sai, cho thấy họ trông đợi chức năng quản lý nằm trong menu tài khoản. P5 phải được gợi ý thẳng mới vào được | 1. Đăng nhập admin tại `https://prod-dev.ems-fitus.cloud`<br>2. Giao người dùng mới mục tiêu *"thêm một thành viên vào hệ thống"*, **không chỉ đường**<br>3. Đo thời gian tới lúc mở được `/dashboard/admin/users`.<br>**Kỳ vọng:** nhận ra lối vào trong vài giây. **Thực tế:** P3 mò ~30 giây · P5 ~50 giây và phải được gợi ý · P4 tự nhận *"khá là khó khăn"*.<br>Trích dẫn: P5 *"Ở đâu gì ta?"* `[01:40]`, *"tôi không biết kiếm ở đâu"* `[05:48]`<br>Heuristic: Nielsen #6 *Recognition rather than recall*, #7 | **3** | Thêm breadcrumb `Dashboard / Admin / Users Management`, và đưa lối vào Users Management lên khu vực nhìn thấy ngay sau khi đăng nhập *(thẻ tác vụ nhanh trên dashboard)* | `evidence/task2/P3-transcript.txt` · `P4-transcript.txt` · `P5-transcript.txt` | |
+| **T2-02** | C / C3 — dialog Create New User | **Usability** | Ràng buộc **duy nhất** của Email và Member Code chỉ được kiểm **sau khi submit cả form**. Người dùng điền xong 8 trường mới nhận `Email already in use` / `This student card is already in use`, phải quay lại sửa rồi submit lại. P2 mất 3 vòng | 1. Mở Add User → điền đủ 8 trường với email hoặc mã số đã tồn tại<br>2. Bấm **Create User**.<br>**Kỳ vọng:** báo trùng ngay khi rời ô *(on blur)*. **Thực tế:** chỉ báo sau khi submit toàn bộ.<br>Gặp ở **3/5 người**: P2 `[03:01–03:10]` · P4 `[03:25]` · P5 `[02:39]`<br>Heuristic: Nielsen #5 *Error prevention* · checklist `F-04` *(nội dung thông báo lỗi đạt, chỉ sai **thời điểm**)* | **2** | Kiểm tra trùng email và mã số ngay khi rời ô, qua một endpoint kiểm tra riêng | `evidence/task2/P2-transcript.txt` · `P4-transcript.txt` · `P5-transcript.txt` | |
+| **T2-03** | C / C3 — dialog Create New User | **Usability** | Hai ô **Member Code** và **Phone Number** nằm cạnh nhau, cùng nhận chuỗi số, nhãn lại không gắn `for`/`id` vào ô → người dùng điền mã số thành viên nhầm vào ô số điện thoại | 1. Mở Add User<br>2. Giao dữ liệu có cả mã số thành viên và số điện thoại<br>3. Quan sát người dùng điền.<br>**Kỳ vọng:** phân biệt được hai ô. **Thực tế:** P3 điền mã số vào ô Phone Number rồi tự phát hiện — *"cái kia là member code chứ không phải là phần phone number… cái số 9901234 là member code"* `[03:44–04:01]`<br>Nếu không tự phát hiện thì số điện thoại sai đi thẳng vào CSDL.<br>Heuristic: Nielsen #6 · WCAG 1.3.1 · mục bổ sung `MY-01` | **2** | Gắn `for`/`id` cho từng cặp nhãn–ô nhập; thêm nhãn phụ hoặc định dạng gợi ý để phân biệt hai ô | `evidence/task2/P3-transcript.txt` | |
 | **T3-01** | C / C1 — Users Management | **Usability** | Ở độ rộng điện thoại, bảng Users **mất 5 trên 7 cột** — chỉ còn USER và ACTIONS. ROLE, MEMBER CODE, STATUS, CREATED, UPDATED biến mất hoàn toàn. Tên và email trong cột còn lại cũng bị cắt cụt (`NAM ĐINH H`, `23127430@stu`) | 1. Mở `/dashboard/admin/users` trên điện thoại (Galaxy S24, Android 15, Chrome)<br>2. Đăng nhập admin<br>3. Đối chiếu số cột với bản desktop.<br>**Kỳ vọng:** vẫn xem được vai trò và trạng thái, hoặc có cách mở rộng. **Thực tế:** ẩn hẳn, không nút mở rộng, không cuộn ngang được.<br>Hệ quả: trên điện thoại admin **không biết user nào đang bị khoá hay giữ vai trò gì** — đúng mục đích của màn hình này.<br>Heuristic: Nielsen #1, #6 · checklist `G-07`, `G-18`, `S-10` | **2** | Chuyển bảng sang dạng thẻ trên màn hình hẹp, mỗi thẻ đủ Role · Member Code · Status; hoặc cho cuộn ngang; hoặc thêm nút mở rộng từng dòng | [`task3/C1_chrome_android_phone.png`](../../evidence/task3/C1_chrome_android_phone.png) | |
 | **T3-02** | C / C2 + C3 — dialog Edit User và Create New User | **Bug** | Trên màn hình điện thoại **cả hai dialog tràn khỏi cạnh phải** và bị cắt. Hệ quả nặng nhất: **không nhìn thấy nút Save Changes / Create User** nên không hoàn thành được thao tác. Riêng C2 còn mất Role, Member Code và công tắc Active | 1. Mở `/dashboard/admin/users` trên điện thoại (Galaxy S24, Android 15, Chrome)<br>2. Chạm icon bút chì một dòng bất kỳ → dialog Edit User<br>3. Quan sát cạnh phải và đáy dialog<br>4. Lặp lại với nút **Add User** → dialog Create New User.<br>**Kỳ vọng:** dialog co vừa màn hình, luôn thấy nút xác nhận. **Thực tế:** dialog giữ nguyên bề rộng desktop, tràn ra ngoài, nút xác nhận nằm ngoài vùng nhìn thấy.<br>Heuristic: Nielsen #1, #3 · checklist `G-07`, `F-13` | **3** | Đặt `max-width: 100vw`, cho dialog cuộn dọc trên màn hình hẹp, ghim hàng nút Cancel/Save xuống đáy dialog | [`task3/C2_chrome_android_phone.png`](../../evidence/task3/C2_chrome_android_phone.png) · [`C3_...`](../../evidence/task3/C3_chrome_android_phone.png) | |
 
-**Phân bố:** mức 3 → 6 lỗi · mức 2 → 5 lỗi · mức 1 → 1 lỗi. **Không lỗi nào ở mức 4** — mọi lỗi đều còn đường vòng, người dùng vẫn hoàn thành được tác vụ trên desktop. Lý do chấm từng mức ở §Diễn giải bên dưới.
+**Phân bố:** mức 3 → 7 lỗi · mức 2 → 7 lỗi · mức 1 → 1 lỗi. **Không lỗi nào ở mức 4** — mọi lỗi đều còn đường vòng, người dùng vẫn hoàn thành được tác vụ trên desktop. Lý do chấm từng mức ở §Diễn giải bên dưới.
 
 ---
 
@@ -65,15 +68,15 @@ Ba yếu tố quyết định: **frequency** (bao nhiêu người gặp, gặp b
 
 | Chỉ số | Số lượng |
 |---|---|
-| **Tổng phát hiện** | **3** |
-| — loại `Bug` | 2 |
-| — loại `Usability` | 1 |
+| **Tổng phát hiện** | **15** |
+| — loại `Bug` | 4 |
+| — loại `Usability` | 11 |
 | Severity 4 | 0 |
-| Severity 3 | 2 |
-| Severity 2 | 1 |
-| Severity 1 | 0 |
-| Từ Task 1B | 1 |
-| Từ Task 2 | 0 *(chưa chạy)* |
+| Severity 3 | 7 |
+| Severity 2 | 7 |
+| Severity 1 | 1 |
+| Từ Task 1B | 10 |
+| Từ Task 2 | 3 |
 | Từ Task 3 | 2 |
 | **Đã gửi Google Form** | **0** |
 
@@ -83,16 +86,19 @@ Nộp **một lần duy nhất** sau khi hoàn tất cả ba task — không n�
 
 | Nguồn | Trạng thái | Số phát hiện |
 |---|---|---|
-| Task 1B — chạy 88 mục × 3 màn hình | ⬜ **chưa chạy** | 1 *(mới có từ khảo sát ban đầu)* |
-| Task 2 — 5 phiên user testing | ⬜ **chưa chạy** | 0 |
-| Task 3 — ma trận 21 ô | ✅ xong | 2 |
-| **Tổng hiện tại** | | **3** |
+| Task 1B — chạy 88 mục × 3 màn hình | ✅ xong — 264/264 ô | **10** |
+| Task 2 — 5 phiên user testing | ✅ xong — 5/5 phiên | **3** |
+| Task 3 — ma trận 21 ô | ✅ xong | **2** |
+| **Tổng** | | **15** |
+
+> **Ba phát hiện Task 2 không trùng với Task 1B.** `T2-01` là hệ quả quan sát được của `T1B-06` nhưng rộng hơn *(khả năng khám phá lối vào, không chỉ thiếu breadcrumb)*. `T2-02` và `T2-03` là **vùng checklist không phủ** — checklist hỏi *"có thông báo lỗi không"* và *"ô nhập có nhãn không"*, không hỏi *"lỗi báo **lúc nào**"* và *"hai ô cạnh nhau có phân biệt được không"*. Phân tích đầy đủ ở [`02_Usability-Report.md §7`](../task2-usability/02_Usability-Report.md).
 
 **Checklist trước khi nộp form:**
 
-- [ ] Task 1B chạy xong, mọi mục `Failed` đáng kể đã thành một dòng ở bảng trên
-- [ ] Task 2 chạy xong, mọi phát hiện severity ≥ 2 đã thành một dòng
-- [ ] Duyệt lại mức nghiêm trọng của toàn bộ danh sách **theo cùng một thước đo** — chấm cả loạt cuối cùng nhất quán hơn chấm rời rạc từng lúc
-- [ ] Nộp từng dòng lên https://forms.gle/CJQFQCAXcsDbXDMM9 bằng email `23127262@student.hcmus.edu.vn`
+- [x] ~~Task 1B chạy xong~~ — 25 ô Failed → 10 lỗi
+- [x] ~~Task 2 chạy xong~~ — 5 phát hiện xếp hạng, 3 trong đó là mới
+- [x] ~~Duyệt lại mức nghiêm trọng toàn danh sách **theo cùng một thước đo**~~ — chấm cả 15 dòng một lượt — chấm cả loạt cuối cùng nhất quán hơn chấm rời rạc từng lúc
+- [ ] Nộp từng dòng lên https://forms.gle/CJQFQCAXcsDbXDMM9
+      ⚠️ Email MSSV `23127262@student.hcmus.edu.vn` là hộp thư **Microsoft**, không đăng nhập Google Form được. Nộp bằng tài khoản Google của trường `lqthanh23@clc.fitus.edu.vn` — đề §7 cho phép *"hoặc địa chỉ form yêu cầu"* — và **ghi MSSV vào đầu mỗi mô tả** để TA gắn được submission với sinh viên
 - [ ] Điền **Thời điểm gửi form** cho từng dòng
 - [ ] Kiểm lần cuối: **số dòng bảng trên = số submission trên form**
