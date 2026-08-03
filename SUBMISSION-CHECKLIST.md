@@ -47,8 +47,8 @@
 | B3 | Mỗi mục có `Passed` / `Failed` / `N/A` — **không ô trống** | ✅ 63 Passed · 25 Failed · 176 N/A — đã đếm lại bằng `grep -c` |
 | B4 | Cột **Notes** ghi lý do cho mỗi mục `Failed` | ✅ đủ 25/25 |
 | B5 | Ảnh chụp **chỉ cho mục Failed** | ✅ 24 ảnh ở [`evidence/task1b/`](evidence/task1b/) |
-| B6 | Mỗi lỗi có: màn hình · bước tái hiện · kỳ vọng vs thực tế · mức nghiêm trọng · ảnh | 🟡 10 phát hiện T1B đã đủ 9 cột ở Findings Log; **§4 bảng bug report trong file execution còn trống** |
-| B7 | Bổ sung ≥ 2 mục của riêng mình *(không trùng thành viên khác)* | ⬜ **§5 còn trống** — 4 ứng viên đã tìm được từ lần audit, chờ chốt |
+| B6 | Mỗi lỗi có: màn hình · bước tái hiện · kỳ vọng vs thực tế · mức nghiêm trọng · ảnh | ✅ **§4** — 25 ô Failed gộp thành **10 lỗi**, đủ 8 cột, có ảnh |
+| B7 | Bổ sung ≥ 2 mục của riêng mình *(không trùng thành viên khác)* | ✅ **§5** — 3 mục `MY-01`…`MY-03`, đã chạy trên cả 3 màn hình *(6 Failed / 3 N/A)* |
 
 ---
 
@@ -83,8 +83,8 @@
 |---|---|---|
 | C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ✅ **5/5** — TB **77,0** · trung vị 72,5 · sd 11,0 · +9,0 so mốc ngành |
 | C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](deliverables/task2-usability/05_Gap-Analysis.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
-| C14 | Xếp hạng theo **severity 0–4** | ⬜ chờ viết trong Usability Report |
-| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ⬜ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) chưa viết |
+| C14 | Xếp hạng theo **severity 0–4** | ✅ 5 phát hiện `U-01`…`U-05` — 3 ở mức 3, 2 ở mức 2, kèm lý do frequency/impact/persistence |
+| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ✅ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) — 8 mục, có cả §7 đối chiếu Task 1B và §8 hạn chế |
 
 > 🔴 [đề §6 dòng 125](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L125): **TA gọi ngẫu nhiên 2 người xác minh. Mạo danh → 0 điểm Task 2.**
 
@@ -113,9 +113,9 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | E1 | File tổng hợp đủ **9 cột** | ✅ [`Findings-Log.md`](deliverables/findings/Findings-Log.md) |
-| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ⬜ **0/12 — nộp một lần cuối**, sau khi có thêm phát hiện Task 2 |
+| E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ⬜ **0/15** — email MSSV là hộp Microsoft, không login Google được → nộp bằng `lqthanh23@clc.fitus.edu.vn`, ghi MSSV trong mô tả |
 | E3 | Điền **Thời điểm gửi form** cho từng dòng | ⬜ |
-| E4 | **Số dòng log = số submission form** | ⬜ hiện **12 ↔ 0** |
+| E4 | **Số dòng log = số submission form** | ⬜ hiện **15 ↔ 0** |
 
 ---
 
@@ -195,10 +195,10 @@
 | Phần | Điểm | Trạng thái |
 |---|---|---|
 | A · Task 1A checklist nhóm | 15 | ✅ chờ nhóm chốt |
-| B · Task 1B chạy checklist | 15 | 🟡 264/264 ô xong; còn §4 bug report + §5 mục bổ sung |
-| C · Task 2 user testing | 25 | 🟡 5 phiên + transcript + SUS 5/5 + liên hệ đã che + phân tích xong; **còn 3 câu probe và Usability Report** |
+| B · Task 1B chạy checklist | 15 | ✅ **xong** — 264 ô + §4 bug report 10 lỗi + §5 ba mục bổ sung |
+| C · Task 2 user testing | 25 | 🟡 Usability Report **xong**; chỉ còn 3 câu probe hỏi bù *(error recovery · speed · trust)* |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
-| E · Findings | 10 | 🟡 log 12 dòng xong, **chưa nộp form** |
+| E · Findings | 10 | 🟡 log **15 dòng** xong, **chưa nộp form** |
 | F · Agent Skill | 10 | ⬜ **chưa bắt đầu** — phần thiếu lớn nhất |
 | G · Phụ lục | bắt buộc | 🟡 AI Audit ✅ · còn AI Critique, git log, README số cuối |
 | H · Đóng gói | bắt buộc | ⬜ cuối cùng |
