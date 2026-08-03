@@ -30,7 +30,7 @@ Mỗi mục đánh **một** trong bốn giá trị, **theo từng màn hình**:
 > Do checklist phủ rộng cả 4 IA, **N/A là bình thường và được dự kiến**: một màn hình chỉ hiển thị sẽ N/A gần hết nhóm IA-02. Ước tính mỗi màn hình thực chạy khoảng **35–45 mục**.
 > Tỉ lệ pass tính trên `Passed / (Passed + Failed)`, **không tính N/A vào mẫu số**.
 
-**Ký hiệu cột Nguồn:** `R1` Nielsen · `R2` Norman · `R3` Shneiderman · `R4` Slide S13 · `R8` Tài liệu E2E EMS · `R10` WCAG 2.2 — chi tiết ở [Task1A_Heuristics-Reference.md](../../references/Task1A_Heuristics-Reference.md)
+**Ký hiệu cột Nguồn:** `R1` Nielsen · `R2` Norman · `R3` Shneiderman · `R4` Slide S13 · `R8` Tài liệu E2E EMS · `R10` WCAG 2.2 — chi tiết ở [Task1A_Heuristics-Reference.md](../nhom/Nguon-tham-khao.md)
 
 **Ký hiệu cột Nguồn gốc:** `AI` = do AI sinh ở lượt đầu · `RV` = bổ sung ở lượt review phản biện của nhóm (xem §5 để biết lý do AI bỏ sót)
 
@@ -211,7 +211,7 @@ Hệ quả trực tiếp: bản 6th ed. nêu đích danh *"novices, experts, **p
 
 ### 5.5 Các mục bổ sung từ vòng kiểm chứng Pool D
 
-F-20, F-21, N-18, S-21, S-22 và S-23 được thêm vì `Huong-dan-cho-nhom.md` ghi Pool D gần như chưa có mục riêng và giao cho người phụ trách xác minh trực tiếp. Hồ sơ hiện tại không chứa bằng chứng đủ để quy kết sáu khoảng trống này cho chất lượng prompt hay giới hạn model, nên checklist **không tự tạo lý do “AI bỏ sót”**. Căn cứ thêm mục là heuristic/tài liệu ghi trong cột Nguồn và bằng chứng EMS trong `Pool-D-Verification-Notes.md`.
+F-20, F-21, N-18, S-21, S-22 và S-23 được thêm vì tài liệu phân công của nhóm ghi Pool D gần như chưa có mục riêng và giao cho người phụ trách xác minh trực tiếp. Hồ sơ hiện tại không chứa bằng chứng đủ để quy kết sáu khoảng trống này cho chất lượng prompt hay giới hạn model, nên checklist **không tự tạo lý do “AI bỏ sót”**. Căn cứ thêm mục là heuristic/tài liệu ghi trong cột Nguồn và bằng chứng EMS trong `Pool-D-Verification-Notes.md` *(do thành viên phụ trách Pool D giữ, không nằm trong bài nộp cá nhân này)*.
 
 ### 5.6 Các mục bổ sung từ vòng kiểm chứng Pool A — nhóm nguyên nhân **[EMS]**
 
@@ -275,6 +275,6 @@ Khảo sát trực tiếp ngày 02/08/2026 trên 3 màn hình: A1 (Events list),
 
 | # | Sản phẩm | Vị trí |
 |---|---|---|
-| 1 | Checklist GUI (file này) | `deliverables/task1a-checklist/GUI-Checklist.md` |
-| 2 | Danh sách nguồn tham khảo | [`references/Task1A_Heuristics-Reference.md`](../../references/Task1A_Heuristics-Reference.md) |
-| 3 | Log prompt AI | [`AI-Prompts-Log.md`](AI-Prompts-Log.md) |
+| 1 | Checklist GUI (file này) | `nhom/GUI-Checklist.md` |
+| 2 | Danh sách nguồn tham khảo | [`references/Task1A_Heuristics-Reference.md`](../nhom/Nguon-tham-khao.md) |
+| 3 | Log prompt AI | [`AI-Prompts-Nhom.md`](AI-Prompts-Nhom.md) |

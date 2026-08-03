@@ -28,9 +28,9 @@
 
 | # | Hạng mục | File | Trạng thái |
 |---|---|---|---|
-| A1 | Checklist GUI dùng chung — **> 40 mục**, phủ IA-01…IA-04 | [`GUI-Checklist.md`](deliverables/task1a-checklist/GUI-Checklist.md) — **88 mục** | ✅ |
-| A2 | Danh sách nguồn tham khảo | [`Task1A_Heuristics-Reference.md`](references/Task1A_Heuristics-Reference.md) — R1…R10 | ✅ |
-| A3 | Các **prompt AI** dùng xây checklist | [`AI-Prompts-Nhom.md`](deliverables/task1a-checklist/AI-Prompts-Nhom.md) — 5 prompt | ✅ |
+| A1 | Checklist GUI dùng chung — **> 40 mục**, phủ IA-01…IA-04 | [`GUI-Checklist.md`](submission/nhom/GUI-Checklist.md) — **88 mục** | ✅ |
+| A2 | Danh sách nguồn tham khảo | [`Task1A_Heuristics-Reference.md`](submission/nhom/Nguon-tham-khao.md) — R1…R10 | ✅ |
+| A3 | Các **prompt AI** dùng xây checklist | [`AI-Prompts-Nhom.md`](submission/nhom/AI-Prompts-Nhom.md) — 5 prompt | ✅ |
 | A4 | Giải thích **vì sao AI bỏ sót** từng mục tự thêm | §5 của checklist — 3 nhóm nguyên nhân | ✅ |
 | A5 | Nhóm review và chốt bản cuối | Pool A/C/D đã kiểm trên EMS thật; Pool B tích hợp 3 mục, **chưa có nhật ký kiểm chứng** | ✅ |
 
@@ -42,11 +42,11 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| B1 | Liệt kê **≥ 3 màn hình** và lý do chọn | ✅ [`Checklist-Execution.md §1`](deliverables/task1b-execution/Checklist-Execution.md) |
+| B1 | Liệt kê **≥ 3 màn hình** và lý do chọn | ✅ [`Checklist-Execution.md §1`](submission/01_Task1B_Ket-qua-checklist.md) |
 | B2 | Chạy checklist trên **từng** màn hình | ✅ 88 mục × 3 màn hình = **264 ô**, chạy live bằng Playwright |
 | B3 | Mỗi mục có `Passed` / `Failed` / `N/A` — **không ô trống** | ✅ 63 Passed · 25 Failed · 176 N/A — đã đếm lại bằng `grep -c` |
 | B4 | Cột **Notes** ghi lý do cho mỗi mục `Failed` | ✅ đủ 25/25 |
-| B5 | Ảnh chụp **chỉ cho mục Failed** | ✅ 24 ảnh ở [`evidence/task1b/`](evidence/task1b/) |
+| B5 | Ảnh chụp **chỉ cho mục Failed** | ✅ 24 ảnh ở [`evidence/task1b/`](submission/evidence/task1b/) |
 | B6 | Mỗi lỗi có: màn hình · bước tái hiện · kỳ vọng vs thực tế · mức nghiêm trọng · ảnh | ✅ **§4** — 25 ô Failed gộp thành **10 lỗi**, đủ 8 cột, có ảnh |
 | B7 | Bổ sung ≥ 2 mục của riêng mình *(không trùng thành viên khác)* | ✅ **§5** — 3 mục `MY-01`…`MY-03`, đã chạy trên cả 3 màn hình *(6 Failed / 3 N/A)* |
 
@@ -60,11 +60,11 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](deliverables/task2-usability/03_Session-Kit.md) |
+| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](submission/phu-luc/P2_Kit-dieu-phoi-va-ghi-chep-phien.md) |
 | C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | 🟡 task success + time on task + SUS đã có; **số lần do dự = 0 ở cả 5 phiên** vì người điều phối nói liên tục → đã ghi vào mục Hạn chế |
-| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | ✅ **đủ 4 chủ đề × 5 người** — clarity hỏi trong phiên, 3 chủ đề còn lại hỏi bù sau phiên. Kết quả và phân tích ở [§4.4](deliverables/task2-usability/02_Usability-Report.md) |
+| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | ✅ **đủ 4 chủ đề × 5 người** — clarity hỏi trong phiên, 3 chủ đề còn lại hỏi bù sau phiên. Kết quả và phân tích ở [§4.4](submission/02_Task2_Usability-Report.md) |
 | C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ✅ 5 người thật, 5 bản ghi, **ngoài lớp và ngoài ngành CNTT**. **P5 đang quản lý một tiệm nước** — có kinh nghiệm quản lý người thật |
-| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ✅ đủ 5/5 — [`06_Thu-thap-bo-sung.md §B1`](deliverables/task2-usability/06_Thu-thap-bo-sung.md). Số đầy đủ **không lưu trong repo** |
+| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ✅ đủ 5/5 — [`06_Thu-thap-bo-sung.md §B1`](submission/02_Task2_Usability-Report.md). Số đầy đủ **không lưu trong repo** |
 | C6 | Chạy **pilot** với 1 người phụ — **không tính** vào 5 người | ➖ **chọn không làm** — đề nêu là bước khuyến nghị, [§16 rubric](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md) chấm Task 2 theo *kịch bản + 5 phiên + phân tích*, không tính pilot |
 
 ### Giai đoạn 2 — Chạy 5 phiên
@@ -74,7 +74,7 @@
 | C7 | Nói rõ đang test **sản phẩm**, không test người dùng | ✅ có trong lời dẫn, nghe được trên bản ghi |
 | C8 | Yêu cầu **think aloud** | ✅ cả 5 người vừa làm vừa nói |
 | C9 | Quan sát trung lập, chỉ can thiệp khi hoàn toàn bế tắc | ❌ **người điều phối dẫn dắt** — *"Đúng rồi"* ở P1/P4, gợi ý thẳng cho P5 ở 02:01. Đã ghi vào mục Hạn chế, không giấu |
-| C10 | Ghi màn hình + note có cấu trúc | ✅ 5 file `.mkv` + 5 transcript ở [`evidence/task2/`](evidence/task2/) |
+| C10 | Ghi màn hình + note có cấu trúc | ✅ 5 file `.mkv` + 5 transcript ở [`evidence/task2/`](submission/evidence/task2/) |
 | C11 | Kết phiên: điền SUS/UEQ-S rồi hỏi probe | 🟡 SUS thu **sau phiên** qua tin nhắn, không phải ngay cuối phiên |
 
 ### Giai đoạn 3 — Phân tích
@@ -82,9 +82,9 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ✅ **5/5** — TB **77,0** · trung vị 72,5 · sd 11,0 · +9,0 so mốc ngành |
-| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](deliverables/task2-usability/05_Gap-Analysis.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
+| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](submission/phu-luc/P2_Kit-dieu-phoi-va-ghi-chep-phien.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
 | C14 | Xếp hạng theo **severity 0–4** | ✅ 5 phát hiện `U-01`…`U-05` — 3 ở mức 3, 2 ở mức 2, kèm lý do frequency/impact/persistence |
-| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ✅ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) — 8 mục, có cả §7 đối chiếu Task 1B và §8 hạn chế |
+| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ✅ [`02_Usability-Report.md`](submission/02_Task2_Usability-Report.md) — 8 mục, có cả §7 đối chiếu Task 1B và §8 hạn chế |
 
 > 🔴 [đề §6 dòng 125](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L125): **TA gọi ngẫu nhiên 2 người xác minh. Mạo danh → 0 điểm Task 2.**
 
@@ -112,7 +112,7 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| E1 | File tổng hợp đủ **9 cột** | ✅ [`Findings-Log.md`](deliverables/findings/Findings-Log.md) |
+| E1 | File tổng hợp đủ **9 cột** | ✅ [`Findings-Log.md`](submission/04_Bug-Usability-Findings-Log.md) |
 | E2 | Nộp **từng phát hiện** lên Google Form bằng email MSSV | ✅ **15/15** lúc 04/08/2026 00:45. Email MSSV là hộp **Microsoft**, không login Google được → nộp bằng `lqthanh23@clc.fitus.edu.vn` *(đề §7 cho phép "hoặc địa chỉ form yêu cầu")*, **MSSV ghi ở đầu mỗi mô tả** |
 | E3 | Điền **Thời điểm gửi form** cho từng dòng | ✅ đủ 15 dòng |
 | E4 | **Số dòng log = số submission form** | ✅ **15 ↔ 15** |

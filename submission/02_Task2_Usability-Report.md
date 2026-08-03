@@ -28,7 +28,7 @@ Nhưng con số trung bình che mất điều quan trọng nhất: **3 trong 5 n
 
 ## 2. Kịch bản tác vụ đã dùng
 
-Kịch bản viết theo **mục tiêu**, không chỉ đường. Người tham gia được cho vai trò và kết quả cần đạt, còn đường đi thì họ tự tìm — nguyên văn ở [`03_Session-Kit.md §1`](03_Session-Kit.md).
+Kịch bản viết theo **mục tiêu**, không chỉ đường. Người tham gia được cho vai trò và kết quả cần đạt, còn đường đi thì họ tự tìm — nguyên văn ở [`P2 §2 Lời thoại`](phu-luc/P2_Kit-dieu-phoi-va-ghi-chep-phien.md).
 
 **Bối cảnh cho người tham gia:**
 > *"Bạn là quản trị viên của hệ thống quản lý sự kiện một khoa. Đây là tài khoản admin, mời bạn tự khám phá."*
@@ -56,7 +56,7 @@ Cả 5 người **ngoài lớp học phần này** và **ngoài ngành CNTT**. L
 | P4 | Ngô Bảo Long | Sinh viên ngành Kinh tế đối ngoại | `0369****70` | 03/08/2026 | `Ngô Bảo Long.mkv` — 6:07 |
 | P5 | Võ Hoàng Xuân Quyên | Sinh viên ngành Y Dược · **đang quản lý một tiệm nước** | `0899****28` | 03/08/2026 | `Võ Hoàng Xuân Quyên.mkv` — 6:00 |
 
-Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](../../evidence/task2/).
+Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](evidence/task2/).
 
 > **Về độ khớp hồ sơ người dùng:** màn hình C1–C3 dành cho **quản trị viên**. Bốn trong năm người chưa từng quản lý nhân sự hay tài khoản; riêng **P5 đang quản lý một tiệm nước** — có kinh nghiệm thật với việc quản người và phân vai, đúng thứ màn hình Users Management mô hình hoá. P5 nói *"tôi cũng không có quản lý **cái này**"*, tức chưa quen **phần mềm** quản trị chứ không phải chưa quen việc quản lý.
 
@@ -102,7 +102,7 @@ Bản ghi màn hình và bản gỡ băng đầy đủ ở [`evidence/task2/`](.
 
 ### 4.3 Chi tiết chấm SUS
 
-Bảng đầy đủ 10 câu × 5 người, cách quy đổi và phân tích theo từng câu ở [`04_SUS-Scoring.md`](04_SUS-Scoring.md).
+Bảng đầy đủ 10 câu × 5 người, cách quy đổi và phân tích theo từng câu ở [`P3_SUS-chi-tiet.md`](phu-luc/P3_SUS-chi-tiet.md).
 
 | | P1 | P2 | P3 | P4 | P5 |
 |---|---|---|---|---|---|
@@ -159,8 +159,8 @@ Kết quả này làm **hạ mức nghiêm trọng của `U-03` từ 3 xuống 2
 | ID | Phát hiện | Màn hình | Heuristic vi phạm | Gặp phải | Loại | **Severity** | Bằng chứng |
 |---|---|---|---|---|---|---|---|
 | **U-01** | Không tự tìm được đường vào Users Management | C1 | Nielsen #6 *Recognition rather than recall* · #7 | **3/5** | **Hệ thống** | **3** | `P3` 01:19–01:49 · `P4` 05:46 · `P5` 01:40, 05:48 |
-| **U-02** | Nhãn / placeholder / thông báo lỗi của ô Họ và Tên **nói ngược nhau** | C3 | Nielsen #2 *Match system and real world* · #9 | 1/5 tự phát hiện | **Hệ thống** *(bug)* | **3** | `P4` 05:01–05:16 · [`T1B-01`](../../evidence/task1b/T1B-01-swapped-name-validation.png) |
-| **U-03** | Không có xác nhận tường minh sau khi lưu — người dùng phải tự suy ra kết quả từ bảng danh sách | C1 · C2 · C3 | Nielsen #1 *Visibility of system status* | 0/5 *(không ai thấy bất an)* | **Hệ thống** | **2** | Probe *trust* 5/5 · [`T1B-10`](../../evidence/task1b/C3-S-01-no-toast.png) |
+| **U-02** | Nhãn / placeholder / thông báo lỗi của ô Họ và Tên **nói ngược nhau** | C3 | Nielsen #2 *Match system and real world* · #9 | 1/5 tự phát hiện | **Hệ thống** *(bug)* | **3** | `P4` 05:01–05:16 · [`T1B-01`](evidence/task1b/T1B-01-swapped-name-validation.png) |
+| **U-03** | Không có xác nhận tường minh sau khi lưu — người dùng phải tự suy ra kết quả từ bảng danh sách | C1 · C2 · C3 | Nielsen #1 *Visibility of system status* | 0/5 *(không ai thấy bất an)* | **Hệ thống** | **2** | Probe *trust* 5/5 · [`T1B-10`](evidence/task1b/C3-S-01-no-toast.png) |
 | **U-04** | Lỗi trùng dữ liệu chỉ báo **sau khi** submit cả form, phải sửa rồi submit lại | C3 | Nielsen #5 *Error prevention* | **3/5** | **Hệ thống** | **2** | `P2` 03:01–03:10 · `P3` · `P4` 03:25 · `P5` 02:39 |
 | **U-05** | Điền mã số thành viên nhầm vào ô Số điện thoại | C3 | Nielsen #6 · WCAG 1.3.1 | 1/5 | **Đơn lẻ** | **2** | `P3` 03:44–04:01 |
 
@@ -190,7 +190,7 @@ Kết quả này làm **hạ mức nghiêm trọng của `U-03` từ 3 xuống 2
 - **Heuristic vi phạm:** Nielsen #2 *Match between system and the real world* · #9 *Help users recognize errors*
 - **Severity 3 — lý do chấm:** chỉ 1/5 người **nhận ra**, nhưng đây là điểm quan trọng — 4 người còn lại **vẫn dính lỗi mà không biết**. Frequency thực tế là **100 % số lần tạo user**. Impact cao vì gây **sai dữ liệu**, không chỉ khó chịu. Persistence vĩnh viễn. Không phải **4** vì vẫn sửa lại được sau.
 - **Vì sao xếp "hệ thống" dù chỉ 1/5:** quy tắc ≥3/5 dùng để phát hiện vấn đề, không dùng để bác bỏ. Ở đây khiếm khuyết đã được đo trực tiếp trên DOM ở Task 1B và tái hiện trên **cả 7 môi trường** của Task 3 — bằng chứng khách quan mạnh hơn số người nhận ra.
-- **Ảnh:** [`T1B-01-swapped-name-validation.png`](../../evidence/task1b/T1B-01-swapped-name-validation.png)
+- **Ảnh:** [`T1B-01-swapped-name-validation.png`](evidence/task1b/T1B-01-swapped-name-validation.png)
 
 #### U-03 — Không có xác nhận tường minh sau khi lưu · **Severity 2** · Vấn đề thiết kế hệ thống
 

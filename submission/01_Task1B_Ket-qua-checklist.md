@@ -7,94 +7,25 @@
 
 ---
 
-## 1. Màn hình đã chọn và lý do
+## 1. Màn hình đã kiểm
 
-> ⚠️ Chính sách môn học: *"Choosing tasks that are too simple will limit the maximum achievable grade"* — chọn màn hình quá đơn giản sẽ **giới hạn điểm tối đa**, kể cả khi làm đủ.
-
-> **URL hệ thống:** `https://prod-dev.ems-fitus.cloud` — EMS đã chuyển khỏi ngrok sang domain này. Khu quản trị nằm dưới `/dashboard/admin` (route `/admin/...` trả về 404).
-
-| # | Mã | Tên màn hình | URL / cách mở | Lý do chọn | Chất liệu giao diện *(đã khảo sát thực tế)* |
-|---|---|---|---|---|---|
-| 1 | **C1** | Users Management | `/dashboard/admin/users` | Màn hình gốc của pool C, giàu chất liệu bảng và điều hướng nhất | 7 cột (USER · ROLE · MEMBER CODE · STATUS · CREATED · UPDATED · ACTIONS), ô Search, bộ lọc trên cột ROLE và STATUS, 2 cột sắp xếp được, phân trang (số user thay đổi theo thời điểm — 79→108 trong các lần khảo sát), chọn số dòng 5–100, nút **Export** và **Add User**, avatar dạng chữ viết tắt |
-| 2 | **C2** | Dialog **Edit User** | Mở từ nút bút chì ở cột ACTIONS của C1 | Form sửa user — **nơi hiện thực cả Assign Role lẫn Block/Unblock** trong build này | 7 trường: First Name · Last Name · Email · Phone Number · **Role** (dropdown Admin/Guest/Lecturer/Student) · Member Code · **Active** (công tắc). Nút Cancel / Save Changes |
-| 3 | **C3** | Dialog **Create New User** | Mở từ nút **Add User** ở C1 | Bề mặt validation lớn nhất của pool C — 8 trường, nhiều loại ràng buộc khác nhau | 8 trường (thêm **Password** có nút hiện/ẩn), validation inline khi submit rỗng, Active mặc định bật. Nút Cancel / Create User |
-
-### ⚠️ Sai lệch so với danh sách gợi ý của đề — có lý do
-
-Đề §5 gợi ý cho kịch bản C: *(C1) Danh sách Users · (C2) Assign Role / sửa user · (C3) Dialog Block-Unblock và Reset-Password · (C4) Export ra Excel*. Khảo sát thực tế trên EMS ngày 01/08/2026 cho thấy:
-
-| Chức năng đề nêu | Thực tế trong build hiện tại |
-|---|---|
-| Assign Role | **Không có màn hình riêng** — là dropdown `Role` bên trong dialog Edit User |
-| Block / Unblock | **Không có dialog riêng** — là công tắc `Active` bên trong dialog Edit User |
-| **Reset Password** | **Không tồn tại.** Cột ACTIONS chỉ có 2 nút: sửa và xoá. Mật khẩu chỉ đặt được lúc tạo user mới |
-| Cột **Audit** | Không có cột tên Audit; thông tin audit nằm ở hai cột CREATED / UPDATED (hiển thị người thao tác) |
-
-Đề §5 cho phép *"chọn màn hình khác trong cùng nhóm nhưng phải giải thích lý do"* — đây là lý do. Bộ C1/C2/C3 ở trên bám sát pool C và **giữ nguyên phạm vi chức năng đề yêu cầu** (danh sách, gán vai trò, khoá/mở khoá), chỉ khác ở chỗ chúng được hiện thực trong dialog thay vì màn hình riêng.
-
-### Hai chức năng kiểm kèm, không tính là màn hình riêng
-
-- **Export ra Excel** — chỉ là một nút và một file tải về, quá mỏng để tính là màn hình *(chính sách môn: "tasks that are too simple will limit the maximum achievable grade")*. Kiểm trong C1 qua mục `S-17` và `G-03`.
-- **Dialog Delete User** — nội dung ngắn (*"Are you sure you want to delete user X? This action cannot be undone."* + Cancel/Confirm). Kiểm trong C1 qua mục `S-06`, `S-07`, `S-08`.
-
-### Phân bố phủ IA của bộ 3 màn hình
-
-| Màn hình | Nhóm IA gánh chính |
-|---|---|
-| C1 | IA-01 (bảng, cột, avatar, empty state) + IA-03 (search, lọc cột, sắp xếp, phân trang, deep link) |
-| C2 | **IA-02** (form sửa) + IA-04 (công tắc Active, phản hồi sau lưu) |
-| C3 | **IA-02** (form tạo, validation đầy đủ) + IA-04 (dialog, thông báo lỗi) |
-
-Cả 4 IA đều có màn hình đại diện; ba màn hình không chồng lấn phạm vi chức năng.
-
-**Không trùng với thành viên khác trong nhóm** *(đề §5 · Policies "Work Allocation")*:
-
-| Thành viên | MSSV | Kịch bản | 3 màn hình phụ trách |
-|---|---|---|---|
-| **Lý Quốc Thạnh** | **23127262** | **C** | **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User** |
-| Lê Thiên Phú | 23127244 | A | A1 Events list · A2 Add/Edit Event form · A4 Participants & Reviews |
-| Đoàn Thành Phát | 23127241 | B | B1 Dashboard & Tìm kiếm · B1-b Saved Events · B2 Chi tiết sự kiện |
-| Nguyễn Đình Thái Hưng | 23127373 | **D** | D1–D4 support request |
-
-Không có thành viên nào trùng kịch bản, cũng không trùng màn hình.
-
----
-
-## 1b. Ghi chú khảo sát ban đầu — 01/08/2026
-
-Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không xoá** vì hệ thống dùng chung). Các quan sát dưới đây **cần bạn tự kiểm lại trên trình duyệt** trước khi đưa vào kết quả chính thức.
-
-| Quan sát | Ảnh hưởng tới mục checklist |
-|---|---|
-| **Không có breadcrumb** ở khu admin | `N-03` sẽ Failed hoặc N/A ở cả 3 màn hình |
-| Avatar là **chữ viết tắt trong vòng tròn**, không phải ảnh (`<img>` = 0) | `G-17` cần đổi cách kiểm: xem tên dài như "KHOA NGUYỄN QUANG ĐĂNG" → viết tắt "KNQĐ" có tràn vòng tròn không |
-| Cột CREATED/UPDATED hiển thị chuỗi **"Tôi là Admin"** trong giao diện English | ~~Ứng viên Failed cho `G-14`~~ → **đã bác bỏ**: đó là *tên hiển thị của tài khoản admin* (dữ liệu), không phải chuỗi giao diện. Kiểm thực tế cho thấy i18n phủ 13/13 chuỗi |
-| Trường bắt buộc **không có dấu `*`** trước khi submit | Ứng viên Failed cho `F-02` |
-| Thông báo lỗi hiện **inline ngay dưới từng trường** | Ứng viên Passed cho `F-04` |
-| Dialog xoá có câu *"This action cannot be undone"* | Ứng viên Passed cho `S-08` |
-| Member Code rỗng hiển thị `-` | Kiểm `G-18` |
-| Bộ lọc cột ROLE: All Roles / Admin / Guest / Lecturer / Student | Kiểm `N-16`, `N-09` |
-| Chưa mở được menu đổi ngôn ngữ bằng script | Cần bạn tự bấm cờ ở header để kiểm `G-14`, `G-15`, `G-16` |
-
-Ảnh khảo sát tham khảo: `scratchpad/ems-survey/` — **không dùng làm bằng chứng nộp bài**; đề §12 yêu cầu ảnh phải là màn hình **bạn** đã kiểm tra, nên hãy tự chụp lại khi chạy checklist.
+Ba màn hình **C1 Users Management · C2 dialog Edit User · C3 dialog Create New User**, cùng lý do chọn, phần giải thích sai lệch so với đề §5, phân bố phủ IA và bảng phân công không trùng thành viên — tất cả nằm ở [`00_Bao-cao-chinh.md §1`](00_Bao-cao-chinh.md). Chương này chỉ trình bày **kết quả chạy**.
 
 ---
 
 ## 2. Bảng chạy checklist
 
-> **Nguồn:** 88 mục của [`../task1a-checklist/GUI-Checklist.md`](../task1a-checklist/GUI-Checklist.md).
-> Mỗi ô nhận `Passed` · `Failed` · `N/A` — **không để trống khi nộp**.
-> `Failed` bắt buộc kèm lý do ở cột Notes và ảnh trong `evidence/task1b/`.
+> **Nguồn:** 88 mục của [`nhom/GUI-Checklist.md`](nhom/GUI-Checklist.md).
+> Mỗi ô nhận `Passed` · `Failed` · `N/A` — **264/264 ô đã có kết luận, không ô nào trống**.
+> Mỗi ô `Failed` kèm lý do ở cột Notes và ảnh trong [`evidence/task1b/`](evidence/task1b/).
 
-**Cách các ô hiện có được điền — 02/08/2026:**
+**Cách từng ô được xác định:**
 
-| Loại ô | Cách xác định | Độ tin cậy |
+| Loại ô | Cách xác định | Bằng chứng |
 |---|---|---|
-| **N/A** | Mục thuộc kịch bản A/B/D, không có control tương ứng trên C1–C3 | Chắc chắn — lý do ghi ở cột Notes |
-| **Passed / Failed** | Đo trực tiếp trên EMS bằng Playwright: đọc DOM, computed style, thử submit, thử phím Esc | Có bằng chứng số ở cột Notes |
-| *(trống)* | Cần mắt người xét (thẩm mỹ, ngữ nghĩa, luồng nhiều bước) hoặc cần thao tác ghi dữ liệu | **Bạn tự điền** |
-
-> ⚠️ Các ô trống **không phải** đã kiểm mà không kết luận được — chúng là phần chưa kiểm. Đề §2 yêu cầu người review, nên phần này để bạn làm.
+| **N/A** | Mục thuộc kịch bản A/B/D, không có control tương ứng trên C1–C3 | Lý do cụ thể ghi ở cột Notes |
+| **Passed / Failed** — đo được | Chạy trên EMS thật bằng Playwright trong Chrome: đọc DOM, computed style, thử submit, thử phím Esc, đo tỉ lệ tương phản, đo `scrollWidth` khi zoom 200 % | Số đo ghi thẳng vào cột Notes |
+| **Passed / Failed** — thị giác | Đọc từ ảnh chụp màn hình *(thẩm mỹ, thứ bậc nút, khoảng cách, ngữ nghĩa nhãn)* | Ảnh trong `evidence/task1b/` |
 
 ### IA-01 — Chuẩn UI chung (18 mục)
 
@@ -247,24 +178,24 @@ Khảo sát bằng Playwright (chỉ mở và quan sát, **không lưu, không x
 
 ## 4. Bug report từ các mục Failed
 
-> Mỗi lỗi đáng kể → một dòng trong [`../findings/Findings-Log.md`](../findings/Findings-Log.md) **và** một submission Google Form.
+> Mỗi lỗi đáng kể → một dòng trong [`04_Bug-Usability-Findings-Log.md`](04_Bug-Usability-Findings-Log.md) **và** một submission Google Form.
 
 **25 ô Failed → 10 lỗi.** Nhiều ô cùng mô tả một khiếm khuyết trên nhiều màn hình *(ví dụ `S-01` Failed ở cả C1, C2, C3 nhưng chỉ là một lỗi: hệ thống không phản hồi sau thao tác ghi)*, nên gộp lại theo lỗi thay vì theo ô.
 
 | ID Finding | Mục checklist | Màn hình | Bước tái hiện | Kỳ vọng | Thực tế | Mức | Ảnh |
 |---|---|---|---|---|---|---|---|
-| **T1B-01** | `F-01` `F-04` `F-05` | C3 | Add User → để trống → **Create User** → đối chiếu nhãn ↔ placeholder ↔ thông báo lỗi của 2 ô tên | Ba thứ cùng nói về một trường | Ô nhãn *First Name* có placeholder *Last Name* và báo *"Last name is required"*; ô kia ngược lại | **3** | [`T1B-01-swapped-name-validation.png`](../../evidence/task1b/T1B-01-swapped-name-validation.png) |
-| **T1B-02** | `F-02` | C2 · C3 | Mở dialog → quan sát nhãn **trước khi** bấm gì | Biết trường nào bắt buộc trước khi điền | Dấu `*` xuất hiện **0 lần**; ràng buộc chỉ nằm ở thuộc tính HTML `required`, không render ra giao diện | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
-| **T1B-03** | `F-08` | C2 · C3 | Submit form rỗng → đọc `document.activeElement` | Focus nhảy về trường lỗi đầu tiên | Vẫn là `BUTTON` — người dùng bàn phím phải Tab ngược lên | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
-| **T1B-04** | `S-20` | C3 | Mở Add User → quan sát vùng quanh ô Password | Ghi sẵn "tối thiểu 8 ký tự" | Không có gợi ý nào; ràng buộc chỉ hiện **sau khi** submit thất bại | **1** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
-| **T1B-05** | `G-12` | C1 · C2 · C3 | Đo tỉ lệ tương phản chữ/nền của sidebar active, nút Export, nút Add User | ≥ 4.5:1 *(WCAG 1.4.3)* | Sidebar **2.08:1** · Export **2.71:1** · Add User **2.08:1** · badge **4.14:1** | **3** | [`C1-G-12-contrast.png`](../../evidence/task1b/C1-G-12-contrast.png) |
-| **T1B-06** | `N-03` | C1 | Mở bất kỳ trang nào dưới `/dashboard/admin` → tìm breadcrumb | Có breadcrumb định vị | Không có phần tử nào ở mọi cấp | **3** | [`C1-N-03-no-breadcrumb.png`](../../evidence/task1b/C1-N-03-no-breadcrumb.png) |
-| **T1B-07** | `G-13` | C1 · C2 · C3 | Zoom 200% *(khung nhìn ~720px)* → so `scrollWidth` với `clientWidth` | Nội dung xuống dòng, không cuộn ngang | Tràn **326px** — 1031 so với 705 *(WCAG 1.4.4)* | **2** | [`C1-G-13-zoom200.png`](../../evidence/task1b/C1-G-13-zoom200.png) |
-| **T1B-08** | `F-12` | C2 · C3 | Nhập dở dữ liệu → bấm **Esc** | Hỏi xác nhận trước khi bỏ dữ liệu chưa lưu | Đóng thẳng, mất sạch nội dung; không có chuỗi *unsaved/discard* nào trong DOM | **3** | [`C3-F-12-no-warning.png`](../../evidence/task1b/C3-F-12-no-warning.png) |
-| **T1B-09** | `F-01` `G-01` | C2 · C3 | Kiểm `[role="dialog"]`: tìm `h1–h4`, `aria-labelledby`, `aria-label` | Dialog có tên đọc được | Cả ba đều **rỗng** — trình đọc màn hình chỉ đọc "dialog" *(WCAG 4.1.2)* | **2** | [`C3-validation-audit.png`](../../evidence/task1b/C3-validation-audit.png) |
-| **T1B-10** | `S-01` `S-02` `S-09` `S-17` | C1 · C2 · C3 | Chạy trọn chuỗi **tạo → sửa → xoá** một user, sau mỗi bước đọc `[class*=toast],[role=status],[role=alert]` | Mỗi thao tác có thông báo xác nhận | Cả ba lần đều **rỗng**. Nếu máy chủ thất bại, admin cũng không biết | **3** | [`C3-S-01-no-toast.png`](../../evidence/task1b/C3-S-01-no-toast.png) |
+| **T1B-01** | `F-01` `F-04` `F-05` | C3 | Add User → để trống → **Create User** → đối chiếu nhãn ↔ placeholder ↔ thông báo lỗi của 2 ô tên | Ba thứ cùng nói về một trường | Ô nhãn *First Name* có placeholder *Last Name* và báo *"Last name is required"*; ô kia ngược lại | **3** | [`T1B-01-swapped-name-validation.png`](evidence/task1b/T1B-01-swapped-name-validation.png) |
+| **T1B-02** | `F-02` | C2 · C3 | Mở dialog → quan sát nhãn **trước khi** bấm gì | Biết trường nào bắt buộc trước khi điền | Dấu `*` xuất hiện **0 lần**; ràng buộc chỉ nằm ở thuộc tính HTML `required`, không render ra giao diện | **2** | [`C3-validation-audit.png`](evidence/task1b/C3-validation-audit.png) |
+| **T1B-03** | `F-08` | C2 · C3 | Submit form rỗng → đọc `document.activeElement` | Focus nhảy về trường lỗi đầu tiên | Vẫn là `BUTTON` — người dùng bàn phím phải Tab ngược lên | **2** | [`C3-validation-audit.png`](evidence/task1b/C3-validation-audit.png) |
+| **T1B-04** | `S-20` | C3 | Mở Add User → quan sát vùng quanh ô Password | Ghi sẵn "tối thiểu 8 ký tự" | Không có gợi ý nào; ràng buộc chỉ hiện **sau khi** submit thất bại | **1** | [`C3-validation-audit.png`](evidence/task1b/C3-validation-audit.png) |
+| **T1B-05** | `G-12` | C1 · C2 · C3 | Đo tỉ lệ tương phản chữ/nền của sidebar active, nút Export, nút Add User | ≥ 4.5:1 *(WCAG 1.4.3)* | Sidebar **2.08:1** · Export **2.71:1** · Add User **2.08:1** · badge **4.14:1** | **3** | [`C1-G-12-contrast.png`](evidence/task1b/C1-G-12-contrast.png) |
+| **T1B-06** | `N-03` | C1 | Mở bất kỳ trang nào dưới `/dashboard/admin` → tìm breadcrumb | Có breadcrumb định vị | Không có phần tử nào ở mọi cấp | **3** | [`C1-N-03-no-breadcrumb.png`](evidence/task1b/C1-N-03-no-breadcrumb.png) |
+| **T1B-07** | `G-13` | C1 · C2 · C3 | Zoom 200% *(khung nhìn ~720px)* → so `scrollWidth` với `clientWidth` | Nội dung xuống dòng, không cuộn ngang | Tràn **326px** — 1031 so với 705 *(WCAG 1.4.4)* | **2** | [`C1-G-13-zoom200.png`](evidence/task1b/C1-G-13-zoom200.png) |
+| **T1B-08** | `F-12` | C2 · C3 | Nhập dở dữ liệu → bấm **Esc** | Hỏi xác nhận trước khi bỏ dữ liệu chưa lưu | Đóng thẳng, mất sạch nội dung; không có chuỗi *unsaved/discard* nào trong DOM | **3** | [`C3-F-12-no-warning.png`](evidence/task1b/C3-F-12-no-warning.png) |
+| **T1B-09** | `F-01` `G-01` | C2 · C3 | Kiểm `[role="dialog"]`: tìm `h1–h4`, `aria-labelledby`, `aria-label` | Dialog có tên đọc được | Cả ba đều **rỗng** — trình đọc màn hình chỉ đọc "dialog" *(WCAG 4.1.2)* | **2** | [`C3-validation-audit.png`](evidence/task1b/C3-validation-audit.png) |
+| **T1B-10** | `S-01` `S-02` `S-09` `S-17` | C1 · C2 · C3 | Chạy trọn chuỗi **tạo → sửa → xoá** một user, sau mỗi bước đọc `[class*=toast],[role=status],[role=alert]` | Mỗi thao tác có thông báo xác nhận | Cả ba lần đều **rỗng**. Nếu máy chủ thất bại, admin cũng không biết | **3** | [`C3-S-01-no-toast.png`](evidence/task1b/C3-S-01-no-toast.png) |
 
-**Phân bố mức nghiêm trọng:** 3 → 5 lỗi · 2 → 4 lỗi · 1 → 1 lỗi. Không lỗi nào ở mức **4**, vì cả 10 đều còn đường vòng: người dùng vẫn hoàn thành được tác vụ trên desktop. Diễn giải từng mức ở [`Findings-Log.md §Diễn giải`](../findings/Findings-Log.md).
+**Phân bố mức nghiêm trọng:** 3 → 5 lỗi · 2 → 4 lỗi · 1 → 1 lỗi. Không lỗi nào ở mức **4**, vì cả 10 đều còn đường vòng: người dùng vẫn hoàn thành được tác vụ trên desktop. Diễn giải từng mức ở [`04_Bug-Usability-Findings-Log.md §Diễn giải`](04_Bug-Usability-Findings-Log.md).
 
 **Hai lỗi được người dùng thật xác nhận độc lập ở Task 2:**
 - `T1B-01` — P4 Ngô Bảo Long tự phát hiện: *"nó bị ngược nhá đúng không bạn… thì nó là 1 cái lỗi"*

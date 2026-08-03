@@ -1,0 +1,53 @@
+09e4cf4  2026-08-04 00:52:24 +0700  docs(task2): add all four probe topics and downgrade U-03 accordingly
+d12dfc4  2026-08-04 00:46:41 +0700  docs(appendix): log the task 1b, task 2 and form submission session
+6bf2d3c  2026-08-04 00:46:17 +0700  docs(findings): submit all fifteen findings to the google form
+c0e4e14  2026-08-04 00:42:29 +0700  docs(repo): mark task 1b complete and usability report done
+62912da  2026-08-04 00:41:42 +0700  docs(findings): add three task 2 findings and recount the log statistics
+fdbb217  2026-08-04 00:40:23 +0700  docs(task2): write the usability report from five sessions
+6d88aa3  2026-08-04 00:22:22 +0700  docs(repo): re-sync submission checklist with current progress
+2a628b9  2026-08-04 00:20:40 +0700  docs(task2): note participant profile mismatch as a study limitation
+2941a7f  2026-08-04 00:19:36 +0700  docs(task2): record role and masked contact for all five participants
+e03e5dd  2026-08-04 00:17:42 +0700  docs(task2): record role and masked contact for the first three participants
+e5f3ff8  2026-08-04 00:14:26 +0700  docs(task2): add data collection template for participant details and probes
+b492df8  2026-08-04 00:12:45 +0700  docs(task2): complete sus scoring with all five participants
+d8c5bb7  2026-08-04 00:08:29 +0700  docs(appendix): backfill the ai audit log for task 1b, task 3 and task 2
+ed66a79  2026-08-04 00:07:35 +0700  docs(repo): update readme and submission checklist after five user-testing sessions
+06b6e43  2026-08-04 00:06:14 +0700  docs(task2): sync video filenames and session counts across task 2 files
+ac8801a  2026-08-04 00:02:13 +0700  docs(task2): add fifth session, users management is hard to find for 3 of 5
+72cfd06  2026-08-03 23:39:24 +0700  docs(task2): fill participant names across the task 2 files
+c5a486b  2026-08-03 23:38:33 +0700  docs(task2): record SUS scores for four participants
+f03b93c  2026-08-03 23:23:28 +0700  docs(task2): transcribe four sessions and analyse the data gaps
+8bcad16  2026-08-03 17:34:02 +0700  fix(task2): keep recording through the probe questions
+6462524  2026-08-02 23:40:58 +0700  docs(task2): finalise the session kit with decoy user and answer key
+82bd05e  2026-08-02 23:26:25 +0700  docs(task2): remove leftover pilot rows
+1fb4b33  2026-08-02 23:25:55 +0700  docs(task2): drop the pilot from the plan and session kit
+183226d  2026-08-02 23:23:39 +0700  docs(task2): verify test data on EMS in place of a pilot session
+4c07671  2026-08-02 23:17:23 +0700  docs(task2): add the session kit and SUS scoring sheet
+c5d406b  2026-08-02 23:12:38 +0700  docs(task2): write the user testing plan for scenario C
+f911f8b  2026-08-02 23:00:12 +0700  docs(task1b): judge the last cells from screenshots, 264 of 264 complete
+a8c095b  2026-08-02 22:54:10 +0700  docs(task1b): complete the run, 251 of 264 cells judged
+3330884  2026-08-02 22:47:16 +0700  docs(task1b): judge visual items from screenshots, 234 of 264 cells
+60c8874  2026-08-02 22:41:31 +0700  docs(task1b): fifth pass and results summary, 171 of 264 cells
+43d5bc9  2026-08-02 22:35:38 +0700  docs(task1b): language switch and empty state measured, 150 of 264 cells
+1f1bf81  2026-08-02 22:26:58 +0700  docs(task1b): third audit pass in real chrome, 146 of 264 cells filled
+f89fc9b  2026-08-02 22:21:32 +0700  docs(task1b): second audit pass, 130 of 264 cells filled
+ce793cd  2026-08-02 22:16:40 +0700  docs(task1b): run automated audit on C1 C2 C3, fill 124 of 264 cells
+15e690a  2026-08-02 22:05:32 +0700  docs(task1b): fill student id for the scenario D owner
+81cb5e7  2026-08-02 22:03:34 +0700  docs(task1b): add fourth member to the work allocation table
+80dd6ed  2026-08-02 22:01:00 +0700  docs(task1b): sync execution template with the 88-item checklist
+c9f6fc2  2026-08-02 22:00:14 +0700  docs(task1a): merge group-reviewed checklist, 74 to 88 items
+7a73765  2026-08-02 21:49:10 +0700  docs(repo): sync readme status with submission checklist
+8c6ed4b  2026-08-02 21:48:48 +0700  docs(repo): add full submission checklist covering brief and policies
+845ff71  2026-08-02 21:45:36 +0700  docs(findings): batch form submission at the end instead of per finding
+d5674d0  2026-08-02 20:02:19 +0700  docs(findings): consolidate findings log with severity ratings
+9b62477  2026-08-02 19:59:23 +0700  docs(task3): propose verdicts for the four remaining matrix cells
+88589d3  2026-08-02 19:53:32 +0700  docs(task3): complete compatibility matrix with 21 captured cells
+ceb6689  2026-08-01 22:12:35 +0700  docs(task1a): split group checklist prompts from personal AI log
+dd174ba  2026-08-01 22:08:29 +0700  docs(task1a): add group handoff brief for shared checklist review
+155fac9  2026-08-01 22:04:40 +0700  docs(findings): add evidence screenshots and log defect T1B-01
+e5a2679  2026-08-01 22:04:40 +0700  docs(task1a): reconcile checklist with live EMS verification
+a9dbea9  2026-08-01 22:03:29 +0700  docs(task1a): reconcile checklist with live EMS survey
+fc9fe89  2026-08-01 13:21:55 +0700  docs(task1b): update target screens from live EMS survey
+802274e  2026-08-01 12:59:52 +0700  docs(repo): refine working rules and course policy file
+b542405  2026-08-01 12:24:01 +0700  docs(task1b): select scenario C and three target screens
+727f9b8  2026-08-01 12:06:20 +0700  chore(repo): scaffold HW03 project structure and reference material
