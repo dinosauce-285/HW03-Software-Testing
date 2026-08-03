@@ -43,10 +43,10 @@ hw03/
 | # | Hạng mục | Điểm | Trạng thái |
 |---|---|---|---|
 | 1a | Task 1A — Checklist dùng chung *(nhóm)* | 15 | ✅ **88 mục** — nhóm đã review, kiểm chứng Pool A/C/D trên EMS thật |
-| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 Đã chốt C1/C2/C3 + có 5 ảnh bằng chứng, **1 lỗi đã ghi log** — chưa chạy đủ 88 mục |
-| 2 | Task 2 — User testing 5 người | 25 | ⬜ Mẫu đã sẵn sàng |
+| 1b | Task 1B — Chạy checklist ≥3 màn hình | 15 | 🟡 **264/264 ô** — 63 Passed · 25 Failed · 176 N/A · 24 ảnh. Còn §4 bug report + §5 mục bổ sung |
+| 2 | Task 2 — User testing 5 người | 25 | 🟡 **5/5 phiên đã quay + transcript**, phân tích xong. Còn SUS của P5, liên hệ đã che, 3 câu probe, và Usability Report |
 | 3 | Task 3 — Cross-browser / platform | 25 | ✅ **Xong** — 21/21 ô, 18 Pass / 3 Fail, 21 ảnh có overlay |
-| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 3 phát hiện đã ghi log — nộp form **một lần cuối** sau khi xong Task 1B và 2 |
+| 4 | Findings (Form + log tổng hợp) | 10 | 🟡 **12 phát hiện** đã ghi log — nộp form **một lần cuối** sau khi xong Task 1B và 2 |
 | 5 | Agent Skill + video demo | 10 | ⬜ Chưa bắt đầu |
 | — | Phụ lục *(AI Audit · AI Critique · Peer Review · Git log)* | bắt buộc | ⬜ Mẫu đã sẵn sàng |
 
@@ -59,10 +59,10 @@ hw03/
 | Kịch bản đã chọn | C — Admin quản lý người dùng |
 | Màn hình đã kiểm | C1 Users Management · C2 Edit User · C3 Create New User |
 | Số mục checklist thiết kế | 88 |
-| Số mục đã chạy / Passed / Failed | |
-| Số lỗi phát hiện | |
+| Số mục đã chạy / Passed / Failed | **264** / 63 / 25 *(176 N/A)* — tỉ lệ pass **71,6 %** |
+| Số lỗi phát hiện | **12** *(10 từ Task 1B · 2 từ Task 3)* — chưa cộng phát hiện Task 2 |
 | Số người tham gia user-testing | 5 |
-| Số vấn đề usability theo severity (4/3/2/1) | |
+| Số vấn đề usability theo severity (4/3/2/1) | ⏳ chốt khi xong Usability Report |
 | Số ô tương thích đã phủ | **21** (7 tổ hợp × 3 màn hình) |
 | Link video demo Agent Skill | |
 
@@ -82,9 +82,10 @@ hw03/
 
 ## Việc cần làm ngay
 
-1. **Tuyển 5 người tham gia Task 2** — phần duy nhất phụ thuộc người khác, độ trễ dài nhất. Bắt đầu sớm nhất có thể.
-2. **Chạy 88 mục checklist trên C1/C2/C3** (Task 1B) — không phụ thuộc ai, EMS đang chạy.
-3. **Gửi nhóm 4 file Task 1A** — xem [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md).
+1. **Nhắn 5 người tham gia** — bảng SUS cho P5 Võ Hoàng Xuân Quyên · **liên hệ ẩn 4 số giữa** của cả 5 · 3 câu probe *(error recovery · speed · trust)*. Phần duy nhất phụ thuộc người khác.
+2. **Viết Usability Report** — làm được ngay phần kịch bản, bảng chỉ số, xếp hạng severity; chừa ô chờ dữ liệu ở mục 1.
+3. **Điền §4 và §5 của Task 1B** — §4 rút từ Findings Log, §5 cần chốt 2 mục bổ sung của riêng mình.
 4. **Agent Skill + video demo** (10đ) — chưa bắt đầu.
+5. **Gửi nhóm 4 file Task 1A** — xem [`Huong-dan-cho-nhom.md`](deliverables/task1a-checklist/Huong-dan-cho-nhom.md).
 
 Đối chiếu đầy đủ mọi yêu cầu: [`SUBMISSION-CHECKLIST.md`](SUBMISSION-CHECKLIST.md)

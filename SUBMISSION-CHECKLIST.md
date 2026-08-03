@@ -43,12 +43,12 @@
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
 | B1 | Liệt kê **≥ 3 màn hình** và lý do chọn | ✅ [`Checklist-Execution.md §1`](deliverables/task1b-execution/Checklist-Execution.md) |
-| B2 | Chạy checklist trên **từng** màn hình | ⬜ **chưa chạy** — 88 mục × 3 màn hình |
-| B3 | Mỗi mục có `Passed` / `Failed` / `N/A` — **không ô trống** | ⬜ |
-| B4 | Cột **Notes** ghi lý do cho mỗi mục `Failed` | ⬜ |
-| B5 | Ảnh chụp **chỉ cho mục Failed** | ⬜ |
-| B6 | Mỗi lỗi có: màn hình · bước tái hiện · kỳ vọng vs thực tế · mức nghiêm trọng · ảnh | 🟡 1/? đã ghi |
-| B7 | Bổ sung ≥ 2 mục của riêng mình *(không trùng thành viên khác)* | ⬜ |
+| B2 | Chạy checklist trên **từng** màn hình | ✅ 88 mục × 3 màn hình = **264 ô**, chạy live bằng Playwright |
+| B3 | Mỗi mục có `Passed` / `Failed` / `N/A` — **không ô trống** | ✅ 63 Passed · 25 Failed · 176 N/A — đã đếm lại bằng `grep -c` |
+| B4 | Cột **Notes** ghi lý do cho mỗi mục `Failed` | ✅ đủ 25/25 |
+| B5 | Ảnh chụp **chỉ cho mục Failed** | ✅ 24 ảnh ở [`evidence/task1b/`](evidence/task1b/) |
+| B6 | Mỗi lỗi có: màn hình · bước tái hiện · kỳ vọng vs thực tế · mức nghiêm trọng · ảnh | 🟡 10 phát hiện T1B đã đủ 9 cột ở Findings Log; **§4 bảng bug report trong file execution còn trống** |
+| B7 | Bổ sung ≥ 2 mục của riêng mình *(không trùng thành viên khác)* | ⬜ **§5 còn trống** — 4 ứng viên đã tìm được từ lần audit, chờ chốt |
 
 ---
 
@@ -60,31 +60,31 @@
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ⬜ |
-| C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | ⬜ *(mẫu SUS đã có)* |
-| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | ⬜ *(mẫu đã có)* |
-| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ⬜ |
-| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ⬜ |
-| C6 | Chạy **pilot** với 1 người phụ — **không tính** vào 5 người | ⬜ |
+| C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](deliverables/task2-usability/03_Session-Kit.md) |
+| C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | 🟡 task success + time on task + SUS đã có; **số lần do dự = 0 ở cả 5 phiên** vì người điều phối nói liên tục → đã ghi vào mục Hạn chế |
+| C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | 🟡 mẫu đủ 4 chủ đề nhưng **trong phiên chỉ hỏi clarity**; 3 chủ đề còn lại phải hỏi bù qua form |
+| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ✅ 5 người, đủ 5 bản ghi màn hình |
+| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ⬜ **chưa thu** số liên hệ của cả 5 người |
+| C6 | Chạy **pilot** với 1 người phụ — **không tính** vào 5 người | ➖ **chọn không làm** — đề nêu là bước khuyến nghị, [§16 rubric](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md) chấm Task 2 theo *kịch bản + 5 phiên + phân tích*, không tính pilot |
 
 ### Giai đoạn 2 — Chạy 5 phiên
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C7 | Nói rõ đang test **sản phẩm**, không test người dùng | ⬜ |
-| C8 | Yêu cầu **think aloud** | ⬜ |
-| C9 | Quan sát trung lập, chỉ can thiệp khi hoàn toàn bế tắc | ⬜ |
-| C10 | Ghi màn hình + note có cấu trúc | ⬜ |
-| C11 | Kết phiên: điền SUS/UEQ-S rồi hỏi probe | ⬜ |
+| C7 | Nói rõ đang test **sản phẩm**, không test người dùng | ✅ có trong lời dẫn, nghe được trên bản ghi |
+| C8 | Yêu cầu **think aloud** | ✅ cả 5 người vừa làm vừa nói |
+| C9 | Quan sát trung lập, chỉ can thiệp khi hoàn toàn bế tắc | ❌ **người điều phối dẫn dắt** — *"Đúng rồi"* ở P1/P4, gợi ý thẳng cho P5 ở 02:01. Đã ghi vào mục Hạn chế, không giấu |
+| C10 | Ghi màn hình + note có cấu trúc | ✅ 5 file `.mkv` + 5 transcript ở [`evidence/task2/`](evidence/task2/) |
+| C11 | Kết phiên: điền SUS/UEQ-S rồi hỏi probe | 🟡 SUS thu **sau phiên** qua tin nhắn, không phải ngay cuối phiên |
 
 ### Giai đoạn 3 — Phân tích
 
 | # | Yêu cầu | Trạng thái |
 |---|---|---|
-| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | ⬜ |
-| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ⬜ |
-| C14 | Xếp hạng theo **severity 0–4** | ⬜ |
-| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ⬜ |
+| C12 | Chấm SUS/UEQ-S 5 người, lập bảng chỉ số | 🟡 **4/5** — TB 79,4 · trung vị 80,0 · sd 10,6. Thiếu điểm của P5 |
+| C13 | Gom điểm đau, **tách lỗi đơn lẻ khỏi vấn đề thiết kế hệ thống** | ✅ [`05_Gap-Analysis.md`](deliverables/task2-usability/05_Gap-Analysis.md) — *khó tìm Users Management* **3/5 người** → vấn đề hệ thống; các lỗi còn lại là đơn lẻ |
+| C14 | Xếp hạng theo **severity 0–4** | ⬜ chờ viết trong Usability Report |
+| C15 | Usability Report: kịch bản · bảng 5 người (đã che) · bảng chỉ số · phát hiện xếp hạng **kèm ảnh mỗi mục** · khuyến nghị theo ưu tiên | ⬜ [`02_Usability-Report.md`](deliverables/task2-usability/02_Usability-Report.md) chưa viết |
 
 > 🔴 [đề §6 dòng 125](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md#L125): **TA gọi ngẫu nhiên 2 người xác minh. Mạo danh → 0 điểm Task 2.**
 
@@ -195,8 +195,8 @@
 | Phần | Điểm | Trạng thái |
 |---|---|---|
 | A · Task 1A checklist nhóm | 15 | ✅ chờ nhóm chốt |
-| B · Task 1B chạy checklist | 15 | ⬜ **chưa chạy** |
-| C · Task 2 user testing | 25 | ⬜ **chưa bắt đầu** |
+| B · Task 1B chạy checklist | 15 | 🟡 264/264 ô xong; còn §4 bug report + §5 mục bổ sung |
+| C · Task 2 user testing | 25 | 🟡 5 phiên + 5 transcript + phân tích xong; còn SUS của P5, liên hệ đã che, 3 câu probe, và Usability Report |
 | D · Task 3 cross-platform | 25 | ✅ **xong** |
 | E · Findings | 10 | 🟡 log xong, chưa nộp form |
 | F · Agent Skill | 10 | ⬜ chưa bắt đầu |
