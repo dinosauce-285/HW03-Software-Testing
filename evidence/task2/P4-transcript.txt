@@ -1,0 +1,81 @@
+# Transcript — 2026-08-03 22-53-46.mkv
+# mô hình: small · ngôn ngữ nhận ra: vi (độ tin cậy 1.00)
+
+[00:00] Mình chào bạn rất là cảm ơn bạn Ngo Bỗ Long ngày hôm nay đã tham gia vào đáy buổi test app của mình
+[00:08] Thì mình xin gửi bạn thông tin ở trong phần chát, nhờ bạn sẽ mang hình giúp mình nhá
+[00:14] Thông tin gì vậy bạn?
+[00:16] Thông tin về trang web
+[00:19] Mình chưa thấy thông tin bạn gửi á
+[00:26] Mình đã gửi trong phần chát phần bên trên là tài khoản, nhờ bạn đang nhập vào tài khoản admin với e-mail và mật khẩu
+[00:49] Mình đã gửi
+[00:52] Mình đã nhập admin đúng không bạn?
+[01:03] Ok
+[01:05] Bây giờ chúng ta đang ở giao diện của admin của hải thống này, nhờ bạn làm 1 cái luồn đó là tìm 1 user, tìm cái chỗ bản lý người dùng và sau đó thêm người dùng mình đã gửi trong cái không chát ở phần bên dưới
+[01:22] Thì mình sẽ tự khám phá cái app và tìm cái chỗ đó và thêm người dùng vào
+[01:27] Tìm chỗ bản lý người dùng và thêm người dùng đúng không bạn?
+[01:33] Đúng rồi
+[01:36] Mình có thể thử lít vào cái avatar xem có gì không?
+[02:08] Để theo bạn
+[02:10] Ok quán kỷ
+[02:14] Mình lấy người dùng
+[02:18] Ok
+[02:19] Thêm người dùng
+[02:20] Trần vàng
+[02:32] Cái nào là hỏi bạn trần đúng không?
+[02:34] Trần đúng không?
+[02:35] Cái đó là mạc số
+[02:57] Mạc số không quay trò sinh viên
+[03:01] Bây giờ này không có xuyên thoại
+[03:04] Thưa bạn đưa mình 1 khẩu không đúng không bạn?
+[03:22] Thì mình có thể thêm 1 số 2026
+[03:25] Student code là đã được sử dụng rồi
+[03:32] Mình có thể chấu cái student code khác cũng được
+[03:38] Nó
+[03:45] Ok đó là lồn đầu tiên và nó đã thành công
+[03:48] Và tiếp theo nhờ bạn tìm 1 cái user tên là
+[03:52] Tên là Hùng
+[03:53] Và sau đó mình sẽ cho họ bị
+[03:57] Ngưng hoạt động chứ không phải là xóa người ta đi
+[04:00] Lê Văn Hùng
+[04:05] Đang không hoạt động mà bạn ơi
+[04:07] Ok
+[04:08] Nếu mà họ đang không hoạt động thì mình thử cho họ hoạt động
+[04:13] Ok, mình sửa nhá
+[04:15] Lùn
+[04:18] Ok, đó là 2 cái lồn của chúng ta
+[04:20] Và sau khi mà làm thử xong 2 lồn
+[04:23] Bạn có cảm nhận nhiều về cái áp này
+[04:25] Đối với nếu mà bạn hùng 1 người dùng
+[04:27] Bạn sẽ có cảm nhận nhiều khi mà dùng thử 2 cái chức năng này
+[04:33] À
+[04:34] Sau khi mà chức năng thêm người dùng
+[04:38] Bạn thấy nó có dùng hay là nó có bị sai chỗ nào hay không
+[04:48] Mình thấy nó khá là
+[04:54] Mình thấy nó là dễ dùng
+[04:56] Có thông báo có lóc
+[04:58] Thì thì lỗi đầy đủ
+[05:00] Ok
+[05:01] Và ví dụ nó có cái chỗ mà chỗ tên thì cái
+[05:05] Trong cái O là cái họ
+[05:08] À ok, nó bị ngược nhá đúng không bạn
+[05:11] Cái là đồ với cái Hien trong cái O cái text
+[05:15] Ok
+[05:16] Thì nó là 1 cái lỗi
+[05:18] Và đối với phần mà ngưng cho 1 cái dư sợ mà động lại
+[05:22] Bạn thấy nó như thế nào
+[05:26] Mình làm lại cái được không? Ok
+[05:28] Mình có thể ngưng mà động để ngược lại cũng được
+[05:39] Thấy nó ok, nó ổn bạn ơi
+[05:41] Ok, thao tác thì rất là nhanh và ổn
+[05:44] Dễ dùng
+[05:45] Ok
+[05:46] Và bán thấy cái tìm cái trang quản lý người dùng này
+[05:48] Nó có khó khăn như
+[05:49] Có
+[05:51] Mình thấy nó khá là khó khăn
+[05:53] Nhưng mà nó lạc minh thì cái trang quản lý này
+[05:55] Nó phải lầm ở ngoài thì dễ thấy
+[05:57] Ok
+[05:59] Ok
+[06:00] Đây là phần phẩm vấn đã xong
+[06:02] Cảm ơn bạn đã tham gia rất nhiều
