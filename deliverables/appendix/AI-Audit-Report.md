@@ -40,7 +40,8 @@
 | 8 | 03/08/2026 23:23 | Claude Code | 2 | *"giờ tôi có video rồi mà không có transcribe, bạn xem video rồi lấy text được không"* | Chạy faster-whisper offline *(model `small`, tiếng Việt)* trên 5 file `.mkv` → 5 transcript có mốc thời gian, đánh dấu khoảng im lặng ≥ 5 giây | Transcript là **máy nhận dạng, có sai chính tả** — tôi đọc lại và chỉ trích dẫn những câu nghe rõ. Video gốc giữ nguyên làm bằng chứng |
 | 9 | 03/08/2026 23:38 | Claude Code | 2 | Tôi gửi 4 bộ điểm SUS 10 câu của từng người | AI tính điểm quy đổi và thống kê: TB 79,4 · trung vị 80,0 · sd 10,6 | AI **từ chối tự bịa** điểm cho người chưa gửi — đúng với đề §12. Điểm là do người tham gia tự chọn, tôi chỉ nhập lại |
 | 10 | 04/08/2026 00:02 | Claude Code | 2 | *"tôi có người 5 video võ hoàng xuân quyên.mkv"* · *"làm xong điền vô checklist dùm"* | Transcribe phiên 5, đối chiếu chéo 5 phiên → *khó tìm Users Management* xuất hiện ở **3/5 người** *(P3, P4, P5)* → đủ ngưỡng gọi là vấn đề thiết kế hệ thống. Cập nhật `05_Gap-Analysis.md`, `README.md`, `SUBMISSION-CHECKLIST.md` | Tôi yêu cầu ghi thẳng **hạn chế phương pháp** thay vì giấu: người điều phối có dẫn dắt, chỉ hỏi 1/4 câu probe, SUS thu sau phiên. TA xem video sẽ thấy |
-| 11 | | | | | | |
+| 11 | 04/08/2026 00:30 | Claude Code | 1B · 2 · Findings | *"oke làm 1b và 2, 4 bạn xài playwright mở form nộp đi"* | Viết `§4` bug report *(25 ô Failed → 10 lỗi)* và `§5` ba mục bổ sung của Task 1B; viết trọn `02_Usability-Report.md` 8 mục từ 5 bản gỡ băng; thêm 3 phát hiện Task 2 vào Findings Log; nộp **15/15** submission lên Google Form bằng Playwright | Tôi chốt mức nghiêm trọng cho 9 dòng còn để trống. **Sửa một ghi nhận sai của chính AI trước đó**: hồ sơ P2 từng ghi *"vô hiệu hoá nhầm Phú Lê Thiên"*, đọc kỹ transcript `[03:21]` thì người điều phối đọc tên Phú — P2 làm đúng. Dữ liệu nộp form rút **tự động** từ bảng trong Findings Log để file và form không lệch nhau |
+| 12 | | | | | | |
 
 ---
 
