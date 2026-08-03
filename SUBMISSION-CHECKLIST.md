@@ -63,8 +63,8 @@
 | C1 | Task scenario **hướng mục tiêu**, không chỉ từng bước bấm | ✅ 2 việc nêu mục tiêu *(thêm thành viên mới · chặn truy cập của một thành viên)*, không chỉ đường — [`03_Session-Kit.md §1`](deliverables/task2-usability/03_Session-Kit.md) |
 | C2 | Xác định chỉ số: task success · time on task · số lỗi/do dự · **SUS hoặc UEQ-S** | 🟡 task success + time on task + SUS đã có; **số lần do dự = 0 ở cả 5 phiên** vì người điều phối nói liên tục → đã ghi vào mục Hạn chế |
 | C3 | Câu hỏi mở về **clarity · error recovery · speed · trust** | 🟡 mẫu đủ 4 chủ đề nhưng **trong phiên chỉ hỏi clarity**; 3 chủ đề còn lại phải hỏi bù qua form |
-| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | ✅ 5 người, đủ 5 bản ghi màn hình |
-| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ⬜ **chưa thu** số liên hệ của cả 5 người |
+| C4 | Tuyển **5 người thật**, khớp hồ sơ người dùng, **ngoài lớp này** | 🟡 5 người thật, đủ 5 bản ghi, **ngoài lớp** ✅ — nhưng cả 5 là sinh viên ngoài ngành, **chưa từng làm quản trị** → lệch hồ sơ người dùng đích, đã nêu ở mục Hạn chế |
+| C5 | Liên hệ kiểm chứng được, **ẩn 4 số giữa** | ✅ đủ 5/5 — [`06_Thu-thap-bo-sung.md §B1`](deliverables/task2-usability/06_Thu-thap-bo-sung.md). Số đầy đủ **không lưu trong repo** |
 | C6 | Chạy **pilot** với 1 người phụ — **không tính** vào 5 người | ➖ **chọn không làm** — đề nêu là bước khuyến nghị, [§16 rubric](docs/2026.HW03.GUI%20Usability%20EMS_Vi.md) chấm Task 2 theo *kịch bản + 5 phiên + phân tích*, không tính pilot |
 
 ### Giai đoạn 2 — Chạy 5 phiên
